@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gmail Inbox Cleaner | Chukwuemelie Uyammadu</title>
+    <meta
+      name="description"
+      content="Gmail Inbox Cleaner automation project case study by Chukwuemelie Uyammadu."
+    />
+    <link rel="icon" href="./assets/png/favicon.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/jpeg/john-doe.png"
+              alt="Chukwuemelie Uyammadu"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Chukwuemelie Uyammadu</span>
+        </div>
+
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper"><a href="./index.html" class="header__link">Home</a></li>
+            <li class="header__link-wrapper"><a href="./index.html#about" class="header__link">About</a></li>
+            <li class="header__link-wrapper"><a href="./index.html#projects" class="header__link">Projects</a></li>
+            <li class="header__link-wrapper"><a href="./index.html#contact" class="header__link">Contact</a></li>
+          </ul>
+
+          <div class="header__main-ham-menu-cont">
+            <img src="./assets/svg/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu" />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link"><a href="./index.html">Home</a></li>
+            <li class="header__sm-menu-link"><a href="./index.html#about">About</a></li>
+            <li class="header__sm-menu-link"><a href="./index.html#projects">Projects</a></li>
+            <li class="header__sm-menu-link"><a href="./index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Gmail Inbox Cleaner</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            A Python automation script that uses the Gmail API to identify, label,
+            and bulk-remove clutter from a Gmail inbox — reducing manual effort
+            and keeping communication organized.
+          </p>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="./index.html#projects" class="btn btn--bg">Back to Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/jpeg/project-mockup-example.jpeg"
+              alt="Gmail Inbox Cleaner"
+              class="project-details__showcase-img"
+            />
+          </div>
+
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <p class="project-details__desc-para">
+                Email overload is a real productivity problem for small business owners
+                and professionals. This project addresses that by building a Gmail Inbox
+                Cleaner — a Python script that connects to a Gmail account through the
+                Gmail API (OAuth 2.0) and automates the process of finding and removing
+                unwanted messages.
+              </p>
+              <p class="project-details__desc-para">
+                The script can identify emails matching configurable criteria such as
+                sender address, subject keywords, or age threshold, then batch-delete or
+                archive them. This eliminates hundreds of manual clicks and turns a
+                recurring chore into a single command.
+              </p>
+
+              <h3 class="project-details__content-title">How It Works</h3>
+              <p class="project-details__desc-para">
+                The tool authenticates with Gmail using OAuth 2.0 credentials and queries
+                the mailbox using Gmail's search syntax (e.g., <code>older_than:30d</code>,
+                <code>from:newsletter@example.com</code>, <code>label:promotions</code>).
+                Matching message IDs are collected in batches and sent to the Gmail API's
+                batch-delete endpoint, keeping API quota usage within limits.
+              </p>
+              <p class="project-details__desc-para">
+                A dry-run mode lets users preview exactly which messages will be affected
+                before any deletion occurs, reducing the risk of accidental data loss.
+                Results are logged to a timestamped file for review.
+              </p>
+
+              <h3 class="project-details__content-title">Key Features</h3>
+              <p class="project-details__desc-para">
+                Configurable search filters (sender, keywords, date range), batch
+                processing to stay within API rate limits, dry-run preview mode,
+                run logging, and a straightforward configuration file so non-technical
+                users can customize targets without editing code.
+              </p>
+
+              <h3 class="project-details__content-title">What This Project Demonstrates</h3>
+              <p class="project-details__desc-para">
+                This project shows my ability to work with third-party APIs and OAuth
+                authentication, automate repetitive business tasks through scripting,
+                and design practical tools with safety guardrails built in. It reflects
+                a core principle in my work: reducing manual effort without introducing
+                new risks.
+              </p>
+            </div>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools & Technologies</h3>
+              <div class="skills">
+                <div class="skills__skill">Python</div>
+                <div class="skills__skill">Gmail API</div>
+                <div class="skills__skill">OAuth 2.0</div>
+                <div class="skills__skill">Automation</div>
+                <div class="skills__skill">Batch Processing</div>
+                <div class="skills__skill">Business Productivity</div>
+              </div>
+            </div>
+
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">Links</h3>
+              <a href="https://github.com/Bobbygkmc" class="btn btn--med btn--theme project-details__links-btn" target="_blank" rel="noopener">
+                GitHub
+              </a>
+              <a href="./index.html#contact" class="btn btn--med btn--theme-inv project-details__links-btn">
+                Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm"><span>Social</span></h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noopener" href="https://github.com/Bobbygkmc">
+                <img class="main-footer__icon" src="./assets/png/github-ico.png" alt="GitHub" />
+              </a>
+              <a href="mailto:chuk.uyammadu@gmail.com">
+                <img class="main-footer__icon" src="./assets/png/mail-ico.png" alt="Email" />
+              </a>
+            </div>
+          </div>
+
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Chukwuemelie Uyammadu</h4>
+            <p class="main-footer__short-desc">
+              Data Analyst, Web Designer, Cybersecurity Analyst, and Business Systems Builder.
+            </p>
+          </div>
+        </div>
+
+        <div class="main-footer__lower">
+          &copy; 2026 Chukwuemelie Uyammadu. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
