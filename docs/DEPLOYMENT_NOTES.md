@@ -22,6 +22,8 @@ npm run build
 The compiled CSS lives at `css/style.css`. SASS sources live in
 `sass/` (7-1 pattern). Edit SASS, never the compiled CSS.
 
+Contact form backend pending. Temporary contact flow uses email and phone.
+
 The production build creates a clean `dist/` directory containing only
 static deployable files: HTML, compiled CSS, assets, and `index.js`.
 Do not publish the repository root, because it may contain `node_modules`,

@@ -181,8 +181,8 @@ A few rules baked into how this repo evolves:
 
 ## Contact
 
-- Email: `bob@uyammadu.com` (placeholder — confirm before printing on
-  business cards)
+- Email: `chuk.uyammadu@gmail.com`
+- Phone: `254-258-7270`
 - GitHub: [Bobbygkmc](https://github.com/Bobbygkmc)
 
 ---

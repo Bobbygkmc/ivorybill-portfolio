@@ -35,9 +35,8 @@
       evt.preventDefault();
       if (status) {
         status.textContent =
-          'Thanks. The form is front-end ready — submissions are not yet ' +
-          'wired to a backend. Please email bob@uyammadu.com directly while ' +
-          'we finish the integration.';
+          'The form backend is pending, so this message was not submitted. ' +
+          'Please email chuk.uyammadu@gmail.com or call/text 254-258-7270 directly.';
         status.setAttribute('role', 'status');
       }
     });
