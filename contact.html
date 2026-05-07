@@ -6,13 +6,17 @@
     <title>Contact — Uyammadu Dev Services</title>
     <meta
       name="description"
-      content="Request a consult or send a service request to Uyammadu Dev Services. Bucks County, PA and remote."
+      content="Request a local technology assessment or project estimate from Chuk Uyammadu. Email, call, or use the intake form."
     />
     <meta name="theme-color" content="#0a1f3d" />
+
     <link rel="icon" type="image/svg+xml" href="./assets/svg/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
@@ -30,6 +34,7 @@
           <a class="uy-nav__link" href="/projects">Projects</a>
           <a class="uy-nav__link" href="/cameras">Cameras</a>
           <a class="uy-nav__link uy-nav__link--active" href="/contact">Contact</a>
+          <a class="uy-nav__link" href="https://blog.uyammadu.com">Blog</a>
         </nav>
         <a class="uy-btn uy-btn--primary uy-nav__cta" href="mailto:chuk.uyammadu@gmail.com">Email Chuk</a>
         <button class="uy-nav__toggle" aria-label="Open menu" aria-controls="uy-mobile-menu" aria-expanded="false">
@@ -45,6 +50,7 @@
             <li><a href="/projects">Projects</a></li>
             <li><a href="/cameras">Cameras</a></li>
             <li><a href="/contact">Contact</a></li>
+            <li><a href="https://blog.uyammadu.com">Blog</a></li>
           </ul>
           <a class="uy-btn uy-btn--primary uy-btn--block" href="mailto:chuk.uyammadu@gmail.com">Email Chuk</a>
         </div>
@@ -57,9 +63,9 @@
           <div class="uy-pagehead__crumb"><a href="/">Home</a><span>/</span>Contact</div>
           <h1 class="uy-h1">Tell me what you're trying to do</h1>
           <p class="uy-lede">
-            Email Chuk directly, or call or text for urgent local business technology
-            issues. The request form is being prepared; for now, use the direct contact
-            options below.
+            Send the request form, email Chuk directly, or call or text for urgent
+            local business technology issues. Include your business name, location,
+            issue, urgency, and preferred contact method.
           </p>
         </div>
       </section>
@@ -68,14 +74,18 @@
         <div class="uy-container">
           <div class="uy-split uy-split--narrow">
             <div>
-              <form class="uy-form" data-uy-form action="#" novalidate>
+              <form class="uy-form" data-uy-form action="/api/contact" method="post" novalidate>
                 <p class="uy-status-banner" data-uy-form-status>
-                  <strong>Form backend coming soon:</strong> the request form is not connected
-                  yet. For service, email
+                  <strong>Request form:</strong> submissions are sent to Chuk through the
+                  site backend. For urgent needs, email
                   <a href="mailto:chuk.uyammadu@gmail.com" style="color:#0062b9;">chuk.uyammadu@gmail.com</a>
-                  or call/text <a href="tel:+12542587270" style="color:#0062b9;">254-258-7270</a>
-                  directly.
+                  or call/text <a href="tel:+12542587270" style="color:#0062b9;">254-258-7270</a>.
                 </p>
+
+                <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+                  <label for="company_website">Company website</label>
+                  <input id="company_website" name="company_website" type="text" tabindex="-1" autocomplete="off" />
+                </div>
 
                 <div class="uy-form__row">
                   <div class="uy-form__field">
@@ -101,12 +111,15 @@
 
                 <div class="uy-form__row">
                   <div class="uy-form__field">
-                    <label class="uy-form__label" for="prefer">Preferred contact</label>
-                    <select class="uy-form__select" id="prefer" name="prefer">
-                      <option>Email</option>
-                      <option>Phone call</option>
-                      <option>Text message</option>
-                      <option>Either is fine</option>
+                    <label class="uy-form__label" for="category">Service category</label>
+                    <select class="uy-form__select" id="category" name="category" required>
+                      <option value="" disabled selected>Select a category</option>
+                      <option>Websites & SEO</option>
+                      <option>AI & Automation</option>
+                      <option>Camera/NVR & Footage Systems</option>
+                      <option>Networking & IT</option>
+                      <option>Restaurant Technology</option>
+                      <option>Other</option>
                     </select>
                   </div>
                   <div class="uy-form__field">
@@ -115,21 +128,19 @@
                       <option>No rush — happy to schedule</option>
                       <option>Within the week</option>
                       <option>This week (paid same-day minimum applies)</option>
-                      <option>Emergency / right now</option>
+                      <option>Emergency — thing is broken right now</option>
                     </select>
                   </div>
                 </div>
 
                 <div class="uy-form__row">
                   <div class="uy-form__field">
-                    <label class="uy-form__label" for="category">Service category</label>
-                    <select class="uy-form__select" id="category" name="category">
-                      <option>Websites &amp; SEO</option>
-                      <option>AI &amp; Automation</option>
-                      <option>Camera/NVR &amp; Footage Systems</option>
-                      <option>Networking &amp; IT</option>
-                      <option>Restaurant Technology</option>
-                      <option>Other</option>
+                    <label class="uy-form__label" for="prefer">Preferred contact</label>
+                    <select class="uy-form__select" id="prefer" name="prefer">
+                      <option>Email</option>
+                      <option>Phone call</option>
+                      <option>Text message</option>
+                      <option>Either is fine</option>
                     </select>
                   </div>
                   <div class="uy-form__field">
@@ -146,7 +157,7 @@
                 </div>
 
                 <div class="uy-form__actions">
-                  <button class="uy-btn uy-btn--primary uy-btn--lg" type="submit">Form backend pending</button>
+                  <button class="uy-btn uy-btn--primary uy-btn--lg" type="submit">Send request</button>
                   <a class="uy-btn uy-btn--ghost" href="mailto:chuk.uyammadu@gmail.com">Email Chuk instead</a>
                   <a class="uy-btn uy-btn--ghost" href="tel:+12542587270">Call or Text Chuk</a>
                 </div>
@@ -168,24 +179,11 @@
                 <p class="uy-card__desc">
                   On-site work is typically Bucks County, PA and surrounding regions
                   (Warrington, Doylestown, Newtown, New Hope, Yardley, Bristol, and the
-                  greater Philadelphia metro). Remote work is available worldwide.
-                </p>
-              </div>
-              <div class="uy-callout uy-mt-2">
-                <h4>What happens next</h4>
-                <p>
-                  Tell me what is broken, slow, outdated, or confusing. Include your
-                  business name, location, issue, urgency, and preferred contact method;
-                  I'll help you map the next step.
+                  upper NE Philly corridor). Remote work is available for websites,
+                  AI, and digital consulting.
                 </p>
               </div>
             </aside>
-          </div>
-
-          <div class="uy-disclaimer uy-mt-4">
-            <strong>Contact form status.</strong>
-            The form above is intentionally front-end only while the backend is pending.
-            The current contact path is email, call, or text directly.
           </div>
         </div>
       </section>
@@ -196,32 +194,48 @@
         <div class="uy-footer__grid">
           <div class="uy-footer__brand">
             <h4>Uyammadu Dev Services</h4>
-            <p>Veteran-owned technology services for small businesses, restaurants, and professionals in Bucks County and beyond. Part of the uyammadu.com ecosystem.</p>
+            <p>
+              Veteran-owned technology services for small businesses, restaurants, and
+              professionals in Bucks County and beyond. Part of the uyammadu.com ecosystem.
+            </p>
           </div>
-          <div class="uy-footer__col"><h5>Site</h5><ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/pricing">Pricing</a></li>
-            <li><a href="/projects">Projects</a></li>
-          </ul></div>
-          <div class="uy-footer__col"><h5>Specialties</h5><ul>
-            <li><a href="/cameras">Camera systems</a></li>
-            <li><a href="/services#networking">Networking &amp; IT</a></li>
-            <li><a href="/services#ai">AI &amp; automation</a></li>
-            <li><a href="/services#restaurant">Restaurant tech</a></li>
-          </ul></div>
-          <div class="uy-footer__col"><h5>Contact</h5><ul>
-            <li><a href="/contact">Request a Local Tech Assessment</a></li>
-            <li><a href="mailto:chuk.uyammadu@gmail.com">chuk.uyammadu@gmail.com</a></li>
-            <li><a href="tel:+12542587270">254-258-7270</a></li>
-            <li><a href="https://github.com/Bobbygkmc" target="_blank" rel="noopener">GitHub</a></li>
-          </ul></div>
+          <div class="uy-footer__col">
+            <h5>Site</h5>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="https://blog.uyammadu.com">Blog</a></li>
+            </ul>
+          </div>
+          <div class="uy-footer__col">
+            <h5>Specialties</h5>
+            <ul>
+              <li><a href="/cameras">Camera systems</a></li>
+              <li><a href="/services#networking">Networking &amp; IT</a></li>
+              <li><a href="/services#ai">AI &amp; automation</a></li>
+              <li><a href="/services#restaurant">Restaurant tech</a></li>
+            </ul>
+          </div>
+          <div class="uy-footer__col">
+            <h5>Contact</h5>
+            <ul>
+              <li><a href="/contact">Request a Local Tech Assessment</a></li>
+              <li><a href="mailto:chuk.uyammadu@gmail.com">chuk.uyammadu@gmail.com</a></li>
+              <li><a href="tel:+12542587270">254-258-7270</a></li>
+              <li><a href="https://github.com/Bobbygkmc" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+          </div>
         </div>
         <div class="uy-footer__bottom">
-          <span class="uy-footer__bottom-meta">© <span class="uy-year">2026</span> Chuk Uyammadu. Bucks County, PA + remote.</span>
+          <span class="uy-footer__bottom-meta">
+            © <span class="uy-year">2026</span> Chuk Uyammadu. Bucks County, PA + remote.
+          </span>
           <div class="uy-footer__bottom-links">
             <a href="/projects">Portfolio</a>
             <a href="/services">Services</a>
+            <a href="https://blog.uyammadu.com">Blog</a>
             <a href="mailto:chuk.uyammadu@gmail.com">Email Chuk</a>
             <a href="tel:+12542587270">Call or Text Chuk</a>
           </div>

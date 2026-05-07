@@ -3,9 +3,10 @@
 Public-facing freelance and business technology services site for
 **Chuk Uyammadu**. Part of the broader `uyammadu.com` ecosystem.
 
-This is a static, dependency-light website. Pure HTML, CSS, and a
-small amount of vanilla JavaScript, with a SASS build step. No
-framework, no backend, no tracking scripts.
+This is a dependency-light website. Public pages are static HTML, CSS,
+and vanilla JavaScript with a SASS build step. The contact form uses a
+Cloudflare Pages Function at `/api/contact`; there is no database and no
+tracking scripts.
 
 ---
 
@@ -24,7 +25,9 @@ Uyammadu ecosystem. It covers:
 
 The umbrella `uyammadu.com` will eventually host portfolio pages,
 writing, AI agents, and other ventures. This repo is one branch of
-that ecosystem.
+that ecosystem. The intended public blog URL is
+`https://blog.uyammadu.com`; blog deployment and DNS are managed as a
+separate task outside this repo.
 
 ---
 
@@ -66,7 +69,7 @@ Cloudflare Pages' extensionless URLs.
 ├── pricing.html        Estimated price ranges and timeframes
 ├── projects.html       Portfolio index with honest status pills
 ├── cameras.html        Camera and security systems detail page
-├── contact.html        Service request form (front-end only for now)
+├── contact.html        Service request form backed by /api/contact
 │
 ├── archive/            Previous portfolio pages, kept for reference
 │   ├── README.md
@@ -89,6 +92,8 @@ Cloudflare Pages' extensionless URLs.
 │   ├── README.md
 │   ├── lead_radar_blueprint.md
 │   └── .gitkeep
+├── functions/          Cloudflare Pages Functions
+│   └── api/contact.js  Contact form email endpoint
 │
 ├── assets/             Images, SVG icons, brand mark
 ├── css/                Compiled CSS output
@@ -155,14 +160,24 @@ the page. This keeps the docs canonical.
 
 Target domain: `dev.uyammadu.com`.
 
-The repo is a static build. Recommended deploy targets and exact
-commands are in `docs/DEPLOYMENT_NOTES.md`. In short:
+The repo deploys to Cloudflare Pages with static files in `dist/` plus
+Pages Functions under `functions/`. Recommended deploy notes are in
+`docs/DEPLOYMENT_NOTES.md`. In short:
 
 - Build command: `npm run build`
-- Publish directory: `/`
+- Build output directory: `dist`
+- Root directory: `/`
+- Deploy command: none
 
-Works on Netlify, Cloudflare Pages, Vercel, or self-hosted via Caddy
-or Nginx on `lo-mein`.
+Do not use `npx wrangler deploy`; this is a Cloudflare Pages deployment,
+not a Worker deployment.
+
+The contact form requires these Cloudflare Pages variables/secrets:
+
+- `RESEND_API_KEY` as a secret
+- `CONTACT_TO_EMAIL`, currently `chuk.uyammadu@gmail.com`
+- `CONTACT_FROM_EMAIL`, a verified Resend sender such as
+  `Uyammadu Dev <contact@uyammadu.com>`
 
 ---
 

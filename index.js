@@ -27,17 +27,62 @@
     el.textContent = String(new Date().getFullYear());
   });
 
-  // ---- Service-request form: client-side only. No backend wired yet. --------
+  // ---- Service-request form -------------------------------------------------
   var form = document.querySelector('[data-uy-form]');
   if (form) {
     var status = form.querySelector('[data-uy-form-status]');
-    form.addEventListener('submit', function (evt) {
+    var submit = form.querySelector('button[type="submit"]');
+    var fallback =
+      'The form could not send right now. Please email chuk.uyammadu@gmail.com ' +
+      'or call/text 254-258-7270.';
+
+    form.addEventListener('submit', async function (evt) {
       evt.preventDefault();
+
       if (status) {
-        status.textContent =
-          'The form backend is pending, so this message was not submitted. ' +
-          'Please email chuk.uyammadu@gmail.com or call/text 254-258-7270 directly.';
+        status.textContent = 'Sending your request...';
         status.setAttribute('role', 'status');
+      }
+
+      if (submit) {
+        submit.disabled = true;
+        submit.textContent = 'Sending...';
+      }
+
+      var data = {};
+      new FormData(form).forEach(function (value, key) {
+        data[key] = value;
+      });
+
+      try {
+        var response = await fetch(form.getAttribute('action') || '/api/contact', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        var result = await response.json().catch(function () {
+          return {};
+        });
+
+        if (!response.ok || !result.ok) {
+          throw new Error(result.error || fallback);
+        }
+
+        if (status) {
+          status.textContent =
+            result.message ||
+            'Request sent. For urgent needs, you can also email or call/text directly.';
+        }
+        form.reset();
+      } catch (error) {
+        if (status) {
+          status.textContent = error && error.message ? error.message : fallback;
+        }
+      } finally {
+        if (submit) {
+          submit.disabled = false;
+          submit.textContent = 'Send request';
+        }
       }
     });
   }

@@ -77,6 +77,7 @@ web_modules/
 # dotenv environment variables file
 .env
 .env.*
+.dev.vars
 .env.test
 .env.production
 
@@ -91,6 +92,7 @@ out
 # Nuxt.js build / generate output
 .nuxt
 dist
+dist/
 
 # Gatsby files
 .cache/

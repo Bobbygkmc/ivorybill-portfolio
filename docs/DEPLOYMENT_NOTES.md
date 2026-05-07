@@ -1,8 +1,9 @@
 # Deployment Notes
 
-How `dev.uyammadu.com` is built and shipped. The site is a static
-build — there is no server-side rendering, no API, and no database
-behind it.
+How `dev.uyammadu.com` is built and shipped. The public pages are a
+static build served from `dist/`. The contact form uses a Cloudflare
+Pages Function at `/api/contact`; there is no database or message
+storage behind it.
 
 ---
 
@@ -22,7 +23,9 @@ npm run build
 The compiled CSS lives at `css/style.css`. SASS sources live in
 `sass/` (7-1 pattern). Edit SASS, never the compiled CSS.
 
-Contact form backend pending. Temporary contact flow uses email and phone.
+The contact form posts to `/api/contact`, a Cloudflare Pages Function
+that sends email through Resend. Direct email and phone remain visible
+as fallbacks.
 
 The production build creates a clean `dist/` directory containing only
 static deployable files: HTML, compiled CSS, assets, and `index.js`.
@@ -43,7 +46,10 @@ Then open `http://127.0.0.1:4173`.
 `npm run preview` calls `scripts/preview.py`, a local-only static server
 for `dist/`. It maps extensionless routes such as `/services` and
 `/contact` to their generated `.html` files so local preview matches
-Cloudflare Pages clean URLs.
+Cloudflare Pages clean URLs. The Python preview does **not** execute
+Cloudflare Pages Functions, so `/api/contact` is not testable through
+`npm run preview`. For full local function testing, use Cloudflare Pages
+local tooling later, without adding a deploy command.
 
 ---
 
@@ -69,11 +75,20 @@ In rough order of how easy they are to set up.
   for this static Pages site.
 - Add a custom domain: `dev.uyammadu.com`. Cloudflare's DNS makes the
   cutover quick if the apex is already on Cloudflare.
+- Configure the contact form variables/secrets:
+  - `RESEND_API_KEY` as a Cloudflare Pages secret.
+  - `CONTACT_TO_EMAIL`, expected value `chuk.uyammadu@gmail.com`.
+  - `CONTACT_FROM_EMAIL`, a verified Resend sender such as
+    `Uyammadu Dev <contact@uyammadu.com>`.
 
 This is a Cloudflare Pages static deploy, not a Cloudflare Worker.
 Do not add `wrangler deploy` or `assets.directory = "."`; that causes
 Wrangler to upload repository files such as `node_modules`, which can
 exceed Worker asset limits.
+
+The broader ecosystem blog URL is `https://blog.uyammadu.com`. That blog
+is a separate project/deployment and may require its own Cloudflare Pages
+site and DNS record.
 
 ### Vercel
 
@@ -105,6 +120,8 @@ in a separate repo, not this one.
 - `dev.uyammadu.com` — this repo.
 - Other subdomains (`agents.`, `lab.`, `writing.`) — separate repos
   or apps under the same umbrella.
+- `blog.uyammadu.com` — intended public blog URL, deployed separately
+  from this services site.
 
 Add a CNAME or ALIAS record on `dev.uyammadu.com` pointing at the
 hosting provider. Confirm HTTPS issuance after the record propagates.
@@ -121,6 +138,8 @@ hosting provider. Confirm HTTPS issuance after the record propagates.
 - [ ] All page-internal links resolve (no 404s on the static set).
 - [ ] Mobile layout sanity-checked at 375px and 414px widths.
 - [ ] Favicon and meta tags load on all pages.
+- [ ] Contact form environment variables are configured in Cloudflare
+      Pages before relying on `/api/contact` in production.
 - [ ] No external trackers or analytics scripts have been added
       without an explicit decision.
 
@@ -133,8 +152,8 @@ hosting provider. Confirm HTTPS issuance after the record propagates.
       sections render cleanly.
 - [ ] Service catalog page renders pricing and disclaimers.
 - [ ] Cameras page renders the privacy and handoff sections.
-- [ ] Contact form is visible and clearly marked as front-end only
-      until backend integration is wired.
+- [ ] Contact form sends through `/api/contact`, or shows the direct
+      email/phone fallback if Resend variables are missing.
 - [ ] Lighthouse score on `index.html` is at least 90 across
       Performance, Accessibility, and Best Practices.
 

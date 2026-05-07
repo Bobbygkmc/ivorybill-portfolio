@@ -36,7 +36,9 @@ npm run preview
 `npm run preview` runs `scripts/preview.py`, which serves the generated
 `dist/` directory and maps extensionless URLs like `/contact` to
 `dist/contact.html`. This keeps local preview aligned with Cloudflare
-Pages clean URLs.
+Pages clean URLs. It does not execute Cloudflare Pages Functions, so
+`/api/contact` must be tested later with Cloudflare Pages local tooling
+or in a configured Pages preview deployment.
 
 ## Cloudflare Pages settings
 
@@ -48,6 +50,16 @@ Use Cloudflare Pages static hosting settings:
 - Root directory: `/`
 - Deploy command: leave blank
 
+Required contact form variables/secrets:
+
+- `RESEND_API_KEY` as a Cloudflare Pages secret
+- `CONTACT_TO_EMAIL`, expected value `chuk.uyammadu@gmail.com`
+- `CONTACT_FROM_EMAIL`, a verified Resend sender such as
+  `Uyammadu Dev <contact@uyammadu.com>`
+
 Do **not** use `npx wrangler deploy` for this static site. That is a
 Worker deploy path and can try to upload the whole repository, including
 large dependency binaries under `node_modules`.
+
+The blog link points to `https://blog.uyammadu.com`. Blog deployment and
+DNS are separate from this `dev.uyammadu.com` site.
