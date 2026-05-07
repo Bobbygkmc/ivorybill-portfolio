@@ -9,14 +9,21 @@
 @import 'pages/home';
 @import 'pages/project-case-study';
 
+// dev.uyammadu.com design system (split from former pages/_uy.scss)
+@import 'components/uy-base';
+@import 'components/uy-buttons';
+@import 'components/uy-nav';
+@import 'pages/uy-hero';
+@import 'components/uy-cards';
+@import 'components/uy-pricing';
+@import 'components/uy-form';
+@import 'pages/uy-ecosystem';
+@import 'components/uy-cta';
+@import 'components/uy-footer';
+@import 'pages/uy-pagehead';
+@import 'components/uy-misc';
+
 @import 'components/header';
 @import 'components/footer';
 @import 'components/skills';
 @import 'components/mouse-scroll';
-
-
-
-
-
-
-

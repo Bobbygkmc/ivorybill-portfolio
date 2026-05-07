@@ -1,0 +1,111 @@
+// =============================================================================
+// dev.uyammadu.com — base, layout primitives, typography, utility helpers
+// All styles scoped under `body.uy-page` to avoid colliding with legacy partials.
+// =============================================================================
+
+body.uy-page {
+  font-family: $uy-font-sans;
+  color: $uy-ink;
+  background: $uy-surface;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // ---- Layout primitives -----------------------------------------------------
+
+  .uy-container {
+    width: min(92%, $uy-container);
+    margin: 0 auto;
+  }
+  .uy-container--narrow {
+    width: min(92%, $uy-container-narrow);
+    margin: 0 auto;
+  }
+
+  .uy-section {
+    padding: 10rem 0;
+    @include respond(tab-port) { padding: 7rem 0; }
+    @include respond(phone)    { padding: 5.5rem 0; }
+  }
+  .uy-section--tight { padding: 6rem 0; }
+  .uy-section--dark {
+    background: $uy-surface-deep;
+    color: rgba(#fff, 0.92);
+  }
+  .uy-section--alt { background: $uy-surface-2; }
+
+  // ---- Typography ------------------------------------------------------------
+
+  .uy-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: $uy-primary;
+    padding: 0.6rem 1.2rem;
+    border-radius: $uy-radius-pill;
+    background: rgba($uy-primary, 0.08);
+  }
+
+  .uy-h1 {
+    font-size: clamp(3.6rem, 5vw + 1rem, 6.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: $uy-deep;
+    margin: 0 0 2rem;
+  }
+  .uy-h2 {
+    font-size: clamp(2.8rem, 3vw + 1rem, 4.2rem);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    font-weight: 700;
+    color: $uy-deep;
+    margin: 0 0 1.6rem;
+  }
+  .uy-h3 {
+    font-size: clamp(2rem, 1.2vw + 1.4rem, 2.6rem);
+    line-height: 1.25;
+    font-weight: 700;
+    color: $uy-deep;
+    margin: 0 0 1.2rem;
+  }
+  .uy-h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $uy-deep;
+    margin: 0 0 0.8rem;
+    letter-spacing: -0.005em;
+  }
+
+  .uy-lede {
+    font-size: clamp(1.7rem, 0.6vw + 1.4rem, 2.1rem);
+    color: $uy-muted;
+    line-height: 1.6;
+    max-width: 70rem;
+  }
+
+  .uy-body {
+    font-size: 1.7rem;
+    color: $uy-muted;
+    line-height: 1.7;
+  }
+
+  .uy-mono {
+    font-family: $uy-font-mono;
+    font-size: 1.4rem;
+    color: $uy-muted;
+    letter-spacing: -0.01em;
+  }
+
+  .uy-section-head {
+    text-align: center;
+    margin-bottom: 5rem;
+
+    .uy-eyebrow { margin-bottom: 1.6rem; }
+    .uy-lede { margin: 0 auto; }
+  }
+}

@@ -1,0 +1,133 @@
+// =============================================================================
+// dev.uyammadu.com — home hero + code-card visual
+// =============================================================================
+
+body.uy-page {
+
+  .uy-hero {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(60rem 40rem at 12% -10%,  rgba($uy-primary, 0.18), transparent 60%),
+      radial-gradient(50rem 30rem at 95% 20%,   rgba($uy-accent, 0.18),  transparent 60%),
+      radial-gradient(80rem 60rem at 50% 110%,  rgba($uy-deep, 0.10),    transparent 60%),
+      $uy-surface;
+    padding: 9rem 0 8rem;
+
+    @include respond(phone) { padding: 6rem 0 5rem; }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba($uy-deep, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba($uy-deep, 0.04) 1px, transparent 1px);
+      background-size: 4rem 4rem;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+      pointer-events: none;
+    }
+
+    &__inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 6rem;
+      align-items: center;
+
+      @include respond(tab-port) { grid-template-columns: 1fr; gap: 4.5rem; }
+    }
+
+    &__copy { max-width: 64rem; }
+
+    &__cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 3.2rem;
+    }
+
+    &__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem 3rem;
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid $uy-line;
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+
+        &-num {
+          font-size: 2.4rem;
+          font-weight: 700;
+          color: $uy-deep;
+          letter-spacing: -0.01em;
+        }
+        &-label {
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: $uy-muted-2;
+          text-transform: uppercase;
+          letter-spacing: 0.8px;
+        }
+      }
+    }
+
+    &__visual {
+      position: relative;
+      @include respond(tab-port) { display: none; }
+    }
+  }
+
+  // Code-card visual block used in hero
+  .uy-codecard {
+    background: $uy-surface-deep;
+    color: rgba(#fff, 0.92);
+    border-radius: $uy-radius-lg;
+    box-shadow: $uy-shadow-lg;
+    overflow: hidden;
+    border: 1px solid rgba(#fff, 0.06);
+
+    &__head {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1.2rem 1.6rem;
+      border-bottom: 1px solid rgba(#fff, 0.06);
+      background: rgba(#fff, 0.03);
+
+      &-dot {
+        width: 1.1rem; height: 1.1rem; border-radius: 50%;
+        background: rgba(#fff, 0.18);
+        &--r { background: #ef4444; }
+        &--y { background: #f59e0b; }
+        &--g { background: #10b981; }
+      }
+      &-title {
+        margin-left: 1rem;
+        font-family: $uy-font-mono;
+        font-size: 1.2rem;
+        color: rgba(#fff, 0.55);
+      }
+    }
+    &__body {
+      padding: 2rem 2.2rem;
+      font-family: $uy-font-mono;
+      font-size: 1.35rem;
+      line-height: 1.7;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    &__line  { color: rgba(#fff, 0.86); }
+    &__c     { color: #94a3b8; }            // comment
+    &__k     { color: #93c5fd; }            // keyword
+    &__s     { color: #86efac; }            // string
+    &__n     { color: #fde68a; }            // number / accent
+    &__p     { color: $uy-accent; }         // primary highlight
+  }
+}

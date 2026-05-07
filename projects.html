@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects — Uyammadu Dev Services</title>
+    <meta
+      name="description"
+      content="Selected projects across AI agents, restaurant technology, camera systems, networking, and local-business automation."
+    />
+    <meta name="theme-color" content="#0a1f3d" />
+    <link rel="icon" type="image/svg+xml" href="./assets/svg/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="uy-page">
+    <header class="uy-nav" role="banner">
+      <div class="uy-container uy-nav__inner">
+        <a class="uy-nav__brand" href="./index.html" aria-label="Uyammadu home">
+          <span class="uy-nav__brand-mark" aria-hidden="true">U</span>
+          <span class="uy-nav__brand-sub"><span>Uyammadu</span><span>Dev Services</span></span>
+        </a>
+        <nav class="uy-nav__links" aria-label="Primary">
+          <a class="uy-nav__link" href="./index.html">Home</a>
+          <a class="uy-nav__link" href="./services.html">Services</a>
+          <a class="uy-nav__link" href="./pricing.html">Pricing</a>
+          <a class="uy-nav__link uy-nav__link--active" href="./projects.html">Projects</a>
+          <a class="uy-nav__link" href="./cameras.html">Cameras</a>
+          <a class="uy-nav__link" href="./contact.html">Contact</a>
+        </nav>
+        <a class="uy-btn uy-btn--primary uy-nav__cta" href="./contact.html">Request a consult</a>
+        <button class="uy-nav__toggle" aria-label="Open menu" aria-controls="uy-mobile-menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+      <div class="uy-nav__mobile" id="uy-mobile-menu">
+        <div class="uy-container">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./cameras.html">Cameras</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+          <a class="uy-btn uy-btn--primary uy-btn--block" href="./contact.html">Request a consult</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="uy-pagehead">
+        <div class="uy-container">
+          <div class="uy-pagehead__crumb"><a href="./index.html">Home</a><span>/</span>Projects</div>
+          <h1 class="uy-h1">Projects</h1>
+          <p class="uy-lede">
+            A working portfolio of live deployments, prototypes, and research concepts. Statuses
+            are honest. <code>Live</code> means it's running for someone.
+            <code>Prototype</code> means it works on synthetic or limited data.
+            <code>Private deployment</code> means it's running for a specific operator and details are kept off public pages.
+          </p>
+        </div>
+      </section>
+
+      <section class="uy-section">
+        <div class="uy-container">
+          <div class="uy-projects">
+
+            <article class="uy-project">
+              <div class="uy-project__head">
+                <h3 class="uy-project__title">Orion — agentic business intelligence</h3>
+                <span class="uy-pill uy-pill--proto">Prototype</span>
+              </div>
+              <p class="uy-project__desc">
+                A small AI agent that ingests operator data (POS exports, basic accounting CSVs)
+                and produces a daily plain-English business summary. Highlights what's unusual
+                rather than dumping every metric. Currently a working prototype against
+                synthetic restaurant POS data.
+              </p>
+              <div class="uy-project__tags">
+                <span>Agents</span><span>Reporting</span><span>Restaurants</span><span>Local-first</span>
+              </div>
+            </article>
+
+            <article class="uy-project">
+              <div class="uy-project__head">
+                <h3 class="uy-project__title">Peppino's — restaurant technology stack</h3>
+                <span class="uy-pill uy-pill--private">Private deployment</span>
+              </div>
+              <p class="uy-project__desc">
+                POS integration support, menu and ordering flow review, network and printer
+                troubleshooting, and reporting visibility for a Bucks County restaurant. Owner
+                holds all credentials and accounts.
+              </p>
+              <div class="uy-project__tags">
+                <span>Toast POS</span><span>Networking</span><span>Reporting</span><span>Operator handoff</span>
+              </div>
+            </article>
+
+            <article class="uy-project">
+              <div class="uy-project__head">
+                <h3 class="uy-project__title">Raspberry Pi infrastructure pattern</h3>
+                <span class="uy-pill uy-pill--live">Live</span>
+              </div>
+              <p class="uy-project__desc">
+                A repeatable Raspberry Pi-based pattern for small-business technology — quiet,
+                low-power, owner-controlled. Used for camera recording, lightweight dashboards,
+                local automation, and "always-on" small services.
+              </p>
+              <div class="uy-project__tags">
+                <span>Raspberry Pi</span><span>Linux</span><span>Edge computing</span><span>Self-hosted</span>
+              </div>
+            </article>
+
+            <article class="uy-project">
+              <div class="uy-project__head">
+                <h3 class="uy-project__title">Frigate &amp; Reolink camera lab</h3>
+                <span class="uy-pill uy-pill--dev">In development</span>
+              </div>
+              <p class="uy-project__desc">
+                A reference install pattern for small-business camera systems on owner-controlled
+                hardware. Documented retention sizing, remote access via Tailscale, and a
+                full ownership-transfer playbook. Feeds into the dedicated
+                <a href="./cameras.html" style="color:#0062b9;">cameras page</a>.
+              </p>
+              <div class="uy-project__tags">
+                <span>Frigate</span><span>Reolink</span><span>PoE</span><span>Privacy-first</span>
+              </div>
+            </article>
+
+            <article class="uy-project">
+              <div class="uy-project__head">
+                <h3 class="uy-project__title">ForgeTable / ForgeWorks community build</h3>
+                <span class="uy-pill uy-pill--research">Research concept</span>
+              </div>
+              <p class="uy-project__desc">
+                An exploratory framing for a community-build pattern that pairs operator-grade
+                tooling with a local maker-style workshop. Currently a written concept;
+                no public deployment.
+              </p>
+              <div class="uy-project__tags">
+                <span>Community</span><span>Build pattern</span><span>Concept</span>
+              </div>
+            </article>
+
+            <article class="uy-project">
+              <div class="uy-project__head">
+                <h3 class="uy-project__title">AI call center for apartment complexes</h3>
+                <span class="uy-pill uy-pill--research">Research concept</span>
+              </div>
+              <p class="uy-project__desc">
+                An exploratory concept for an AI-assisted intake and triage layer for property
+                management call queues. Captured as a design note, not a deployed system.
+              </p>
+              <div class="uy-project__tags">
+                <span>AI</span><span>Intake</span><span>Property management</span>
+              </div>
+            </article>
+
+            <article class="uy-project">
+              <div class="uy-project__head">
+                <h3 class="uy-project__title">Local opportunity radar (Crenshaw companion)</h3>
+                <span class="uy-pill uy-pill--research">Research concept</span>
+              </div>
+              <p class="uy-project__desc">
+                A locally hosted, manual-first radar for ethically sourced small-business
+                opportunities in Bucks County. Blueprint published in the docs. No scraping,
+                no spam, owner-purgeable.
+              </p>
+              <div class="uy-project__tags">
+                <span>Local-first</span><span>Ethical sourcing</span><span>Bucks County</span>
+              </div>
+            </article>
+
+            <article class="uy-project">
+              <div class="uy-project__head">
+                <h3 class="uy-project__title">Restaurant analytics &amp; operations support</h3>
+                <span class="uy-pill uy-pill--private">Private deployment</span>
+              </div>
+              <p class="uy-project__desc">
+                Reporting and operational visibility work for restaurant environments —
+                visibility into performance, inventory thinking, and practical systems support
+                for daily operations. Originated in earlier portfolio work.
+              </p>
+              <div class="uy-project__tags">
+                <span>Data analysis</span><span>Reporting</span><span>Operations</span>
+              </div>
+            </article>
+
+            <article class="uy-project">
+              <div class="uy-project__head">
+                <h3 class="uy-project__title">Crenshaw — operator-side ops agent</h3>
+                <span class="uy-pill uy-pill--dev">In development</span>
+              </div>
+              <p class="uy-project__desc">
+                Internal AI agent that coordinates build, deploy, and audit work and pings the
+                operator over ntfy at meaningful checkpoints. Workflow documented in
+                <code>docs/CRENSHAW_NTFY_WORKFLOW.md</code>.
+              </p>
+              <div class="uy-project__tags">
+                <span>Agents</span><span>Ops</span><span>ntfy</span><span>Internal</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="uy-cta-strip">
+        <div class="uy-container uy-cta-strip__inner">
+          <div>
+            <h3>Want to talk through a project of your own?</h3>
+            <p>Bring a sketch, a problem, or a half-built thing. We'll figure out the next step.</p>
+          </div>
+          <a class="uy-btn uy-btn--accent uy-btn--lg" href="./contact.html">Request a consult</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="uy-footer" role="contentinfo">
+      <div class="uy-container">
+        <div class="uy-footer__grid">
+          <div class="uy-footer__brand">
+            <h4>Uyammadu Dev Services</h4>
+            <p>Veteran-owned technology services for small businesses, restaurants, and professionals in Bucks County and beyond. Part of the uyammadu.com ecosystem.</p>
+          </div>
+          <div class="uy-footer__col"><h5>Site</h5><ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+          </ul></div>
+          <div class="uy-footer__col"><h5>Specialties</h5><ul>
+            <li><a href="./cameras.html">Camera systems</a></li>
+            <li><a href="./services.html#networking">Networking &amp; IT</a></li>
+            <li><a href="./services.html#ai">AI &amp; automation</a></li>
+            <li><a href="./services.html#restaurant">Restaurant tech</a></li>
+          </ul></div>
+          <div class="uy-footer__col"><h5>Contact</h5><ul>
+            <li><a href="./contact.html">Request a consult</a></li>
+            <li><a href="mailto:bob@uyammadu.com">bob@uyammadu.com</a></li>
+            <li><a href="https://github.com/Bobbygkmc" target="_blank" rel="noopener">GitHub</a></li>
+          </ul></div>
+        </div>
+        <div class="uy-footer__bottom">
+          <span class="uy-footer__bottom-meta">© <span class="uy-year">2026</span> Chuk Uyammadu. Bucks County, PA + remote.</span>
+          <div class="uy-footer__bottom-links">
+            <a href="./projects.html">Portfolio</a>
+            <a href="./services.html">Services</a>
+            <a href="mailto:bob@uyammadu.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

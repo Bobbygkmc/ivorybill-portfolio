@@ -1,0 +1,75 @@
+// =============================================================================
+// dev.uyammadu.com — forms + status banner
+// =============================================================================
+
+body.uy-page {
+
+  .uy-form {
+    display: grid;
+    gap: 2rem;
+    background: $uy-surface;
+    padding: 3.2rem;
+    border-radius: $uy-radius-lg;
+    border: 1px solid $uy-line;
+    box-shadow: $uy-shadow-sm;
+
+    @include respond(phone) { padding: 2.4rem; }
+
+    &__row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+      @include respond(phone) { grid-template-columns: 1fr; }
+    }
+    &__field { display: flex; flex-direction: column; gap: 0.7rem; }
+
+    &__label {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: $uy-ink-2;
+      letter-spacing: 0.2px;
+    }
+
+    &__input,
+    &__select,
+    &__textarea {
+      font: inherit;
+      font-size: 1.5rem;
+      color: $uy-ink;
+      padding: 1.3rem 1.4rem;
+      border: 1px solid $uy-line-2;
+      border-radius: $uy-radius-md;
+      background: $uy-surface;
+      transition: border-color 0.15s $uy-ease, box-shadow 0.15s $uy-ease;
+
+      &::placeholder { color: $uy-muted-2; }
+
+      &:hover { border-color: $uy-muted-2; }
+      &:focus {
+        outline: none;
+        border-color: $uy-primary;
+        box-shadow: 0 0 0 4px rgba($uy-primary, 0.12);
+      }
+    }
+    &__textarea { min-height: 14rem; resize: vertical; }
+    &__hint { font-size: 1.3rem; color: $uy-muted-2; }
+
+    &__actions {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 0.8rem;
+    }
+  }
+
+  .uy-status-banner {
+    margin-bottom: 2.4rem;
+    padding: 1.4rem 1.8rem;
+    border-radius: $uy-radius-md;
+    background: rgba($uy-accent, 0.08);
+    border: 1px solid rgba($uy-accent, 0.22);
+    color: darken($uy-accent, 24%);
+    font-size: 1.4rem;
+    line-height: 1.55;
+
+    strong { color: $uy-deep; }
+  }
+}

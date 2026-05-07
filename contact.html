@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Uyammadu Dev Services</title>
+    <meta
+      name="description"
+      content="Request a consult or send a service request to Uyammadu Dev Services. Bucks County, PA and remote."
+    />
+    <meta name="theme-color" content="#0a1f3d" />
+    <link rel="icon" type="image/svg+xml" href="./assets/svg/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="uy-page">
+    <header class="uy-nav" role="banner">
+      <div class="uy-container uy-nav__inner">
+        <a class="uy-nav__brand" href="./index.html" aria-label="Uyammadu home">
+          <span class="uy-nav__brand-mark" aria-hidden="true">U</span>
+          <span class="uy-nav__brand-sub"><span>Uyammadu</span><span>Dev Services</span></span>
+        </a>
+        <nav class="uy-nav__links" aria-label="Primary">
+          <a class="uy-nav__link" href="./index.html">Home</a>
+          <a class="uy-nav__link" href="./services.html">Services</a>
+          <a class="uy-nav__link" href="./pricing.html">Pricing</a>
+          <a class="uy-nav__link" href="./projects.html">Projects</a>
+          <a class="uy-nav__link" href="./cameras.html">Cameras</a>
+          <a class="uy-nav__link uy-nav__link--active" href="./contact.html">Contact</a>
+        </nav>
+        <a class="uy-btn uy-btn--primary uy-nav__cta" href="mailto:bob@uyammadu.com">Email directly</a>
+        <button class="uy-nav__toggle" aria-label="Open menu" aria-controls="uy-mobile-menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+      <div class="uy-nav__mobile" id="uy-mobile-menu">
+        <div class="uy-container">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./cameras.html">Cameras</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+          <a class="uy-btn uy-btn--primary uy-btn--block" href="mailto:bob@uyammadu.com">Email directly</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="uy-pagehead">
+        <div class="uy-container">
+          <div class="uy-pagehead__crumb"><a href="./index.html">Home</a><span>/</span>Contact</div>
+          <h1 class="uy-h1">Tell me what you're trying to do</h1>
+          <p class="uy-lede">
+            Same form whether you've got a thing that needs fixing or a thing you want to
+            build. I'll reply with a few clarifying questions and a written estimate. No
+            pressure, no auto-responders, no upsell engine.
+          </p>
+        </div>
+      </section>
+
+      <section class="uy-section">
+        <div class="uy-container">
+          <div class="uy-split uy-split--narrow">
+            <div>
+              <form class="uy-form" data-uy-form action="#" novalidate>
+                <p class="uy-status-banner" data-uy-form-status>
+                  <strong>Heads up:</strong> this form is front-end ready. Submissions are not
+                  yet wired to a backend, so for time-sensitive requests please email
+                  <a href="mailto:bob@uyammadu.com" style="color:#0062b9;">bob@uyammadu.com</a>
+                  directly while we finish the integration.
+                </p>
+
+                <div class="uy-form__row">
+                  <div class="uy-form__field">
+                    <label class="uy-form__label" for="name">Your name</label>
+                    <input class="uy-form__input" id="name" name="name" type="text" placeholder="Jane Operator" required />
+                  </div>
+                  <div class="uy-form__field">
+                    <label class="uy-form__label" for="business">Business name</label>
+                    <input class="uy-form__input" id="business" name="business" type="text" placeholder="Optional" />
+                  </div>
+                </div>
+
+                <div class="uy-form__row">
+                  <div class="uy-form__field">
+                    <label class="uy-form__label" for="email">Email</label>
+                    <input class="uy-form__input" id="email" name="email" type="email" placeholder="you@example.com" required />
+                  </div>
+                  <div class="uy-form__field">
+                    <label class="uy-form__label" for="phone">Phone (optional)</label>
+                    <input class="uy-form__input" id="phone" name="phone" type="tel" placeholder="(215) 555-0123" />
+                  </div>
+                </div>
+
+                <div class="uy-form__row">
+                  <div class="uy-form__field">
+                    <label class="uy-form__label" for="prefer">Preferred contact</label>
+                    <select class="uy-form__select" id="prefer" name="prefer">
+                      <option>Email</option>
+                      <option>Phone call</option>
+                      <option>Text message</option>
+                      <option>Either is fine</option>
+                    </select>
+                  </div>
+                  <div class="uy-form__field">
+                    <label class="uy-form__label" for="urgency">Urgency</label>
+                    <select class="uy-form__select" id="urgency" name="urgency">
+                      <option>No rush — happy to schedule</option>
+                      <option>Within the week</option>
+                      <option>This week (paid same-day minimum applies)</option>
+                      <option>Emergency / right now</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="uy-form__row">
+                  <div class="uy-form__field">
+                    <label class="uy-form__label" for="category">Service category</label>
+                    <select class="uy-form__select" id="category" name="category">
+                      <option>Not sure yet</option>
+                      <option>Websites &amp; digital presence</option>
+                      <option>AI &amp; automation</option>
+                      <option>Camera &amp; security systems</option>
+                      <option>Networking &amp; IT support</option>
+                      <option>Restaurant technology</option>
+                      <option>Retainer / ongoing support</option>
+                    </select>
+                  </div>
+                  <div class="uy-form__field">
+                    <label class="uy-form__label" for="location">Location (city / ZIP)</label>
+                    <input class="uy-form__input" id="location" name="location" type="text" placeholder="Warrington, PA 18976" />
+                  </div>
+                </div>
+
+                <div class="uy-form__field">
+                  <label class="uy-form__label" for="message">Short project description</label>
+                  <textarea class="uy-form__textarea" id="message" name="message"
+                            placeholder="A few sentences about what's going on. Don't worry about getting the technical details right." required></textarea>
+                  <span class="uy-form__hint">No file uploads here yet. Reply to my first email if you want to send screenshots or photos.</span>
+                </div>
+
+                <div class="uy-form__actions">
+                  <button class="uy-btn uy-btn--primary uy-btn--lg" type="submit">Send request</button>
+                  <a class="uy-btn uy-btn--ghost" href="mailto:bob@uyammadu.com">Or email directly</a>
+                </div>
+              </form>
+            </div>
+
+            <aside>
+              <div class="uy-card" style="margin-bottom:2rem;">
+                <h3 class="uy-card__title">Direct contact</h3>
+                <p class="uy-card__desc">For time-sensitive requests, the form above isn't wired up yet — please use email.</p>
+                <ul class="uy-card__list" style="margin-top:1rem;">
+                  <li><strong>Email:</strong> <a href="mailto:bob@uyammadu.com" style="color:#0062b9;">bob@uyammadu.com</a></li>
+                  <li><strong>Call / text:</strong> placeholder pending public listing</li>
+                  <li><strong>GitHub:</strong> <a href="https://github.com/Bobbygkmc" target="_blank" rel="noopener" style="color:#0062b9;">Bobbygkmc</a></li>
+                </ul>
+              </div>
+              <div class="uy-card">
+                <h3 class="uy-card__title">Service area</h3>
+                <p class="uy-card__desc">
+                  On-site work is typically Bucks County, PA and surrounding regions
+                  (Warrington, Doylestown, Newtown, New Hope, Yardley, Bristol, and the
+                  greater Philadelphia metro). Remote work is available worldwide.
+                </p>
+              </div>
+              <div class="uy-callout uy-mt-2">
+                <h4>What happens next</h4>
+                <p>
+                  You'll get a reply with a few short clarifying questions. If the project
+                  is well-scoped, you'll see a written estimate within one business day.
+                  Anything time-sensitive should go straight to email.
+                </p>
+              </div>
+            </aside>
+          </div>
+
+          <div class="uy-disclaimer uy-mt-4">
+            <strong>Backend integration note (developer-facing).</strong>
+            The form above is intentionally front-end only. To wire it up: point the
+            <code>action</code> attribute at a Formspree, Netlify Forms, Cloudflare Worker,
+            or self-hosted endpoint, and remove the front-end <code>preventDefault</code>
+            in <code>index.js</code>. Spam protection (honeypot or hCaptcha) should be added
+            at the same time. Documented in <code>docs/DEPLOYMENT_NOTES.md</code>.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="uy-footer" role="contentinfo">
+      <div class="uy-container">
+        <div class="uy-footer__grid">
+          <div class="uy-footer__brand">
+            <h4>Uyammadu Dev Services</h4>
+            <p>Veteran-owned technology services for small businesses, restaurants, and professionals in Bucks County and beyond. Part of the uyammadu.com ecosystem.</p>
+          </div>
+          <div class="uy-footer__col"><h5>Site</h5><ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+          </ul></div>
+          <div class="uy-footer__col"><h5>Specialties</h5><ul>
+            <li><a href="./cameras.html">Camera systems</a></li>
+            <li><a href="./services.html#networking">Networking &amp; IT</a></li>
+            <li><a href="./services.html#ai">AI &amp; automation</a></li>
+            <li><a href="./services.html#restaurant">Restaurant tech</a></li>
+          </ul></div>
+          <div class="uy-footer__col"><h5>Contact</h5><ul>
+            <li><a href="./contact.html">Request a consult</a></li>
+            <li><a href="mailto:bob@uyammadu.com">bob@uyammadu.com</a></li>
+            <li><a href="https://github.com/Bobbygkmc" target="_blank" rel="noopener">GitHub</a></li>
+          </ul></div>
+        </div>
+        <div class="uy-footer__bottom">
+          <span class="uy-footer__bottom-meta">© <span class="uy-year">2026</span> Chuk Uyammadu. Bucks County, PA + remote.</span>
+          <div class="uy-footer__bottom-links">
+            <a href="./projects.html">Portfolio</a>
+            <a href="./services.html">Services</a>
+            <a href="mailto:bob@uyammadu.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

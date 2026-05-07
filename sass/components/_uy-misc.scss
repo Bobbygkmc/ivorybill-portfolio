@@ -1,0 +1,67 @@
+// =============================================================================
+// dev.uyammadu.com — divider, prose, feature-list, utility helpers
+// =============================================================================
+
+body.uy-page {
+
+  .uy-divider {
+    height: 1px;
+    background: $uy-line;
+    margin: 6rem 0;
+  }
+
+  .uy-prose {
+    h2 { margin-top: 4rem; }
+    h3 { margin-top: 3rem; }
+    p { margin-bottom: 1.4rem; }
+    ul { padding-left: 2rem; margin-bottom: 1.6rem;
+      li { font-size: 1.6rem; color: $uy-ink-2; line-height: 1.7; margin-bottom: 0.6rem; } }
+    code {
+      font-family: $uy-font-mono;
+      background: $uy-surface-3;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.92em;
+    }
+  }
+
+  // Camera page-specific layout helpers
+  .uy-feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem 3rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include respond(phone) { grid-template-columns: 1fr; }
+
+    li {
+      display: grid;
+      grid-template-columns: 2.4rem 1fr;
+      gap: 1.2rem;
+      align-items: start;
+      font-size: 1.5rem;
+      color: $uy-ink-2;
+      line-height: 1.55;
+
+      &::before {
+        content: '';
+        margin-top: 0.8rem;
+        width: 1.6rem;
+        height: 0.2rem;
+        background: $uy-primary;
+        border-radius: 1px;
+      }
+    }
+  }
+
+  // Utility helpers
+  .uy-text-center { text-align: center; }
+  .uy-mt-0 { margin-top: 0; }
+  .uy-mt-2 { margin-top: 2rem; }
+  .uy-mt-4 { margin-top: 4rem; }
+  .uy-mb-0 { margin-bottom: 0; }
+  .uy-mb-2 { margin-bottom: 2rem; }
+  .uy-mb-4 { margin-bottom: 4rem; }
+}

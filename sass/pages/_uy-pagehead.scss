@@ -1,0 +1,26 @@
+// =============================================================================
+// dev.uyammadu.com — sub-page hero
+// =============================================================================
+
+body.uy-page {
+
+  .uy-pagehead {
+    padding: 8rem 0 5rem;
+    background:
+      radial-gradient(40rem 30rem at 5% -10%, rgba($uy-primary, 0.16), transparent 60%),
+      $uy-surface;
+    border-bottom: 1px solid $uy-line;
+
+    @include respond(phone) { padding: 5rem 0 3rem; }
+
+    &__crumb {
+      font-family: $uy-font-mono;
+      font-size: 1.3rem;
+      color: $uy-muted-2;
+      letter-spacing: 0.4px;
+      margin-bottom: 1.6rem;
+      a { color: $uy-muted; text-decoration: none; &:hover { color: $uy-primary; } }
+      span { margin: 0 0.6rem; }
+    }
+  }
+}

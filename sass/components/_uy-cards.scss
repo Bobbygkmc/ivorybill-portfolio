@@ -1,0 +1,156 @@
+// =============================================================================
+// dev.uyammadu.com — service grid + cards, project grid + cards
+// =============================================================================
+
+body.uy-page {
+
+  // ---- Service grid (cards) --------------------------------------------------
+
+  .uy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+
+    @include respond(tab-port) { grid-template-columns: repeat(2, 1fr); }
+    @include respond(phone)    { grid-template-columns: 1fr; gap: 1.8rem; }
+
+    &--2 { grid-template-columns: repeat(2, 1fr); @include respond(phone) { grid-template-columns: 1fr; } }
+    &--4 {
+      grid-template-columns: repeat(4, 1fr);
+      @include respond(tab-land) { grid-template-columns: repeat(2, 1fr); }
+      @include respond(phone)    { grid-template-columns: 1fr; }
+    }
+  }
+
+  .uy-card {
+    background: $uy-surface;
+    border: 1px solid $uy-line;
+    border-radius: $uy-radius-lg;
+    padding: 2.8rem;
+    transition: transform 0.2s $uy-ease,
+                box-shadow 0.2s $uy-ease,
+                border-color 0.2s $uy-ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $uy-shadow-md;
+      border-color: $uy-line-2;
+    }
+
+    &__icon {
+      width: 4.4rem;
+      height: 4.4rem;
+      border-radius: $uy-radius-md;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba($uy-primary, 0.08);
+      color: $uy-primary;
+      margin-bottom: 0.4rem;
+
+      svg { width: 2.4rem; height: 2.4rem; }
+    }
+    &__title { font-size: 1.9rem; font-weight: 700; color: $uy-deep; margin: 0; }
+    &__desc { font-size: 1.5rem; color: $uy-muted; line-height: 1.6; margin: 0; }
+    &__list {
+      list-style: none; padding: 0; margin: 0.6rem 0 0;
+      li {
+        font-size: 1.4rem;
+        color: $uy-ink-2;
+        padding: 0.4rem 0 0.4rem 1.8rem;
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0; top: 1.1rem;
+          width: 0.6rem; height: 0.6rem;
+          border-radius: 50%;
+          background: $uy-accent;
+        }
+      }
+    }
+    &__link {
+      margin-top: auto;
+      padding-top: 1rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $uy-primary;
+      text-decoration: none;
+      display: inline-flex;
+      gap: 0.6rem;
+      align-items: center;
+
+      &:hover { gap: 1rem; }
+    }
+
+    // Variant: dark card on dark sections
+    &--dark {
+      background: rgba(#fff, 0.04);
+      border-color: rgba(#fff, 0.08);
+      .uy-card__title { color: #fff; }
+      .uy-card__desc  { color: rgba(#fff, 0.75); }
+      .uy-card__list li { color: rgba(#fff, 0.85); }
+      .uy-card__icon  { background: rgba($uy-accent, 0.16); color: $uy-accent; }
+      &:hover { border-color: rgba(#fff, 0.16); }
+    }
+
+    // Variant: feature card with eyebrow + larger
+    &--feature {
+      padding: 3.2rem;
+    }
+  }
+
+  // ---- Project cards ---------------------------------------------------------
+
+  .uy-projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+    @include respond(tab-port) { grid-template-columns: 1fr; }
+  }
+
+  .uy-project {
+    background: $uy-surface;
+    border: 1px solid $uy-line;
+    border-radius: $uy-radius-lg;
+    padding: 2.8rem;
+    transition: transform 0.2s $uy-ease,
+                box-shadow 0.2s $uy-ease,
+                border-color 0.2s $uy-ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $uy-shadow-md;
+      border-color: $uy-line-2;
+    }
+
+    &__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    &__title { font-size: 2rem; font-weight: 700; color: $uy-deep; margin: 0; }
+    &__desc  { font-size: 1.5rem; color: $uy-muted; line-height: 1.65; margin: 0 0 1.6rem; }
+
+    &__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.6rem;
+
+      span {
+        font-size: 1.2rem;
+        font-family: $uy-font-mono;
+        color: $uy-muted;
+        background: $uy-surface-3;
+        padding: 0.3rem 0.9rem;
+        border-radius: $uy-radius-sm;
+      }
+    }
+  }
+}

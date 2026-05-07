@@ -1,0 +1,56 @@
+// =============================================================================
+// dev.uyammadu.com — process steps + CTA strip
+// =============================================================================
+
+body.uy-page {
+
+  // ---- Process steps ---------------------------------------------------------
+
+  .uy-steps {
+    counter-reset: uy-step;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    @include respond(tab-land) { grid-template-columns: repeat(2, 1fr); }
+    @include respond(phone)    { grid-template-columns: 1fr; }
+  }
+  .uy-step {
+    counter-increment: uy-step;
+    border-top: 2px solid $uy-line;
+    padding-top: 2rem;
+    position: relative;
+
+    &::before {
+      content: counter(uy-step, decimal-leading-zero);
+      font-family: $uy-font-mono;
+      font-size: 1.3rem;
+      color: $uy-primary;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    h4 { margin: 0.6rem 0 0.6rem; }
+    p  { font-size: 1.4rem; color: $uy-muted; line-height: 1.55; margin: 0; }
+  }
+
+  // ---- CTA strip -------------------------------------------------------------
+
+  .uy-cta-strip {
+    margin: 0;
+    padding: 6rem 0;
+    background:
+      radial-gradient(40rem 30rem at 80% 0%, rgba($uy-accent, 0.18), transparent 60%),
+      linear-gradient(135deg, $uy-deep, lighten($uy-deep, 6%));
+    color: #fff;
+
+    &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    h3 { color: #fff; margin: 0; font-size: 2.6rem; font-weight: 700; letter-spacing: -0.01em; }
+    p  { color: rgba(#fff, 0.7); margin: 0.4rem 0 0; font-size: 1.55rem; }
+  }
+}

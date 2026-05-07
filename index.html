@@ -3,390 +3,432 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chukwuemelie Uyammadu | Data Analyst Portfolio</title>
+    <title>Uyammadu — AI, Web, Cameras &amp; Business Technology Systems</title>
     <meta
       name="description"
-      content="Portfolio of Chukwuemelie Uyammadu — Data Analyst, Web Designer, Cybersecurity Analyst, and Business Systems Builder focused on practical solutions for small businesses."
+      content="Veteran-owned technology services for small businesses, restaurants, and professionals in Bucks County and beyond. AI systems, websites, camera and security setup, networking, and restaurant technology by Chuk Uyammadu."
     />
+    <meta name="theme-color" content="#0a1f3d" />
+    <meta property="og:title" content="Uyammadu — Business Technology Systems Built for Real-World Operators" />
+    <meta property="og:description" content="AI, websites, cameras, networking, and restaurant tech for small businesses in Bucks County, PA and beyond." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dev.uyammadu.com/" />
 
-    <link rel="icon" href="./assets/png/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="./assets/svg/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
-    <header class="header">
-      <div class="header__content">
-        <div class="header__logo-container">
-          <div class="header__logo-img-cont">
-            <img
-              src="./assets/jpeg/john-doe.png"
-              alt="Chukwuemelie Uyammadu"
-              class="header__logo-img"
-            />
-          </div>
-          <span class="header__logo-sub">Chukwuemelie Uyammadu</span>
-        </div>
 
-        <div class="header__main">
-          <ul class="header__links">
-            <li class="header__link-wrapper">
-              <a href="./index.html" class="header__link"> Home </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#about" class="header__link">About</a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#projects" class="header__link">Projects</a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#contact" class="header__link">Contact</a>
-            </li>
-          </ul>
+  <body class="uy-page">
+    <a href="#uy-main" class="uy-btn uy-btn--quiet" style="position:absolute;left:-9999px;top:0;">Skip to content</a>
 
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
-          </div>
-        </div>
+    <!-- Top navigation -->
+    <header class="uy-nav" role="banner">
+      <div class="uy-container uy-nav__inner">
+        <a class="uy-nav__brand" href="./index.html" aria-label="Uyammadu home">
+          <span class="uy-nav__brand-mark" aria-hidden="true">U</span>
+          <span class="uy-nav__brand-sub">
+            <span>Uyammadu</span>
+            <span>Dev Services</span>
+          </span>
+        </a>
+        <nav class="uy-nav__links" aria-label="Primary">
+          <a class="uy-nav__link uy-nav__link--active" href="./index.html">Home</a>
+          <a class="uy-nav__link" href="./services.html">Services</a>
+          <a class="uy-nav__link" href="./pricing.html">Pricing</a>
+          <a class="uy-nav__link" href="./projects.html">Projects</a>
+          <a class="uy-nav__link" href="./cameras.html">Cameras</a>
+          <a class="uy-nav__link" href="./contact.html">Contact</a>
+        </nav>
+        <a class="uy-btn uy-btn--primary uy-nav__cta" href="./contact.html">Request a consult</a>
+        <button class="uy-nav__toggle" aria-label="Open menu" aria-controls="uy-mobile-menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+        </button>
       </div>
-
-      <div class="header__sm-menu">
-        <div class="header__sm-menu-content">
-          <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="./index.html"> Home </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#about"> About </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#projects"> Projects </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#contact"> Contact </a>
-            </li>
+      <div class="uy-nav__mobile" id="uy-mobile-menu">
+        <div class="uy-container">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./cameras.html">Cameras</a></li>
+            <li><a href="./contact.html">Contact</a></li>
           </ul>
+          <a class="uy-btn uy-btn--primary uy-btn--block" href="./contact.html">Request a consult</a>
         </div>
       </div>
     </header>
 
-    <section class="home-hero">
-      <div class="home-hero__content">
-        <h1 class="heading-primary">Hey, I'm Chukwuemelie Uyammadu</h1>
-        <div class="home-hero__info">
-          <p class="text-primary">
-            Data Analyst, Web Designer, Cybersecurity Analyst, and Business
-            Systems Builder focused on practical technology solutions for small
-            businesses, operations, and digital growth.
-          </p>
-        </div>
-        <div class="home-hero__cta">
-          <a href="./index.html#projects" class="btn btn--bg">Projects</a>
-        </div>
-      </div>
-
-      <div class="home-hero__socials">
-        <div class="home-hero__social">
-          <a href="https://github.com/Bobbygkmc" class="home-hero__social-icon-link" target="_blank" rel="noopener">
-            <img
-              src="./assets/png/github-ico.png"
-              alt="GitHub"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="mailto:chuk.uyammadu@gmail.com" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/mail-ico.png"
-              alt="Email"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-      </div>
-
-      <div class="home-hero__mouse-scroll-cont">
-        <div class="mouse"></div>
-      </div>
-    </section>
-
-    <section id="about" class="about sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">About Me</span>
-          <span class="heading-sec__sub">
-            I build practical solutions that help businesses make better
-            decisions, improve operations, strengthen their digital presence,
-            and use technology more effectively.
-          </span>
-        </h2>
-
-        <div class="about__content">
-          <div class="about__content-main">
-            <h3 class="about__content-title">Get to know me</h3>
-
-            <div class="about__content-details">
-              <p class="about__content-details-para">
-                I'm a <strong>Data Analyst</strong> with experience across
-                reporting, operations support, process improvement, technical
-                troubleshooting, and business systems. I enjoy working on
-                projects that transform raw information into decisions and turn
-                technology into something practical for real-world use.
-              </p>
-
-              <p class="about__content-details-para">
-                My background also includes <strong>web design</strong>,
-                <strong>IT support</strong>, and
-                <strong>cybersecurity-focused problem solving</strong>. I build
-                and refine systems that help small businesses improve
-                visibility, reliability, efficiency, and customer experience.
-              </p>
-
-              <p class="about__content-details-para">
-                I am especially interested in work involving data analysis,
-                websites for local businesses, automation, Raspberry Pi-based
-                systems, operational reporting, and technology improvements that
-                create measurable business value.
-              </p>
+    <main id="uy-main">
+      <!-- Hero -->
+      <section class="uy-hero">
+        <div class="uy-container uy-hero__inner">
+          <div class="uy-hero__copy">
+            <span class="uy-eyebrow">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>
+              </svg>
+              Bucks County, PA &amp; remote — veteran-owned
+            </span>
+            <h1 class="uy-h1">
+              AI, Web, Security &amp; Business Technology Systems Built for Real-World Operators.
+            </h1>
+            <p class="uy-lede">
+              I build practical technology for small businesses, restaurants, and professionals.
+              Websites, AI workflows, camera and network systems, and the boring infrastructure
+              that keeps the lights on. Honest scope, owner-friendly handoffs, no buzzword theater.
+            </p>
+            <div class="uy-hero__cta-row">
+              <a class="uy-btn uy-btn--primary uy-btn--lg" href="./services.html">
+                View services
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a class="uy-btn uy-btn--ghost uy-btn--lg" href="./projects.html">View projects</a>
+              <a class="uy-btn uy-btn--quiet" href="./contact.html">Request a consult →</a>
             </div>
+            <div class="uy-hero__meta">
+              <div class="uy-hero__meta-item">
+                <span class="uy-hero__meta-item-num">5</span>
+                <span class="uy-hero__meta-item-label">Service practices</span>
+              </div>
+              <div class="uy-hero__meta-item">
+                <span class="uy-hero__meta-item-num">Local + remote</span>
+                <span class="uy-hero__meta-item-label">Bucks County base</span>
+              </div>
+              <div class="uy-hero__meta-item">
+                <span class="uy-hero__meta-item-num">Operator-first</span>
+                <span class="uy-hero__meta-item-label">Honest scope &amp; handoff</span>
+              </div>
+            </div>
+          </div>
 
-            <a href="./index.html#contact" class="btn btn--med btn--theme dynamicBgClr">
-              Contact
+          <div class="uy-hero__visual" aria-hidden="true">
+            <div class="uy-codecard">
+              <div class="uy-codecard__head">
+                <span class="uy-codecard__head-dot uy-codecard__head-dot--r"></span>
+                <span class="uy-codecard__head-dot uy-codecard__head-dot--y"></span>
+                <span class="uy-codecard__head-dot uy-codecard__head-dot--g"></span>
+                <span class="uy-codecard__head-title">~/uyammadu/intake.sh</span>
+              </div>
+              <div class="uy-codecard__body"><span class="uy-codecard__c"># every engagement starts here</span>
+<span class="uy-codecard__k">scope</span>=(
+  <span class="uy-codecard__s">"what does the owner actually need?"</span>
+  <span class="uy-codecard__s">"what works today?"</span>
+  <span class="uy-codecard__s">"what is the simplest path?"</span>
+)
+
+<span class="uy-codecard__k">deliver</span> <span class="uy-codecard__p">--mode</span>=<span class="uy-codecard__s">"plain talk"</span> \
+        <span class="uy-codecard__p">--quote</span>=<span class="uy-codecard__s">"in writing"</span> \
+        <span class="uy-codecard__p">--handoff</span>=<span class="uy-codecard__s">"owner is the admin"</span>
+
+<span class="uy-codecard__c"># done. the owner runs their business.</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services preview -->
+      <section class="uy-section">
+        <div class="uy-container">
+          <div class="uy-section-head">
+            <span class="uy-eyebrow">What I do</span>
+            <h2 class="uy-h2">Five practices, one operator-first approach</h2>
+            <p class="uy-lede">
+              Every engagement is scoped in writing, priced honestly, and handed off in a way
+              that leaves the owner in full control. No vendor lock-in tricks. No mystery boxes.
+            </p>
+          </div>
+
+          <div class="uy-grid">
+            <article class="uy-card">
+              <span class="uy-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>
+              </span>
+              <h3 class="uy-card__title">Websites &amp; digital presence</h3>
+              <p class="uy-card__desc">Landing pages, multi-page sites, WordPress repair, local SEO, and Google Business Profile cleanup. Sites that load fast and show up in search.</p>
+              <a class="uy-card__link" href="./services.html#websites">Explore websites →</a>
+            </article>
+
+            <article class="uy-card">
+              <span class="uy-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>
+              </span>
+              <h3 class="uy-card__title">AI &amp; automation</h3>
+              <p class="uy-card__desc">Reporting workflows, automated business summaries, lightweight dashboards, and AI agent prototypes for specific operator pain points.</p>
+              <a class="uy-card__link" href="./services.html#ai">Explore AI →</a>
+            </article>
+
+            <article class="uy-card">
+              <span class="uy-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg>
+              </span>
+              <h3 class="uy-card__title">Camera &amp; security systems</h3>
+              <p class="uy-card__desc">PoE camera install, Reolink and Frigate setup, retention planning, and full ownership-transfer documentation. Owner stays in control.</p>
+              <a class="uy-card__link" href="./cameras.html">Explore cameras →</a>
+            </article>
+
+            <article class="uy-card">
+              <span class="uy-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="6" rx="1"/><rect x="2" y="15" width="20" height="6" rx="1"/><path d="M6 6h.01M6 18h.01"/></svg>
+              </span>
+              <h3 class="uy-card__title">Networking &amp; IT support</h3>
+              <p class="uy-card__desc">Wi-Fi troubleshooting, switch and router setup, POS and printer help, Raspberry Pi systems, and the day-to-day "fix the thing" tier.</p>
+              <a class="uy-card__link" href="./services.html#networking">Explore IT →</a>
+            </article>
+
+            <article class="uy-card">
+              <span class="uy-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8a4 4 0 008 0V2M10 2v6M18 2v8a4 4 0 01-2 3.5V22"/></svg>
+              </span>
+              <h3 class="uy-card__title">Restaurant technology</h3>
+              <p class="uy-card__desc">Toast and other POS support, menu digitization, online ordering integration, sales dashboards, and operator handoff documentation.</p>
+              <a class="uy-card__link" href="./services.html#restaurant">Explore restaurant tech →</a>
+            </article>
+
+            <article class="uy-card">
+              <span class="uy-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+              </span>
+              <h3 class="uy-card__title">Retainers &amp; ongoing support</h3>
+              <p class="uy-card__desc">For owners who want a steady technology partner. A defined block of monthly hours, priority response, and proactive system checks.</p>
+              <a class="uy-card__link" href="./pricing.html#retainers">See retainers →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="uy-section uy-section--alt">
+        <div class="uy-container">
+          <div class="uy-section-head">
+            <span class="uy-eyebrow">How engagements run</span>
+            <h2 class="uy-h2">Honest scope, in writing, before any hardware ships</h2>
+          </div>
+
+          <div class="uy-steps">
+            <div class="uy-step">
+              <h4>Discovery</h4>
+              <p>Short call or visit. We talk through what you actually need vs. what feels urgent. No invoice attached to this conversation.</p>
+            </div>
+            <div class="uy-step">
+              <h4>Proposal</h4>
+              <p>Written estimate with hardware, software, and labor itemized. Not a binding quote until you sign — but tighter than the catalog ranges.</p>
+            </div>
+            <div class="uy-step">
+              <h4>Delivery</h4>
+              <p>Work performed remotely or on-site. You get visibility while it's happening, not just at the end.</p>
+            </div>
+            <div class="uy-step">
+              <h4>Handoff</h4>
+              <p>Credentials transferred to you. Written documentation. Short walkthrough. Optional retainer for ongoing support.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured projects -->
+      <section class="uy-section">
+        <div class="uy-container">
+          <div class="uy-section-head">
+            <span class="uy-eyebrow">Selected work</span>
+            <h2 class="uy-h2">Live deployments and prototypes</h2>
+            <p class="uy-lede">
+              A representative slice of recent and ongoing work. Statuses are honest:
+              <code>Live</code>, <code>Prototype</code>, <code>In Development</code>,
+              <code>Private Deployment</code>, <code>Research Concept</code>.
+            </p>
+          </div>
+
+          <div class="uy-projects">
+            <article class="uy-project">
+              <div class="uy-project__head">
+                <h3 class="uy-project__title">Orion — agentic business intelligence</h3>
+                <span class="uy-pill uy-pill--proto">Prototype</span>
+              </div>
+              <p class="uy-project__desc">
+                An AI agent that reads operator data and produces a daily plain-English business
+                summary. Currently a working prototype against synthetic restaurant POS data.
+              </p>
+              <div class="uy-project__tags">
+                <span>Agents</span><span>Reporting</span><span>Restaurants</span><span>Local-first</span>
+              </div>
+            </article>
+
+            <article class="uy-project">
+              <div class="uy-project__head">
+                <h3 class="uy-project__title">Peppino's — restaurant technology stack</h3>
+                <span class="uy-pill uy-pill--private">Private deployment</span>
+              </div>
+              <p class="uy-project__desc">
+                POS integration support, menu and ordering flow review, network and printer
+                troubleshooting, and reporting visibility for a Bucks County restaurant.
+              </p>
+              <div class="uy-project__tags">
+                <span>Toast POS</span><span>Networking</span><span>Reporting</span>
+              </div>
+            </article>
+
+            <article class="uy-project">
+              <div class="uy-project__head">
+                <h3 class="uy-project__title">Frigate &amp; Reolink camera lab</h3>
+                <span class="uy-pill uy-pill--dev">In development</span>
+              </div>
+              <p class="uy-project__desc">
+                A reference install pattern for small-business camera systems on owner-controlled
+                hardware. Documented retention, remote access, and ownership-transfer playbook.
+              </p>
+              <div class="uy-project__tags">
+                <span>Frigate</span><span>Reolink</span><span>PoE</span><span>Privacy-first</span>
+              </div>
+            </article>
+
+            <article class="uy-project">
+              <div class="uy-project__head">
+                <h3 class="uy-project__title">Local opportunity radar</h3>
+                <span class="uy-pill uy-pill--research">Research concept</span>
+              </div>
+              <p class="uy-project__desc">
+                A locally hosted, manual-first radar for ethically sourced small-business
+                opportunities in Bucks County. Blueprint published; no code shipped yet.
+              </p>
+              <div class="uy-project__tags">
+                <span>Local-first</span><span>Ethical sourcing</span><span>Bucks County</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="uy-text-center uy-mt-4">
+            <a class="uy-btn uy-btn--ghost" href="./projects.html">See the full project list →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ecosystem -->
+      <section class="uy-section uy-section--dark">
+        <div class="uy-container">
+          <div class="uy-section-head">
+            <span class="uy-eyebrow" style="background:rgba(0,180,216,0.14);color:#00b4d8;">The umbrella</span>
+            <h2 class="uy-h2" style="color:#fff;">uyammadu.com is a small ecosystem, not a single page</h2>
+            <p class="uy-lede" style="color:rgba(255,255,255,0.75);">
+              dev.uyammadu.com is the dependable, business-facing surface. Other sibling
+              subdomains carry the more experimental work. Everything stays under one roof,
+              with one operator behind it.
+            </p>
+          </div>
+
+          <div class="uy-eco">
+            <a class="uy-eco-card" href="./index.html">
+              <span class="uy-eco-card__name">dev.uyammadu.com</span>
+              <span class="uy-eco-card__title">Dev services</span>
+              <span class="uy-eco-card__desc">Public-facing freelance and business technology services. This site.</span>
+              <span class="uy-eco-card__status">Live</span>
             </a>
-          </div>
-
-          <div class="about__content-skills">
-            <h3 class="about__content-title">My Skills</h3>
-
-            <div class="skills">
-              <div class="skills__skill">Data Analysis</div>
-              <div class="skills__skill">Reporting</div>
-              <div class="skills__skill">Business Systems</div>
-              <div class="skills__skill">Process Improvement</div>
-              <div class="skills__skill">IT Support</div>
-              <div class="skills__skill">Troubleshooting</div>
-              <div class="skills__skill">Web Design</div>
-              <div class="skills__skill">Cybersecurity</div>
-              <div class="skills__skill">Raspberry Pi</div>
-              <div class="skills__skill">Automation</div>
-              <div class="skills__skill">System Setup</div>
-              <div class="skills__skill">Operations Support</div>
+            <div class="uy-eco-card">
+              <span class="uy-eco-card__name">uyammadu.com</span>
+              <span class="uy-eco-card__title">Umbrella home</span>
+              <span class="uy-eco-card__desc">The long-form home base — portfolio, writing, and ecosystem map.</span>
+              <span class="uy-eco-card__status">Coming soon</span>
+            </div>
+            <div class="uy-eco-card">
+              <span class="uy-eco-card__name">agents.uyammadu.com</span>
+              <span class="uy-eco-card__title">AI agents</span>
+              <span class="uy-eco-card__desc">Operator-facing agents and assistants. Crenshaw and friends.</span>
+              <span class="uy-eco-card__status">In development</span>
+            </div>
+            <div class="uy-eco-card">
+              <span class="uy-eco-card__name">lab.uyammadu.com</span>
+              <span class="uy-eco-card__title">Lab</span>
+              <span class="uy-eco-card__desc">Experiments, prototypes, and short-lived research projects.</span>
+              <span class="uy-eco-card__status">Planned</span>
+            </div>
+            <div class="uy-eco-card">
+              <span class="uy-eco-card__name">writing.uyammadu.com</span>
+              <span class="uy-eco-card__title">Writing</span>
+              <span class="uy-eco-card__desc">Notes on operator-grade technology, AI, and small business systems.</span>
+              <span class="uy-eco-card__status">Planned</span>
+            </div>
+            <div class="uy-eco-card">
+              <span class="uy-eco-card__name">ventures.uyammadu.com</span>
+              <span class="uy-eco-card__title">Ventures</span>
+              <span class="uy-eco-card__desc">Side businesses and operator-focused product experiments.</span>
+              <span class="uy-eco-card__status">Planned</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="projects" class="projects sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-bg">
-          <span class="heading-sec__main">Projects</span>
-          <span class="heading-sec__sub">
-            A selection of business-focused technology, analytics, and web
-            projects that reflect the kind of work I want to continue building.
-          </span>
-        </h2>
-
-        <div class="projects__content">
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/project-mockup-example.jpeg"
-                alt="Restaurant Analytics and Operations Support"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">
-                Restaurant Analytics & Operations Support
-              </h3>
-              <p class="projects__row-content-desc">
-                Built and planned reporting, workflow, and operational
-                improvement ideas for restaurant environments, including better
-                visibility into performance, inventory thinking, and practical
-                systems support for daily operations.
-              </p>
-              <a
-                href="./project-1.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_self"
-              >
-                Case Study
-              </a>
-            </div>
+      <!-- CTA strip -->
+      <section class="uy-cta-strip">
+        <div class="uy-container uy-cta-strip__inner">
+          <div>
+            <h3>Have a thing that needs fixing — or a thing that needs building?</h3>
+            <p>Same form for both. No pressure on either.</p>
           </div>
-
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/project-mockup-example.jpeg"
-                alt="Business Website and Web Design Projects"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">
-                Business Website & Web Design Projects
-              </h3>
-              <p class="projects__row-content-desc">
-                Designed and refined websites for businesses and brands with a
-                focus on clean structure, usability, professional presentation,
-                and stronger online visibility.
-              </p>
-              <a
-                href="./project-2.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_self"
-              >
-                Case Study
-              </a>
-            </div>
-          </div>
-
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/project-mockup-example.jpeg"
-                alt="Automation and Document Workflow Concepts"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">
-                Automation & Document Workflow Concepts
-              </h3>
-              <p class="projects__row-content-desc">
-                Explored systems for invoice organization, workflow improvement,
-                file handling, and reducing manual effort through lightweight
-                automation and structured business processes.
-              </p>
-              <a
-                href="./project-3.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_self"
-              >
-                Case Study
-              </a>
-            </div>
-          </div>
-
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/project-mockup-example.jpeg"
-                alt="Raspberry Pi and Small System Deployments"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">
-                Raspberry Pi & Small System Deployments
-              </h3>
-              <p class="projects__row-content-desc">
-                Built and planned lightweight hosting, device-based solutions,
-                and custom small-business technology deployments using Raspberry
-                Pi systems and practical infrastructure tools.
-              </p>
-              <a
-                href="./project-1.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_self"
-              >
-                View More
-              </a>
-            </div>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a class="uy-btn uy-btn--accent uy-btn--lg" href="./contact.html">Request a consult</a>
+            <a class="uy-btn uy-btn--ghost uy-btn--lg" href="./pricing.html">See pricing</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section id="contact" class="contact sec-pad dynamicBg">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
-          <span class="heading-sec__sub heading-sec__sub--lt">
-            I’m open to opportunities involving data analysis, business systems,
-            web design, IT support, and cybersecurity-focused problem solving.
-          </span>
-        </h2>
-
-        <div class="contact__form-container">
-          <div style="color: #fff; text-align: center; font-size: 1.8rem; line-height: 1.8;">
-            <p><strong>Email:</strong> chuk.uyammadu@gmail.com</p>
+    <!-- Footer -->
+    <footer class="uy-footer" role="contentinfo">
+      <div class="uy-container">
+        <div class="uy-footer__grid">
+          <div class="uy-footer__brand">
+            <h4>Uyammadu Dev Services</h4>
             <p>
-              <strong>GitHub:</strong>
-              <a
-                href="https://github.com/Bobbygkmc"
-                target="_blank"
-                rel="noopener"
-                style="color: #fff; text-decoration: underline;"
-              >
-                github.com/Bobbygkmc
-              </a>
+              Veteran-owned technology services for small businesses, restaurants, and
+              professionals in Bucks County and beyond. Part of the uyammadu.com ecosystem.
             </p>
-            <p>
-              <strong>Focus Areas:</strong> Data Analysis, Web Design,
-              Cybersecurity Analysis, IT Support, Business Systems
-            </p>
+          </div>
+          <div class="uy-footer__col">
+            <h5>Site</h5>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./services.html">Services</a></li>
+              <li><a href="./pricing.html">Pricing</a></li>
+              <li><a href="./projects.html">Projects</a></li>
+            </ul>
+          </div>
+          <div class="uy-footer__col">
+            <h5>Specialties</h5>
+            <ul>
+              <li><a href="./cameras.html">Camera systems</a></li>
+              <li><a href="./services.html#networking">Networking &amp; IT</a></li>
+              <li><a href="./services.html#ai">AI &amp; automation</a></li>
+              <li><a href="./services.html#restaurant">Restaurant tech</a></li>
+            </ul>
+          </div>
+          <div class="uy-footer__col">
+            <h5>Contact</h5>
+            <ul>
+              <li><a href="./contact.html">Request a consult</a></li>
+              <li><a href="mailto:bob@uyammadu.com">bob@uyammadu.com</a></li>
+              <li><a href="https://github.com/Bobbygkmc" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
-
-    <footer class="main-footer">
-      <div class="main-container">
-        <div class="main-footer__upper">
-          <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Social</span>
-            </h2>
-
-            <div class="main-footer__social-cont">
-              <a target="_blank" rel="noopener" href="https://github.com/Bobbygkmc">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/github-ico.png"
-                  alt="GitHub"
-                />
-              </a>
-
-              <a href="mailto:chuk.uyammadu@gmail.com">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/mail-ico.png"
-                  alt="Email"
-                />
-              </a>
-            </div>
+        <div class="uy-footer__bottom">
+          <span class="uy-footer__bottom-meta">
+            © <span class="uy-year">2026</span> Chuk Uyammadu. Bucks County, PA + remote.
+          </span>
+          <div class="uy-footer__bottom-links">
+            <a href="./projects.html">Portfolio</a>
+            <a href="./services.html">Services</a>
+            <a href="mailto:bob@uyammadu.com">Email</a>
           </div>
-
-          <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt">Chukwuemelie Uyammadu</h4>
-            <p class="main-footer__short-desc">
-              Data Analyst, Web Designer, Cybersecurity Analyst, and Business
-              Systems Builder focused on practical solutions that improve
-              operations, visibility, and business performance.
-            </p>
-          </div>
-        </div>
-
-        <div class="main-footer__lower">
-          &copy; 2026 Chukwuemelie Uyammadu. All rights reserved.
         </div>
       </div>
     </footer>

@@ -1,0 +1,125 @@
+// =============================================================================
+// dev.uyammadu.com — top navigation
+// =============================================================================
+
+body.uy-page {
+
+  .uy-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid rgba($uy-deep, 0.06);
+
+    &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 0;
+    }
+
+    &__brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      font-weight: 700;
+      color: $uy-deep;
+      text-decoration: none;
+      font-size: 1.6rem;
+      letter-spacing: -0.01em;
+
+      &-mark {
+        width: 3.4rem;
+        height: 3.4rem;
+        border-radius: 9px;
+        background: linear-gradient(135deg, $uy-deep, $uy-primary);
+        color: #fff;
+        font-weight: 800;
+        font-size: 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: $uy-shadow-md;
+        letter-spacing: -0.02em;
+      }
+      &-sub {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
+        gap: 0.2rem;
+        span:last-child {
+          font-size: 1.1rem;
+          font-weight: 500;
+          color: $uy-muted-2;
+          letter-spacing: 0.6px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    &__links {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      @include respond(tab-port) { display: none; }
+    }
+
+    &__link {
+      padding: 0.9rem 1.4rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: $uy-ink-2;
+      text-decoration: none;
+      border-radius: $uy-radius-sm;
+      transition: color 0.15s $uy-ease, background 0.15s $uy-ease;
+
+      &:hover { color: $uy-primary; background: rgba($uy-primary, 0.06); }
+      &--active { color: $uy-primary; background: rgba($uy-primary, 0.08); }
+    }
+
+    &__cta {
+      margin-left: 1rem;
+      @include respond(tab-port) { display: none; }
+    }
+
+    &__toggle {
+      display: none;
+      width: 4.4rem; height: 4.4rem;
+      align-items: center; justify-content: center;
+      background: transparent; border: 1px solid $uy-line;
+      border-radius: $uy-radius-sm; cursor: pointer;
+
+      svg { width: 2rem; height: 2rem; color: $uy-deep; }
+
+      @include respond(tab-port) { display: inline-flex; }
+    }
+
+    &__mobile {
+      display: none;
+      border-top: 1px solid $uy-line;
+      padding: 1rem 0 1.6rem;
+      &--open { display: block; }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      a {
+        display: block;
+        padding: 1.4rem 0.4rem;
+        font-size: 1.6rem;
+        color: $uy-deep;
+        text-decoration: none;
+        border-bottom: 1px solid $uy-line;
+        font-weight: 500;
+        &:hover { color: $uy-primary; }
+      }
+      .uy-btn { margin-top: 1.6rem; }
+    }
+  }
+}

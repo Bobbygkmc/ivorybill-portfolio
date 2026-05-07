@@ -76,6 +76,7 @@ web_modules/
 
 # dotenv environment variables file
 .env
+.env.*
 .env.test
 .env.production
 
@@ -123,3 +124,22 @@ dist
 .pnp.*
 
 # End of https://www.toptal.com/developers/gitignore/api/node
+# AI/editor local tool state
+.DS_Store
+.gemini/
+.kiro/
+.opencode/
+.qoder/
+.roo/
+.trae/
+.windsurf/
+.github/prompts/
+.claude/
+.agent/
+.agents/
+.codebuddy/
+.codex/
+.continue/
+.cursor/
+__pycache__/
+*.pyc

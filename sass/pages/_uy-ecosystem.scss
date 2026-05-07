@@ -1,0 +1,58 @@
+// =============================================================================
+// dev.uyammadu.com — split layouts + ecosystem section (used on home + sub-pages)
+// =============================================================================
+
+body.uy-page {
+
+  // ---- Split / two-column layouts -------------------------------------------
+
+  .uy-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+    @include respond(tab-port) { grid-template-columns: 1fr; gap: 3.5rem; }
+
+    &--narrow { grid-template-columns: 1.2fr 1fr; @include respond(tab-port) { grid-template-columns: 1fr; } }
+  }
+
+  // ---- Ecosystem section -----------------------------------------------------
+
+  .uy-eco {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    @include respond(tab-port) { grid-template-columns: repeat(2, 1fr); }
+    @include respond(phone)    { grid-template-columns: 1fr; }
+  }
+
+  .uy-eco-card {
+    background: rgba(#fff, 0.04);
+    border: 1px solid rgba(#fff, 0.10);
+    border-radius: $uy-radius-md;
+    padding: 2rem;
+    color: rgba(#fff, 0.85);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: transform 0.18s $uy-ease, border-color 0.18s $uy-ease;
+
+    &:hover { transform: translateY(-2px); border-color: rgba(#fff, 0.22); }
+
+    &__name {
+      font-family: $uy-font-mono;
+      font-size: 1.3rem;
+      color: $uy-accent;
+      letter-spacing: 0.5px;
+    }
+    &__title { font-size: 1.7rem; font-weight: 700; color: #fff; }
+    &__desc  { font-size: 1.4rem; color: rgba(#fff, 0.7); line-height: 1.55; }
+    &__status {
+      margin-top: 0.6rem;
+      font-size: 1.15rem;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: rgba(#fff, 0.5);
+    }
+  }
+}
