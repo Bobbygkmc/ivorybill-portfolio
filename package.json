@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sass sass/main.scss css/style.css --style=compressed --no-source-map",
+    "clean": "rm -rf dist",
+    "build:css": "sass sass/main.scss css/style.css --style=compressed --no-source-map",
+    "build:static": "mkdir -p dist && cp -R *.html css assets index.js dist/",
+    "build": "npm run clean && npm run build:css && npm run build:static",
     "dev": "sass sass/main.scss css/style.css --watch --no-source-map",
-    "preview": "python3 -m http.server 4173 --bind 0.0.0.0"
+    "preview": "python3 -m http.server 4173 --bind 0.0.0.0 --directory dist"
   },
   "author": "",
   "license": "GPL-3.0",

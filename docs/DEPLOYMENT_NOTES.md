@@ -13,17 +13,19 @@ behind it.
 npm install
 
 # Watch SASS during local development (compiles on save)
-npm run compile:scss
+npm run dev
 
-# Production build — vendor-prefix and minify css/style.css in place
+# Production build — compile CSS and copy deployable files to dist/
 npm run build
 ```
 
 The compiled CSS lives at `css/style.css`. SASS sources live in
 `sass/` (7-1 pattern). Edit SASS, never the compiled CSS.
 
-The build does not produce a separate `dist/` directory. The repo
-root is the publish directory.
+The production build creates a clean `dist/` directory containing only
+static deployable files: HTML, compiled CSS, assets, and `index.js`.
+Do not publish the repository root, because it may contain `node_modules`,
+docs, source Sass, and local tooling state.
 
 ---
 
@@ -32,14 +34,11 @@ root is the publish directory.
 Any static file server works. Two simple options:
 
 ```bash
-# Python
-python3 -m http.server 8080
-
-# Node
-npx serve .
+npm run build
+npm run preview
 ```
 
-Then open `http://localhost:8080`.
+Then open `http://127.0.0.1:4173`.
 
 ---
 
@@ -57,17 +56,26 @@ In rough order of how easy they are to set up.
 ### Cloudflare Pages
 
 - Connect the GitHub repo.
+- Framework preset: **None** / **Static**.
+- Root directory: `/`.
 - Build command: `npm run build`
-- Build output directory: `/`
+- Build output directory: `dist`
+- Deploy command: leave blank. Do **not** use `npx wrangler deploy`
+  for this static Pages site.
 - Add a custom domain: `dev.uyammadu.com`. Cloudflare's DNS makes the
   cutover quick if the apex is already on Cloudflare.
+
+This is a Cloudflare Pages static deploy, not a Cloudflare Worker.
+Do not add `wrangler deploy` or `assets.directory = "."`; that causes
+Wrangler to upload repository files such as `node_modules`, which can
+exceed Worker asset limits.
 
 ### Vercel
 
 - Connect the GitHub repo.
 - Framework preset: **Other**.
 - Build command: `npm run build`
-- Output directory: `./`
+- Output directory: `dist`
 - Add a custom domain: `dev.uyammadu.com`.
 
 ### Self-host on `lo-mein` (advanced)
@@ -101,6 +109,8 @@ hosting provider. Confirm HTTPS issuance after the record propagates.
 ## Pre-deploy checklist
 
 - [ ] `npm run build` succeeds locally with no errors.
+- [ ] `dist/` exists and does not contain `node_modules`.
+- [ ] `find dist -type f -size +20M -print` prints nothing.
 - [ ] `git status` is clean before tagging a release.
 - [ ] No secrets, tokens, or `.env` files are staged.
 - [ ] All page-internal links resolve (no 404s on the static set).

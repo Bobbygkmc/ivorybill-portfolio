@@ -32,3 +32,20 @@ The preview command binds to `0.0.0.0` so it can accept local network and Tailsc
 ```bash
 npm run preview
 ```
+
+`npm run preview` serves the generated `dist/` directory, matching the
+Cloudflare Pages output directory.
+
+## Cloudflare Pages settings
+
+Use Cloudflare Pages static hosting settings:
+
+- Framework preset: **None** / **Static**
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: `/`
+- Deploy command: leave blank
+
+Do **not** use `npx wrangler deploy` for this static site. That is a
+Worker deploy path and can try to upload the whole repository, including
+large dependency binaries under `node_modules`.
