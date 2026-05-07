@@ -33,8 +33,10 @@ The preview command binds to `0.0.0.0` so it can accept local network and Tailsc
 npm run preview
 ```
 
-`npm run preview` serves the generated `dist/` directory, matching the
-Cloudflare Pages output directory.
+`npm run preview` runs `scripts/preview.py`, which serves the generated
+`dist/` directory and maps extensionless URLs like `/contact` to
+`dist/contact.html`. This keeps local preview aligned with Cloudflare
+Pages clean URLs.
 
 ## Cloudflare Pages settings
 

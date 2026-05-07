@@ -33,14 +33,17 @@ docs, source Sass, and local tooling state.
 
 ## Local preview
 
-Any static file server works. Two simple options:
-
 ```bash
 npm run build
 npm run preview
 ```
 
 Then open `http://127.0.0.1:4173`.
+
+`npm run preview` calls `scripts/preview.py`, a local-only static server
+for `dist/`. It maps extensionless routes such as `/services` and
+`/contact` to their generated `.html` files so local preview matches
+Cloudflare Pages clean URLs.
 
 ---
 

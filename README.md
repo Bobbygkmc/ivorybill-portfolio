@@ -35,19 +35,22 @@ that ecosystem.
 npm install
 
 # Watch SASS during local development (compiles to css/style.css on save)
-npm run compile:scss
+npm run dev
 
-# Production build (vendor-prefix + minify css/style.css in place)
+# Production build (compiles CSS and copies deployable files to dist/)
 npm run build
 ```
 
-Then open `index.html` in a browser, or serve the directory:
+Preview the generated `dist/` folder:
 
 ```bash
-python3 -m http.server 8080
-# or
-npx serve .
+npm run preview
 ```
+
+Then open `http://127.0.0.1:4173`. The preview command uses
+`scripts/preview.py`, a small local-only static server that maps clean
+routes like `/contact` to `dist/contact.html` so local preview matches
+Cloudflare Pages' extensionless URLs.
 
 > `css/style.css` is the **compiled output**. Edit SASS sources under
 > `sass/`, never the compiled CSS directly.
