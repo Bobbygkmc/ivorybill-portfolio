@@ -19,21 +19,35 @@ Do not use Bob as a public display name.
 # Watch SASS and compile to CSS during development
 npm run dev
 
-# Production build
+# Production build (clean → compile CSS → copy HTML/JS/assets to dist/)
 npm run build
 
-# Preview dist/ with clean local routes
+# Preview dist/ on http://127.0.0.1:4173 with clean routes
 npm run preview
 ```
 
 > `css/style.css` is the **compiled output** — edit SASS source files, not this file directly.
 
+`npm run preview` runs `scripts/preview.py`, a small local-only static
+server that maps extensionless routes (e.g. `/contact` → `dist/contact.html`)
+so local preview matches Cloudflare Pages' URL behavior. Plain
+`python -m http.server` on `dist/` will 404 on those routes.
+
 ## Architecture
 
-**Pages**: `index.html`, `services.html`, `pricing.html`, `projects.html`,
-`orion.html`, `cameras.html`, and `contact.html`.
+**Pages**: `index.html`, `about.html`, `services.html`, `pricing.html`,
+`projects.html`, `orion.html`, `cameras.html`, and `contact.html`.
+Archived pages live under `archive/` and are not linked from the live
+site, but their SASS partials still compile (don't break them).
 
 **JavaScript** (`index.js`): Only handles hamburger menu toggle and mobile nav close-on-click. No external libraries.
+
+**Contact form** (`functions/api/contact.js`): Cloudflare Pages Function
+that POSTs to Resend. Requires `RESEND_API_KEY` (secret),
+`CONTACT_TO_EMAIL`, and `CONTACT_FROM_EMAIL` (verified Resend sender).
+Returns 503 if any are missing. Honeypot field is `company_website`
+(hidden in the form; if filled, the function returns a fake-success
+200 and sends nothing). Message length is capped at 5000 chars.
 
 **SASS structure** (7-1 pattern, entry point `sass/main.scss`).
 
@@ -79,3 +93,32 @@ pages/
 **Compiler note**: this repo uses Dart Sass through the local `sass`
 package. Run `npm run build:css` or `npm run build`; do not edit
 `css/style.css` directly.
+
+## Working agreement
+
+These rules are baked into how the repo evolves and apply to any
+content edits Claude makes:
+
+- **Update docs first, then mirror to the page.** Each major service
+  area has a canonical doc under `docs/` (e.g. `SERVICE_CATALOG.md`
+  for `services.html`, `PRICING_GUIDE.md` for `pricing.html`,
+  `CAMERA_SYSTEMS_SERVICE_GUIDE.md` for `cameras.html`,
+  `ORION_CASE_STUDY.md` for `orion.html`). The doc is the source of
+  truth — change it before changing the page.
+- **Honest scope.** Don't claim services we don't actually offer. Use
+  the project status pills accurately: `Live`, `Prototype`,
+  `In Development`, `Private deployment`, `Research concept`.
+- **No tracking scripts** without an explicit follow-up decision. No
+  analytics, no third-party JS unless asked.
+- **Static, dependency-light.** Don't add heavy build tooling, JS
+  frameworks, or runtime dependencies without a clear reason.
+- **Preserve `archive/`.** Old work is kept, not deleted. Its SASS
+  partials must keep compiling.
+
+## Deployment
+
+Target: Cloudflare Pages, domain `dev.uyammadu.com`. Build command
+`npm run build`, output dir `dist`. **Do not** run `npx wrangler
+deploy` — this is a Pages deployment, not a Worker deployment.
+`wrangler.toml` exists only to declare `pages_build_output_dir`.
+Full deploy notes: `docs/DEPLOYMENT_NOTES.md`.
