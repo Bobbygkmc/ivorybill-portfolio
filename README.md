@@ -1,7 +1,8 @@
 # dev.uyammadu.com
 
-Public-facing freelance and business technology services site for
-**Chuk Uyammadu**. Part of the broader `uyammadu.com` ecosystem.
+Personal portfolio and public-facing business technology services site
+for **Chukwuemelie "Chuk" Uyammadu**. Part of the broader
+`uyammadu.com` ecosystem.
 
 This is a dependency-light website. Public pages are static HTML, CSS,
 and vanilla JavaScript with a SASS build step. The contact form uses a
@@ -12,8 +13,8 @@ tracking scripts.
 
 ## What this site is
 
-`dev.uyammadu.com` is the dependable, business-facing surface of the
-Uyammadu ecosystem. It covers:
+`dev.uyammadu.com` is the dependable, business-facing surface of
+Chuk's portfolio and the Uyammadu ecosystem. It covers:
 
 - AI systems and automation
 - Local business technology support
@@ -68,6 +69,7 @@ Cloudflare Pages' extensionless URLs.
 ├── services.html       Full service catalog (5 practices)
 ├── pricing.html        Estimated price ranges and timeframes
 ├── projects.html       Portfolio index with honest status pills
+├── orion.html          Orion case study — secure agentic BI prototype
 ├── cameras.html        Camera and security systems detail page
 ├── contact.html        Service request form backed by /api/contact
 │
@@ -123,7 +125,8 @@ sass/
 └── pages/
     ├── _home.scss              legacy
     ├── _project-case-study.scss legacy
-    └── _uy.scss                 NEW design system, scoped to body.uy-page
+    ├── components/uy-*.scss     Current design-system components
+    └── pages/uy-*.scss          Current page-specific design-system partials
 ```
 
 All new pages set `<body class="uy-page">` and use the `uy-*` classes.
@@ -147,6 +150,7 @@ of truth in `docs/`:
 | `docs/SERVICE_CATALOG.md`                    | Source of truth for `services.html`                                     |
 | `docs/PRICING_GUIDE.md`                      | Source of truth for `pricing.html`                                      |
 | `docs/CAMERA_SYSTEMS_SERVICE_GUIDE.md`       | Source of truth for `cameras.html` (scope, retention, handoff)          |
+| `docs/ORION_CASE_STUDY.md`                   | Source of truth for `orion.html` and Orion project cards                |
 | `docs/OPPORTUNITY_RADAR_BLUEPRINT.md`        | Future local lead-radar product blueprint (planning, not built)         |
 | `docs/CRENSHAW_NTFY_WORKFLOW.md`             | How the Crenshaw agent uses ntfy during build / deploy                  |
 | `docs/DEPLOYMENT_NOTES.md`                   | Deploy targets, build commands, rollout / rollback                      |
@@ -209,4 +213,4 @@ A few rules baked into how this repo evolves:
 
 The original Dopefolio template was licensed under GPL-3.0 (see
 `LICENSE`). All new content authored for `dev.uyammadu.com` is owned
-by Chuk Uyammadu.
+by Chukwuemelie "Chuk" Uyammadu.

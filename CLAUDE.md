@@ -4,27 +4,34 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Dopefolio — a static portfolio website for Chukwuemelie Uyammadu. Pure HTML/CSS/JS with a SASS build step. No backend, no framework.
+uyammadu-portfolio — the static `dev.uyammadu.com` personal portfolio
+and dev services site for Chukwuemelie "Chuk" Uyammadu. Public pages
+are HTML/CSS/vanilla JS with a SASS build step. The only server-side
+surface is the Cloudflare Pages Function under `functions/api/contact.js`.
+
+Name rule: use "Chuk Uyammadu" for public display copy. Use
+"Chukwuemelie \"Chuk\" Uyammadu" for formal/about/resume-style context.
+Do not use Bob as a public display name.
 
 ## Commands
 
 ```bash
 # Watch SASS and compile to CSS during development
-npm run compile:scss
+npm run dev
 
-# Production build (vendor-prefix + minify CSS)
+# Production build
 npm run build
 
-# Steps run individually
-npm run prefix:css     # autoprefixer for last 10 browser versions
-npm run compress:css   # minify css/style.css in place
+# Preview dist/ with clean local routes
+npm run preview
 ```
 
 > `css/style.css` is the **compiled output** — edit SASS source files, not this file directly.
 
 ## Architecture
 
-**Pages**: `index.html` (main portfolio) + `project-1.html`, `project-2.html`, `project-3.html` (case study templates).
+**Pages**: `index.html`, `services.html`, `pricing.html`, `projects.html`,
+`orion.html`, `cameras.html`, and `contact.html`.
 
 **JavaScript** (`index.js`): Only handles hamburger menu toggle and mobile nav close-on-click. No external libraries.
 
@@ -59,6 +66,7 @@ pages/
   _home.scss, _project-case-study.scss     (legacy)
   _uy-hero.scss     home hero + .uy-codecard terminal mock
   _uy-ecosystem.scss .uy-split, .uy-eco, .uy-eco-card
+  _uy-case-study.scss portfolio case-study layouts
   _uy-pagehead.scss sub-page hero + breadcrumb
 ```
 
@@ -68,4 +76,6 @@ pages/
 
 **To add a new project**: add a card to `projects.html` with the appropriate status pill (`.uy-pill--live|proto|dev|private|research`). Case-study templates `project-N.html` are legacy.
 
-**Compiler note**: `node-sass` (in `devDependencies`) does not build on Node ≥ 18. Use Dart Sass: `npx --yes sass sass/main.scss css/style.css --style=compressed --no-source-map`. Output is byte-identical to legacy node-sass for this codebase.
+**Compiler note**: this repo uses Dart Sass through the local `sass`
+package. Run `npm run build:css` or `npm run build`; do not edit
+`css/style.css` directly.

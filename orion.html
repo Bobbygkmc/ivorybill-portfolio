@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orion — Secure Agentic Business Intelligence Framework</title>
+    <meta
+      name="description"
+      content="Orion is a read-first AI business intelligence prototype with FastAPI, LangGraph, Pydantic, fictional local CSV data, guardrails, PII scrubbing, evals, and reviewer-visible decision trails."
+    />
+    <meta name="theme-color" content="#0a1f3d" />
+    <meta property="og:title" content="Orion — Secure Agentic Business Intelligence Framework" />
+    <meta property="og:description" content="A portfolio case study for a read-first agentic BI prototype with typed plans, guardrails, fictional local data, and inspectable decision trails." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://dev.uyammadu.com/orion" />
+
+    <link rel="icon" type="image/svg+xml" href="./assets/svg/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="uy-page">
+    <a href="#uy-main" class="uy-btn uy-btn--quiet" style="position:absolute;left:-9999px;top:0;">Skip to content</a>
+
+    <header class="uy-nav" role="banner">
+      <div class="uy-container uy-nav__inner">
+        <a class="uy-nav__brand" href="/" aria-label="Uyammadu home">
+          <span class="uy-nav__brand-mark" aria-hidden="true">U</span>
+          <span class="uy-nav__brand-sub">
+            <span>Uyammadu</span>
+            <span>Dev Services</span>
+          </span>
+        </a>
+        <nav class="uy-nav__links" aria-label="Primary">
+          <a class="uy-nav__link" href="/">Home</a>
+          <a class="uy-nav__link" href="/services">Services</a>
+          <a class="uy-nav__link" href="/pricing">Pricing</a>
+          <a class="uy-nav__link uy-nav__link--active" href="/projects">Projects</a>
+          <a class="uy-nav__link" href="/cameras">Cameras</a>
+          <a class="uy-nav__link" href="/contact">Contact</a>
+          <a class="uy-nav__link" href="https://blog.uyammadu.com">Blog</a>
+        </nav>
+        <a class="uy-btn uy-btn--primary uy-nav__cta" href="/contact">Request a Local Tech Assessment</a>
+        <button class="uy-nav__toggle" aria-label="Open menu" aria-controls="uy-mobile-menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+        </button>
+      </div>
+      <div class="uy-nav__mobile" id="uy-mobile-menu">
+        <div class="uy-container">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/cameras">Cameras</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="https://blog.uyammadu.com">Blog</a></li>
+          </ul>
+          <a class="uy-btn uy-btn--primary uy-btn--block" href="/contact">Request a Local Tech Assessment</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="uy-main">
+      <section class="uy-pagehead">
+        <div class="uy-container">
+          <div class="uy-pagehead__crumb"><a href="/">Home</a><span>/</span><a href="/projects">Projects</a><span>/</span>Orion</div>
+          <span class="uy-eyebrow">Portfolio case study</span>
+          <h1 class="uy-h1">Orion</h1>
+          <p class="uy-lede">Secure Agentic Business Intelligence Framework</p>
+          <p class="uy-body">
+            A read-first AI business intelligence prototype that turns natural-language
+            business questions into structured BI responses using FastAPI, LangGraph,
+            Pydantic, fictional local CSV data, destructive-operation blocking, PII
+            scrubbing, deterministic evals, and reviewer-visible decision trails.
+          </p>
+          <div class="uy-case-actions" aria-label="Orion project actions">
+            <a class="uy-btn uy-btn--primary uy-btn--lg" href="/projects">Back to projects</a>
+            <span class="uy-btn uy-btn--ghost uy-btn--disabled" aria-disabled="true">Private repo / available on request</span>
+            <span class="uy-btn uy-btn--ghost uy-btn--disabled" aria-disabled="true">Live demo coming soon</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="uy-section">
+        <div class="uy-container">
+          <div class="uy-case-grid">
+            <div class="uy-case-prose">
+              <article>
+                <span class="uy-eyebrow">Problem</span>
+                <h2 class="uy-h2">Business answers without unrestricted data access</h2>
+                <p>
+                  Orion explores how AI-assisted business intelligence can answer
+                  operational questions without giving an LLM unrestricted database access.
+                  The prototype treats every user request as something that must be
+                  sanitized, planned, checked, executed read-only, and explained.
+                </p>
+              </article>
+
+              <article>
+                <span class="uy-eyebrow">Approach</span>
+                <h2 class="uy-h2">Typed plans, guardrails, and inspectable trails</h2>
+                <p>
+                  The system routes a request through sanitization, typed planning,
+                  guardrail checks, read-only connector execution, structured synthesis,
+                  and an inspectable decision trail. The emphasis is on narrow tool
+                  permissions, explicit intermediate state, and repeatable behavior that a
+                  reviewer can audit.
+                </p>
+              </article>
+
+              <article>
+                <span class="uy-eyebrow">Build</span>
+                <h2 class="uy-h2">Portfolio-grade engineering demo</h2>
+                <p>
+                  It is built as a portfolio-grade engineering demo using fictional local
+                  data, deterministic fallback behavior, and repeatable build/eval checks.
+                  The public case study intentionally does not expose a running demo,
+                  customer data, live warehouse, ERP, CRM, or inventory connection.
+                </p>
+              </article>
+            </div>
+
+            <aside class="uy-case-rail" aria-label="Orion project details">
+              <div class="uy-case-panel">
+                <h3>Project Facts</h3>
+                <div class="uy-case-meta">
+                  <div class="uy-case-meta__row">
+                    <span>Status</span>
+                    <strong>Prototype</strong>
+                  </div>
+                  <div class="uy-case-meta__row">
+                    <span>Repository</span>
+                    <strong>Private; available on request</strong>
+                  </div>
+                  <div class="uy-case-meta__row">
+                    <span>Demo Access</span>
+                    <strong>Local reviewer demo only; public demo coming soon</strong>
+                  </div>
+                  <div class="uy-case-meta__row">
+                    <span>Data</span>
+                    <strong>Fictional local CSV data</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="uy-case-panel">
+                <h3>Stack</h3>
+                <div class="uy-project__tags">
+                  <span>Python</span><span>FastAPI</span><span>LangGraph</span><span>Pydantic</span><span>AI Agents</span><span>Business Intelligence</span><span>Security Guardrails</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="uy-section uy-section--alt">
+        <div class="uy-container">
+          <div class="uy-section-head">
+            <span class="uy-eyebrow">Request path</span>
+            <h2 class="uy-h2">A constrained BI agent pipeline</h2>
+            <p class="uy-lede">
+              The value of the prototype is the shape of the pipeline: every step narrows
+              what the agent can do and leaves a trail that can be reviewed.
+            </p>
+          </div>
+
+          <div class="uy-case-pipeline">
+            <div class="uy-case-pipeline__step">
+              <span class="uy-case-pipeline__num">01</span>
+              <span class="uy-case-pipeline__text"><strong>Sanitize request</strong><span>Normalize the question, scrub risky content, and prepare a bounded BI intent.</span></span>
+            </div>
+            <div class="uy-case-pipeline__step">
+              <span class="uy-case-pipeline__num">02</span>
+              <span class="uy-case-pipeline__text"><strong>Plan with types</strong><span>Use Pydantic contracts so plans and responses have explicit structure.</span></span>
+            </div>
+            <div class="uy-case-pipeline__step">
+              <span class="uy-case-pipeline__num">03</span>
+              <span class="uy-case-pipeline__text"><strong>Check guardrails</strong><span>Block destructive operations and reject requests outside the demo's safe scope.</span></span>
+            </div>
+            <div class="uy-case-pipeline__step">
+              <span class="uy-case-pipeline__num">04</span>
+              <span class="uy-case-pipeline__text"><strong>Execute read-only</strong><span>Run against fictional local CSV data through constrained connector logic.</span></span>
+            </div>
+            <div class="uy-case-pipeline__step">
+              <span class="uy-case-pipeline__num">05</span>
+              <span class="uy-case-pipeline__text"><strong>Synthesize and show work</strong><span>Return a structured BI response with reviewer-visible decision trails.</span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="uy-section">
+        <div class="uy-container">
+          <div class="uy-grid uy-grid--2">
+            <div class="uy-case-panel">
+              <h3>What the case study demonstrates</h3>
+              <ul class="uy-case-list">
+                <li>How to separate natural-language BI requests from unrestricted database access.</li>
+                <li>How typed plans and structured responses make agent behavior easier to review.</li>
+                <li>How guardrail checks can block destructive or out-of-scope operations before execution.</li>
+                <li>How deterministic evals and fallback behavior support repeatable review.</li>
+              </ul>
+            </div>
+            <div class="uy-case-panel">
+              <h3>Public boundaries</h3>
+              <ul class="uy-case-list">
+                <li>Prototype, not a production-ready product claim.</li>
+                <li>Uses fictional local CSV data, not real customer data.</li>
+                <li>No public live warehouse, ERP, CRM, or inventory-system integration is claimed.</li>
+                <li>The repository is private and the live demo is not exposed publicly yet.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="uy-cta-strip">
+        <div class="uy-container uy-cta-strip__inner">
+          <div>
+            <h3>Need a business system with clearer guardrails?</h3>
+            <p>Bring the workflow and the risk constraints. The implementation should respect both.</p>
+          </div>
+          <a class="uy-btn uy-btn--accent uy-btn--lg" href="/contact">Request a Local Tech Assessment</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="uy-footer" role="contentinfo">
+      <div class="uy-container">
+        <div class="uy-footer__grid">
+          <div class="uy-footer__brand">
+            <h4>Uyammadu Dev Services</h4>
+            <p>Veteran-owned technology services for small businesses, restaurants, and professionals in Bucks County and beyond. Part of the uyammadu.com ecosystem.</p>
+          </div>
+          <div class="uy-footer__col"><h5>Site</h5><ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="https://blog.uyammadu.com">Blog</a></li>
+          </ul></div>
+          <div class="uy-footer__col"><h5>Specialties</h5><ul>
+            <li><a href="/cameras">Camera systems</a></li>
+            <li><a href="/services#networking">Networking &amp; IT</a></li>
+            <li><a href="/services#ai">AI &amp; automation</a></li>
+            <li><a href="/services#restaurant">Restaurant tech</a></li>
+          </ul></div>
+          <div class="uy-footer__col"><h5>Contact</h5><ul>
+            <li><a href="/contact">Request a Local Tech Assessment</a></li>
+            <li><a href="mailto:chuk.uyammadu@gmail.com">chuk.uyammadu@gmail.com</a></li>
+            <li><a href="tel:+12542587270">254-258-7270</a></li>
+            <li><a href="https://github.com/Bobbygkmc" target="_blank" rel="noopener">GitHub</a></li>
+          </ul></div>
+        </div>
+        <div class="uy-footer__bottom">
+          <span class="uy-footer__bottom-meta">© <span class="uy-year">2026</span> Chuk Uyammadu. Bucks County, PA + remote.</span>
+          <div class="uy-footer__bottom-links">
+            <a href="/projects">Portfolio</a>
+            <a href="/services">Services</a>
+            <a href="https://blog.uyammadu.com">Blog</a>
+            <a href="mailto:chuk.uyammadu@gmail.com">Email Chuk</a>
+            <a href="tel:+12542587270">Call or Text Chuk</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

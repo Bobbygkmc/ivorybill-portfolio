@@ -135,6 +135,13 @@ body.uy-page {
       margin-bottom: 1.2rem;
     }
     &__title { font-size: 2rem; font-weight: 700; color: $uy-deep; margin: 0; }
+    &__subtitle {
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: $uy-muted;
+    }
     &__desc  { font-size: 1.5rem; color: $uy-muted; line-height: 1.65; margin: 0 0 1.6rem; }
 
     &__tags {
@@ -151,6 +158,14 @@ body.uy-page {
         padding: 0.3rem 0.9rem;
         border-radius: $uy-radius-sm;
       }
+    }
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
     }
   }
 }

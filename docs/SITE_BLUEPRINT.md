@@ -1,8 +1,9 @@
 # Site Blueprint — dev.uyammadu.com
 
 This document defines the information architecture, brand positioning,
-and design system for the public-facing freelance and business
-technology services branch of the Uyammadu digital ecosystem.
+and design system for Chukwuemelie "Chuk" Uyammadu's personal portfolio
+and public-facing business technology services branch of the Uyammadu
+digital ecosystem.
 
 The umbrella domain is `uyammadu.com`. The build target for this
 repository is `dev.uyammadu.com`. The repo is intentionally static
@@ -21,6 +22,12 @@ repository is `dev.uyammadu.com`. The repo is intentionally static
 
 > uyammadu.com is the home base for Chuk Uyammadu's portfolio,
 > AI agents, technical ventures, and business technology services.
+
+**Name usage**
+
+- Public display copy: `Chuk Uyammadu`
+- Formal/about/resume-style copy: `Chukwuemelie "Chuk" Uyammadu`
+- Never use Bob as a public display name.
 
 The site speaks to two audiences at once:
 
@@ -64,11 +71,9 @@ The static site has the following pages.
 ├── services.html       Full service catalog
 ├── pricing.html        Estimated price ranges and timeframes
 ├── projects.html       Portfolio index
+├── orion.html          Case study — Orion secure agentic BI prototype
 ├── cameras.html        Camera and security systems
-├── contact.html        Service request and contact methods
-├── project-1.html      Case study — restaurant technology
-├── project-2.html      Case study — websites and digital presence
-└── project-3.html      Case study — automation, AI, and infrastructure
+└── contact.html        Service request and contact methods
 ```
 
 Future pages (not yet built):
@@ -104,9 +109,8 @@ The design system lives under SCSS partials and is the source of truth.
 The compiled `css/style.css` is a build artifact — do not edit by hand.
 
 - `sass/abstracts/_variables.scss` — all `$uy-*` design tokens
-- `sass/pages/_uy.scss` — full system (layout, type, buttons, cards,
-  hero, services, projects, pricing, forms, ecosystem, process, CTA,
-  footer, page hero)
+- `sass/components/uy-*.scss` — current design-system components
+- `sass/pages/uy-*.scss` — current page-specific design-system partials
 - `sass/abstracts/_mixins.scss` — responsive breakpoints
 - `sass/base/_base.scss` — reset, smooth scroll, base font scaling
 

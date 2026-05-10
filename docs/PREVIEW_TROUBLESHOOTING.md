@@ -2,7 +2,7 @@
 
 Use these steps from the repository root:
 
-1. `cd ~/ivorybill-portfolio`
+1. `cd ~/uyammadu-portfolio`
 2. `npm run build`
 3. `npm run preview`
 4. On a device connected to the same Tailscale network, open:

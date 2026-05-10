@@ -1,0 +1,178 @@
+// =============================================================================
+// dev.uyammadu.com — portfolio case-study layouts
+// =============================================================================
+
+body.uy-page {
+  .uy-case-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  .uy-btn--disabled {
+    color: $uy-muted;
+    background: $uy-surface-3;
+    border-color: $uy-line;
+    box-shadow: none;
+    cursor: default;
+
+    &:hover {
+      color: $uy-muted;
+      background: $uy-surface-3;
+      border-color: $uy-line;
+      box-shadow: none;
+      transform: none;
+    }
+  }
+
+  .uy-case-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(28rem, 0.9fr);
+    gap: 4rem;
+    align-items: start;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .uy-case-prose {
+    display: grid;
+    gap: 3.2rem;
+
+    p {
+      font-size: 1.7rem;
+      line-height: 1.75;
+      color: $uy-muted;
+      margin: 0;
+    }
+  }
+
+  .uy-case-panel {
+    background: $uy-surface;
+    border: 1px solid $uy-line;
+    border-radius: $uy-radius-lg;
+    padding: 2.8rem;
+    box-shadow: $uy-shadow-sm;
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: $uy-deep;
+      margin: 0 0 1.6rem;
+    }
+  }
+
+  .uy-case-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1.2rem;
+
+    li {
+      position: relative;
+      padding-left: 2rem;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      color: $uy-muted;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.8rem;
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 50%;
+        background: $uy-accent;
+      }
+    }
+  }
+
+  .uy-case-rail {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .uy-case-pipeline {
+    display: grid;
+    gap: 1.2rem;
+    margin-top: 1.6rem;
+  }
+
+  .uy-case-pipeline__step {
+    display: grid;
+    grid-template-columns: 3.8rem 1fr;
+    gap: 1.2rem;
+    align-items: start;
+    padding: 1.4rem;
+    border: 1px solid $uy-line;
+    border-radius: $uy-radius-md;
+    background: $uy-surface-2;
+  }
+
+  .uy-case-pipeline__num {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: $uy-radius-md;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($uy-primary, 0.1);
+    color: $uy-primary;
+    font-family: $uy-font-mono;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .uy-case-pipeline__text {
+    strong {
+      display: block;
+      color: $uy-deep;
+      font-size: 1.5rem;
+      line-height: 1.35;
+    }
+
+    span {
+      display: block;
+      margin-top: 0.3rem;
+      color: $uy-muted;
+      font-size: 1.35rem;
+      line-height: 1.5;
+    }
+  }
+
+  .uy-case-meta {
+    display: grid;
+    gap: 1.2rem;
+  }
+
+  .uy-case-meta__row {
+    display: grid;
+    gap: 0.3rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid $uy-line;
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    span {
+      font-family: $uy-font-mono;
+      font-size: 1.15rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $uy-muted-2;
+    }
+
+    strong {
+      color: $uy-deep;
+      font-size: 1.5rem;
+      line-height: 1.45;
+    }
+  }
+}

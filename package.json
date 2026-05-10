@@ -1,7 +1,7 @@
 {
-  "name": "dopefolio",
+  "name": "uyammadu-portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Static personal portfolio and dev services site for dev.uyammadu.com.",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",
@@ -11,7 +11,7 @@
     "dev": "sass sass/main.scss css/style.css --watch --no-source-map",
     "preview": "python3 scripts/preview.py"
   },
-  "author": "",
+  "author": "Chukwuemelie \"Chuk\" Uyammadu",
   "license": "GPL-3.0",
   "devDependencies": {
     "sass": "^1.94.2"

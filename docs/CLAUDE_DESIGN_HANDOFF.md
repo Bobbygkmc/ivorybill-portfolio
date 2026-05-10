@@ -4,7 +4,7 @@ This document is a self-contained brief for a Claude.ai session with the
 Figma connector enabled. It captures everything Claude Design needs to
 produce Figma frames + a token library that match the live site.
 
-The implementation lives in `~/ivorybill-portfolio` (static HTML + SCSS
+The implementation lives in `~/uyammadu-portfolio` (static HTML + SCSS
 + ~50 lines vanilla JS). Claude Design does not need filesystem access
 to this repo — copy/paste this doc into the Claude.ai conversation, and
 attach the screenshots listed in §10.
@@ -13,9 +13,14 @@ attach the screenshots listed in §10.
 
 ## 1. Brief
 
-**Product**: dev.uyammadu.com — public-facing freelance + business
-technology services site for Chuk Uyammadu. Veteran-owned, solo
-operator, based in Bucks County, PA, serving local + remote.
+**Product**: dev.uyammadu.com — personal portfolio and public-facing
+business technology services site for Chukwuemelie "Chuk" Uyammadu.
+Veteran-owned, solo operator, based in Bucks County, PA, serving local
++ remote.
+
+**Name usage**: use `Chuk Uyammadu` in public display copy, use
+`Chukwuemelie "Chuk" Uyammadu` in formal/about/resume-style context,
+and never use Bob as a public display name.
 
 **Audiences (two at once)**:
 
