@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ForgeWorks — Local builder community platform</title>
+    <meta
+      name="description"
+      content="ForgeWorks (ForgeTable) is a Rust + Axum + SQLite local builder community platform prototype for project nights, RSVPs, project boards, public recaps, sponsors, and community tech help — with an explicit public/private boundary."
+    />
+    <meta name="theme-color" content="#0a1f3d" />
+    <meta property="og:title" content="ForgeWorks — Local builder community platform" />
+    <meta property="og:description" content="A portfolio case study for ForgeWorks / ForgeTable, a Rust-powered local builder community platform prototype with an explicit public/private boundary and public launch polish in progress." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://dev.uyammadu.com/forgeworks" />
+
+    <link rel="icon" type="image/svg+xml" href="./assets/svg/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="uy-page">
+    <a href="#uy-main" class="uy-btn uy-btn--quiet" style="position:absolute;left:-9999px;top:0;">Skip to content</a>
+
+    <header class="uy-nav" role="banner">
+      <div class="uy-container uy-nav__inner">
+        <a class="uy-nav__brand" href="/" aria-label="Uyammadu home">
+          <span class="uy-nav__brand-mark" aria-hidden="true">U</span>
+          <span class="uy-nav__brand-sub">
+            <span>Uyammadu</span>
+            <span>Dev Services</span>
+          </span>
+        </a>
+        <nav class="uy-nav__links" aria-label="Primary">
+          <a class="uy-nav__link" href="/">Home</a>
+          <a class="uy-nav__link" href="/about">About</a>
+          <a class="uy-nav__link" href="/services">Services</a>
+          <a class="uy-nav__link" href="/pricing">Pricing</a>
+          <a class="uy-nav__link uy-nav__link--active" href="/projects">Projects</a>
+          <a class="uy-nav__link" href="/cameras">Cameras</a>
+          <a class="uy-nav__link" href="/contact">Contact</a>
+          <a class="uy-nav__link" href="https://blog.uyammadu.com">Blog</a>
+        </nav>
+        <a class="uy-btn uy-btn--primary uy-nav__cta" href="/contact">Request a Local Tech Assessment</a>
+        <button class="uy-nav__toggle" aria-label="Open menu" aria-controls="uy-mobile-menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+        </button>
+      </div>
+      <div class="uy-nav__mobile" id="uy-mobile-menu">
+        <div class="uy-container">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/cameras">Cameras</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="https://blog.uyammadu.com">Blog</a></li>
+          </ul>
+          <a class="uy-btn uy-btn--primary uy-btn--block" href="/contact">Request a Local Tech Assessment</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="uy-main">
+      <section class="uy-pagehead">
+        <div class="uy-container">
+          <div class="uy-pagehead__crumb"><a href="/">Home</a><span>/</span><a href="/projects">Projects</a><span>/</span>ForgeWorks</div>
+          <span class="uy-eyebrow">Portfolio case study</span>
+          <h1 class="uy-h1">ForgeWorks</h1>
+          <p class="uy-lede">Local builder community platform (working repo: ForgeTable)</p>
+          <p class="uy-body">
+            A Rust + Axum + SQLite prototype for organizing a weekly local
+            builder table — project nights, RSVPs, a project board, published
+            meeting recaps, sponsor and join pages, and a community tech help
+            intake — designed around an explicit public/private boundary
+            between member-facing pages and operator-only data. Public launch
+            polish is in progress; the platform is not a finished public
+            product.
+          </p>
+          <div class="uy-case-actions" aria-label="ForgeWorks project actions">
+            <a class="uy-btn uy-btn--primary uy-btn--lg" href="/projects">Back to projects</a>
+            <span class="uy-btn uy-btn--ghost uy-btn--disabled" aria-disabled="true">Private repo / available on request</span>
+            <span class="uy-btn uy-btn--ghost uy-btn--disabled" aria-disabled="true">Public pilot polish in progress</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="uy-section">
+        <div class="uy-container">
+          <div class="uy-case-grid">
+            <div class="uy-case-prose">
+              <article>
+                <span class="uy-eyebrow">Problem</span>
+                <h2 class="uy-h2">Builder communities lose memory or leak signal</h2>
+                <p>
+                  Local technology communities tend to swing between two
+                  failure modes: stay fully informal — no project memory, no
+                  recap trail, no RSVP signal — or over-tool with SaaS that
+                  ends up owning the member data. ForgeWorks explores an
+                  operator-controlled middle path that preserves a builder
+                  community's history without leaking private signal.
+                </p>
+              </article>
+
+              <article>
+                <span class="uy-eyebrow">Approach</span>
+                <h2 class="uy-h2">A small public surface, a gated admin surface</h2>
+                <p>
+                  The platform draws an explicit public/private boundary
+                  into the architecture. Public pages cover the homepage,
+                  project board, published recaps, sponsor page, public
+                  events, a community tech help intake, and a join page.
+                  Everything else — admin routes, Slack integration, raw
+                  exports, unpublished recaps, member emails, and the
+                  SQLite database — stays behind an admin key.
+                </p>
+              </article>
+
+              <article>
+                <span class="uy-eyebrow">Build</span>
+                <h2 class="uy-h2">Rust backend, static front, operator CLI</h2>
+                <p>
+                  The current build is a single Axum HTTP service backed by
+                  SQLite, with static HTML/CSS/JS for public pages and a
+                  Rust <code>ft</code> CLI for operator-side tasks. A Python
+                  "Scout" Slack bot skeleton is kept intentionally separate
+                  from the public surface. The deployment target is a
+                  Raspberry Pi. The current focus is public launch polish:
+                  data-driven home counts, an RSVP flow, a Tech Help Night
+                  intake, and a public pilot confidence check.
+                </p>
+              </article>
+            </div>
+
+            <aside class="uy-case-rail" aria-label="ForgeWorks project details">
+              <div class="uy-case-panel">
+                <h3>Project Facts</h3>
+                <div class="uy-case-meta">
+                  <div class="uy-case-meta__row">
+                    <span>Status</span>
+                    <strong>In development; public pilot polish in progress</strong>
+                  </div>
+                  <div class="uy-case-meta__row">
+                    <span>Repository</span>
+                    <strong>Private; available on request</strong>
+                  </div>
+                  <div class="uy-case-meta__row">
+                    <span>Public demo</span>
+                    <strong>Not exposed publicly yet</strong>
+                  </div>
+                  <div class="uy-case-meta__row">
+                    <span>Deployment target</span>
+                    <strong>Raspberry Pi (operator-controlled)</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="uy-case-panel">
+                <h3>Stack</h3>
+                <div class="uy-project__tags">
+                  <span>Rust</span><span>Axum</span><span>SQLite</span><span>Static HTML/CSS/JS</span><span>Operator CLI (ft)</span><span>Raspberry Pi</span><span>Public/Private boundary</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="uy-section uy-section--alt">
+        <div class="uy-container">
+          <div class="uy-section-head">
+            <span class="uy-eyebrow">Public launch polish</span>
+            <h2 class="uy-h2">A small set of credible public surfaces</h2>
+            <p class="uy-lede">
+              The launch focus is not new features — it is making the public
+              surface honest, current, and safe to preview, then adding the
+              minimum interaction (RSVP, tech help) that a working community
+              actually needs.
+            </p>
+          </div>
+
+          <div class="uy-case-pipeline">
+            <div class="uy-case-pipeline__step">
+              <span class="uy-case-pipeline__num">01</span>
+              <span class="uy-case-pipeline__text"><strong>One source of truth for build metadata</strong><span>Public version, member count, and project count come from a single API endpoint so footers cannot drift.</span></span>
+            </div>
+            <div class="uy-case-pipeline__step">
+              <span class="uy-case-pipeline__num">02</span>
+              <span class="uy-case-pipeline__text"><strong>Data-driven homepage</strong><span>Next meeting, members so far, and projects on the board are read from the live API instead of hard-coded copy.</span></span>
+            </div>
+            <div class="uy-case-pipeline__step">
+              <span class="uy-case-pipeline__num">03</span>
+              <span class="uy-case-pipeline__text"><strong>RSVP flow</strong><span>A single dated CTA replaces a scattered hero and captures interest without requiring a higher-commitment sign-up.</span></span>
+            </div>
+            <div class="uy-case-pipeline__step">
+              <span class="uy-case-pipeline__num">04</span>
+              <span class="uy-case-pipeline__text"><strong>Tech Help Night intake</strong><span>Public form posts to a stored request with only a public acknowledgement; the queue is admin-key-gated.</span></span>
+            </div>
+            <div class="uy-case-pipeline__step">
+              <span class="uy-case-pipeline__num">05</span>
+              <span class="uy-case-pipeline__text"><strong>Public pilot confidence check</strong><span>A scripted, non-mutating preflight verifies the public preview is safe and admin routes reject invalid keys.</span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="uy-section">
+        <div class="uy-container">
+          <div class="uy-section-head">
+            <span class="uy-eyebrow">Sanitized architecture</span>
+            <h2 class="uy-h2">Public pages on one side, operator surface on the other</h2>
+            <p class="uy-lede">
+              This placeholder shows the public architecture pattern without
+              exposing private repository links, local demo URLs, admin keys,
+              Slack tokens, member emails, or non-public implementation
+              details.
+            </p>
+          </div>
+          <div class="uy-arch" aria-label="Sanitized ForgeWorks architecture flow">
+            <div class="uy-arch__node">
+              <span>Visitor</span>
+              <strong>Member or guest</strong>
+              <p>Browses public pages or submits an intake form.</p>
+            </div>
+            <div class="uy-arch__node">
+              <span>Public pages</span>
+              <strong>Home, projects, recaps, events, sponsors, join, tech help</strong>
+              <p>Static HTML rendered by the Axum service.</p>
+            </div>
+            <div class="uy-arch__node">
+              <span>Public API</span>
+              <strong>Read-only summaries and intake POSTs</strong>
+              <p>Returns counts, public recaps, and acknowledgements only.</p>
+            </div>
+            <div class="uy-arch__node">
+              <span>SQLite</span>
+              <strong>Single operator-controlled store</strong>
+              <p>Members, projects, recaps, RSVPs, and tech-help requests.</p>
+            </div>
+            <div class="uy-arch__node">
+              <span>Admin gate</span>
+              <strong>Admin key required</strong>
+              <p>Admin routes reject invalid keys and stay off public pages.</p>
+            </div>
+            <div class="uy-arch__node">
+              <span>Operator surface</span>
+              <strong>ft CLI and Slack Scout (private)</strong>
+              <p>Operator-only tooling kept separate from the public site.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="uy-section">
+        <div class="uy-container">
+          <div class="uy-grid uy-grid--2">
+            <div class="uy-case-panel">
+              <h3>What the case study demonstrates</h3>
+              <ul class="uy-case-list">
+                <li>Designing a small, owner-controlled community platform without importing a heavy SaaS dependency.</li>
+                <li>Drawing an explicit public/private data boundary into the architecture instead of bolting it on later.</li>
+                <li>Using a typed Rust backend with SQLite and a separate operator CLI so the public surface stays small.</li>
+                <li>Treating "is this safe to show in public preview?" as a scripted check, not a feeling.</li>
+              </ul>
+            </div>
+            <div class="uy-case-panel">
+              <h3>Public boundaries</h3>
+              <ul class="uy-case-list">
+                <li>Prototype with public launch polish in progress; not a finished public product.</li>
+                <li>No public live membership, no paid sponsors, and no production-grade auth are claimed.</li>
+                <li>No public live demo URL is exposed; admin routes, Slack tokens, and member data stay private.</li>
+                <li>Repository is private and available on request.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="uy-cta-strip">
+        <div class="uy-container uy-cta-strip__inner">
+          <div>
+            <h3>Need a small, owner-controlled platform with a clear public/private line?</h3>
+            <p>Bring the workflow and the privacy constraints. The platform should respect both.</p>
+          </div>
+          <a class="uy-btn uy-btn--accent uy-btn--lg" href="/contact">Request a Local Tech Assessment</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="uy-footer" role="contentinfo">
+      <div class="uy-container">
+        <div class="uy-footer__grid">
+          <div class="uy-footer__brand">
+            <h4>Uyammadu Dev Services</h4>
+            <p>Veteran-owned technology services for small businesses, restaurants, and professionals in Bucks County and beyond. Part of the uyammadu.com ecosystem.</p>
+          </div>
+          <div class="uy-footer__col"><h5>Site</h5><ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="https://blog.uyammadu.com">Blog</a></li>
+          </ul></div>
+          <div class="uy-footer__col"><h5>Specialties</h5><ul>
+            <li><a href="/cameras">Camera systems</a></li>
+            <li><a href="/services#networking">Networking &amp; IT</a></li>
+            <li><a href="/services#ai">AI &amp; automation</a></li>
+            <li><a href="/services#restaurant">Restaurant tech</a></li>
+          </ul></div>
+          <div class="uy-footer__col"><h5>Contact</h5><ul>
+            <li><a href="/contact">Request a Local Tech Assessment</a></li>
+            <li><a href="mailto:chuk.uyammadu@gmail.com">chuk.uyammadu@gmail.com</a></li>
+            <li><a href="tel:+12542587270">254-258-7270</a></li>
+            <li><a href="https://github.com/Bobbygkmc" target="_blank" rel="noopener">GitHub</a></li>
+          </ul></div>
+        </div>
+        <div class="uy-footer__bottom">
+          <span class="uy-footer__bottom-meta">© <span class="uy-year">2026</span> Chuk Uyammadu. Bucks County, PA + remote.</span>
+          <div class="uy-footer__bottom-links">
+            <a href="/projects">Portfolio</a>
+            <a href="/about">About</a>
+            <a href="/services">Services</a>
+            <a href="https://blog.uyammadu.com">Blog</a>
+            <a href="mailto:chuk.uyammadu@gmail.com">Email Chuk</a>
+            <a href="tel:+12542587270">Call or Text Chuk</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
