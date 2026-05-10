@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
@@ -25,8 +26,22 @@ class CleanUrlHandler(SimpleHTTPRequestHandler):
 
         return str(translated)
 
+    def handle_one_request(self):
+        # Swallow client-side disconnects (curl -I, browser closes) so the
+        # server logs them quietly instead of bubbling a non-zero exit.
+        try:
+            super().handle_one_request()
+        except (BrokenPipeError, ConnectionResetError):
+            pass
+
 
 if __name__ == "__main__":
     server = ThreadingHTTPServer((HOST, PORT), CleanUrlHandler)
-    print(f"Serving {ROOT} at http://{HOST}:{PORT}")
-    server.serve_forever()
+    print(f"Serving {ROOT} at http://{HOST}:{PORT}", flush=True)
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print("\nShutting down preview server.", flush=True)
+    finally:
+        server.server_close()
+    sys.exit(0)

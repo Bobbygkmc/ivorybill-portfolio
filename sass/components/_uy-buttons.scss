@@ -2,6 +2,8 @@
 // dev.uyammadu.com — buttons + pills
 // =============================================================================
 
+@use 'sass:color';
+
 body.uy-page {
 
   // ---- Buttons ---------------------------------------------------------------
@@ -46,7 +48,7 @@ body.uy-page {
       background: $uy-accent;
       color: $uy-deep;
       box-shadow: $uy-shadow-md;
-      &:hover { background: lighten($uy-accent, 4%); }
+      &:hover { background: color.adjust($uy-accent, $lightness: 4%); }
     }
     &--ghost {
       background: transparent;
@@ -108,9 +110,9 @@ body.uy-page {
       opacity: 0.9;
     }
 
-    &--live     { background: rgba($uy-status-live, 0.12);    color: darken($uy-status-live, 12%); }
+    &--live     { background: rgba($uy-status-live, 0.12);    color: color.adjust($uy-status-live, $lightness: -12%); }
     &--proto    { background: rgba($uy-status-proto, 0.12);   color: $uy-status-proto; }
-    &--dev      { background: rgba($uy-status-dev, 0.14);     color: darken($uy-status-dev, 8%); }
+    &--dev      { background: rgba($uy-status-dev, 0.14);     color: color.adjust($uy-status-dev, $lightness: -8%); }
     &--private  { background: rgba($uy-status-private, 0.14); color: $uy-status-private; }
     &--research { background: rgba($uy-status-research, 0.12); color: $uy-status-research; }
   }

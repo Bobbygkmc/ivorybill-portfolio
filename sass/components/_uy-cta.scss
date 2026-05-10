@@ -2,6 +2,8 @@
 // dev.uyammadu.com — process steps + CTA strip
 // =============================================================================
 
+@use 'sass:color';
+
 body.uy-page {
 
   // ---- Process steps ---------------------------------------------------------
@@ -40,7 +42,7 @@ body.uy-page {
     padding: 6rem 0;
     background:
       radial-gradient(40rem 30rem at 80% 0%, rgba($uy-accent, 0.18), transparent 60%),
-      linear-gradient(135deg, $uy-deep, lighten($uy-deep, 6%));
+      linear-gradient(135deg, $uy-deep, color.adjust($uy-deep, $lightness: 6%));
     color: #fff;
 
     &__inner {

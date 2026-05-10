@@ -2,6 +2,8 @@
 // dev.uyammadu.com — forms + status banner
 // =============================================================================
 
+@use 'sass:color';
+
 body.uy-page {
 
   .uy-form {
@@ -66,7 +68,7 @@ body.uy-page {
     border-radius: $uy-radius-md;
     background: rgba($uy-accent, 0.08);
     border: 1px solid rgba($uy-accent, 0.22);
-    color: darken($uy-accent, 24%);
+    color: color.adjust($uy-accent, $lightness: -24%);
     font-size: 1.4rem;
     line-height: 1.55;
 
