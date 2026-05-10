@@ -68,6 +68,7 @@ The static site has the following pages.
 ```
 /
 ├── index.html          Home — hero + ecosystem + service preview + CTAs
+├── about.html          Formal profile — Chukwuemelie "Chuk" Uyammadu
 ├── services.html       Full service catalog
 ├── pricing.html        Estimated price ranges and timeframes
 ├── projects.html       Portfolio index
@@ -89,7 +90,7 @@ Future pages (not yet built):
 
 **Header navigation (every page)**
 
-`Home / Services / Pricing / Projects / Cameras / Contact`
+`Home / About / Services / Pricing / Projects / Cameras / Contact`
 
 **Footer (every page)**
 

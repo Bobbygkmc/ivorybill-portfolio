@@ -65,3 +65,15 @@ data, deterministic fallback behavior, and repeatable build/eval checks.
    repeatable eval/build checks.
 4. Outcome: portfolio-grade prototype that demonstrates secure
    agentic BI patterns without public live-data exposure.
+
+## Public architecture placeholder
+
+Use a sanitized flow diagram only:
+
+`Business question -> PII/risk screen -> Typed BI intent -> Read-only
+guardrail gate -> Fictional local CSV connector -> Structured answer ->
+Reviewer-visible decision trail`
+
+Do not include private repository URLs, localhost demo URLs, credentials,
+customer data, live warehouse details, or non-public implementation
+internals.

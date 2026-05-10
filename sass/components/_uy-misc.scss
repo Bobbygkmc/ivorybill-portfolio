@@ -56,6 +56,61 @@ body.uy-page {
     }
   }
 
+  .uy-profile-strip {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 4rem;
+    align-items: start;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      gap: 2.4rem;
+    }
+  }
+
+  .uy-signal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .uy-signal {
+    padding: 1.8rem;
+    border: 1px solid $uy-line;
+    border-radius: $uy-radius-lg;
+    background: $uy-surface;
+    box-shadow: $uy-shadow-sm;
+
+    span {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-family: $uy-font-mono;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: $uy-primary;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    strong {
+      display: block;
+      color: $uy-deep;
+      font-size: 1.7rem;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0.7rem 0 0;
+      color: $uy-muted;
+      font-size: 1.45rem;
+      line-height: 1.55;
+    }
+  }
+
   // Utility helpers
   .uy-text-center { text-align: center; }
   .uy-mt-0 { margin-top: 0; }

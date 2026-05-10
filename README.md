@@ -66,6 +66,7 @@ Cloudflare Pages' extensionless URLs.
 ```
 /
 ├── index.html          Home — hero, services preview, projects preview, ecosystem, CTA
+├── about.html          Formal profile for Chukwuemelie "Chuk" Uyammadu
 ├── services.html       Full service catalog (5 practices)
 ├── pricing.html        Estimated price ranges and timeframes
 ├── projects.html       Portfolio index with honest status pills

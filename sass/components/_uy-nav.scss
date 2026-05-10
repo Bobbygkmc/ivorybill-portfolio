@@ -77,6 +77,10 @@ body.uy-page {
 
       &:hover { color: $uy-primary; background: rgba($uy-primary, 0.06); }
       &--active { color: $uy-primary; background: rgba($uy-primary, 0.08); }
+
+      @include respond(tab-land) {
+        padding: 0.8rem 1rem;
+      }
     }
 
     &__cta {

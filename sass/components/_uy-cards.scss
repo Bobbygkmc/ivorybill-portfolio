@@ -133,6 +133,11 @@ body.uy-page {
       justify-content: space-between;
       gap: 1rem;
       margin-bottom: 1.2rem;
+
+      @include respond(phone) {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
     &__title { font-size: 2rem; font-weight: 700; color: $uy-deep; margin: 0; }
     &__subtitle {
@@ -166,6 +171,14 @@ body.uy-page {
       flex-wrap: wrap;
       gap: 1rem;
       margin-top: 2rem;
+
+      @include respond(phone) {
+        align-items: stretch;
+
+        .uy-btn {
+          width: 100%;
+        }
+      }
     }
   }
 }

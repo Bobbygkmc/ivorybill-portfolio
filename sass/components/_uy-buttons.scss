@@ -65,6 +65,11 @@ body.uy-page {
     }
     &--lg { padding: 1.7rem 3.2rem; font-size: 1.6rem; }
     &--block { width: 100%; }
+
+    @include respond(phone) {
+      white-space: normal;
+      text-align: center;
+    }
   }
 
   // Dark-section button overrides

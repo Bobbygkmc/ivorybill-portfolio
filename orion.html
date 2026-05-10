@@ -38,6 +38,7 @@
         </a>
         <nav class="uy-nav__links" aria-label="Primary">
           <a class="uy-nav__link" href="/">Home</a>
+          <a class="uy-nav__link" href="/about">About</a>
           <a class="uy-nav__link" href="/services">Services</a>
           <a class="uy-nav__link" href="/pricing">Pricing</a>
           <a class="uy-nav__link uy-nav__link--active" href="/projects">Projects</a>
@@ -56,6 +57,7 @@
         <div class="uy-container">
           <ul>
             <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/pricing">Pricing</a></li>
             <li><a href="/projects">Projects</a></li>
@@ -134,7 +136,7 @@
                 <div class="uy-case-meta">
                   <div class="uy-case-meta__row">
                     <span>Status</span>
-                    <strong>Prototype</strong>
+                    <strong>Prototype; not production-ready</strong>
                   </div>
                   <div class="uy-case-meta__row">
                     <span>Repository</span>
@@ -200,6 +202,57 @@
 
       <section class="uy-section">
         <div class="uy-container">
+          <div class="uy-section-head">
+            <span class="uy-eyebrow">Sanitized architecture</span>
+            <h2 class="uy-h2">A public diagram of the safe path, not private internals</h2>
+            <p class="uy-lede">
+              This placeholder shows the public architecture pattern without exposing
+              private repository links, local demo URLs, credentials, customer data, or
+              non-public implementation details.
+            </p>
+          </div>
+          <div class="uy-arch" aria-label="Sanitized Orion architecture flow">
+            <div class="uy-arch__node">
+              <span>Input</span>
+              <strong>Business question</strong>
+              <p>Natural-language request from a reviewer or local demo user.</p>
+            </div>
+            <div class="uy-arch__node">
+              <span>Sanitize</span>
+              <strong>PII and risk screen</strong>
+              <p>Scrub sensitive content and normalize the request.</p>
+            </div>
+            <div class="uy-arch__node">
+              <span>Plan</span>
+              <strong>Typed BI intent</strong>
+              <p>Pydantic-style contracts keep plans and outputs structured.</p>
+            </div>
+            <div class="uy-arch__node">
+              <span>Guard</span>
+              <strong>Read-only gate</strong>
+              <p>Destructive operations and unsafe intents are blocked.</p>
+            </div>
+            <div class="uy-arch__node">
+              <span>Execute</span>
+              <strong>Local CSV connector</strong>
+              <p>Fictional local demo data only; no live warehouse connection.</p>
+            </div>
+            <div class="uy-arch__node">
+              <span>Synthesize</span>
+              <strong>Structured answer</strong>
+              <p>Business response with clear fields and deterministic fallbacks.</p>
+            </div>
+            <div class="uy-arch__node">
+              <span>Review</span>
+              <strong>Decision trail</strong>
+              <p>Inspectable steps for technical reviewers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="uy-section">
+        <div class="uy-container">
           <div class="uy-grid uy-grid--2">
             <div class="uy-case-panel">
               <h3>What the case study demonstrates</h3>
@@ -243,6 +296,7 @@
           </div>
           <div class="uy-footer__col"><h5>Site</h5><ul>
             <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/pricing">Pricing</a></li>
             <li><a href="/projects">Projects</a></li>
@@ -265,6 +319,7 @@
           <span class="uy-footer__bottom-meta">© <span class="uy-year">2026</span> Chuk Uyammadu. Bucks County, PA + remote.</span>
           <div class="uy-footer__bottom-links">
             <a href="/projects">Portfolio</a>
+            <a href="/about">About</a>
             <a href="/services">Services</a>
             <a href="https://blog.uyammadu.com">Blog</a>
             <a href="mailto:chuk.uyammadu@gmail.com">Email Chuk</a>
