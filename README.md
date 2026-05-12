@@ -99,8 +99,20 @@ Cloudflare Pages' extensionless URLs.
 │   └── api/contact.js  Contact form email endpoint
 │
 ├── assets/             Images, SVG icons, brand mark
+│   ├── images/
+│   │   ├── brand/          Brand-owned marks and lockups
+│   │   ├── headshots/      Approved Chuk headshots
+│   │   ├── projects/       Project thumbnails and case-study visuals
+│   │   ├── workflow/       Process diagrams and handoff visuals
+│   │   ├── cameras/        Camera/NVR hardware photos and diagrams
+│   │   ├── social/         Open Graph/social preview images
+│   │   └── placeholders/   Original SVG placeholders
+│   ├── svg/            Legacy icons and favicon
+│   ├── png/            Legacy raster assets
+│   └── jpeg/           Legacy raster assets
 ├── css/                Compiled CSS output
 ├── sass/               SASS sources (7-1 pattern; see below)
+├── .assets/            Lightweight registry for public-safe visual assets
 ├── index.js            Mobile nav, year stamp, form guard
 ├── package.json        Build scripts
 └── LICENSE
@@ -148,6 +160,7 @@ of truth in `docs/`:
 | Doc                                          | Purpose                                                                |
 | -------------------------------------------- | ---------------------------------------------------------------------- |
 | `docs/SITE_BLUEPRINT.md`                     | IA, brand positioning, design tokens, accessibility goals               |
+| `docs/brand-guidelines.md`                   | Lightweight brand source for asset and design tooling                   |
 | `docs/SERVICE_CATALOG.md`                    | Source of truth for `services.html`                                     |
 | `docs/PRICING_GUIDE.md`                      | Source of truth for `pricing.html`                                      |
 | `docs/CAMERA_SYSTEMS_SERVICE_GUIDE.md`       | Source of truth for `cameras.html` (scope, retention, handoff)          |
@@ -155,9 +168,30 @@ of truth in `docs/`:
 | `docs/OPPORTUNITY_RADAR_BLUEPRINT.md`        | Future local lead-radar product blueprint (planning, not built)         |
 | `docs/CRENSHAW_NTFY_WORKFLOW.md`             | How the Crenshaw agent uses ntfy during build / deploy                  |
 | `docs/DEPLOYMENT_NOTES.md`                   | Deploy targets, build commands, rollout / rollback                      |
+| `docs/MEDIA_CAPTURE_PLAN.md`                 | Asset folders, privacy rules, screenshot redaction, future media plan    |
 
 When updating site content, **update the doc first**, then mirror to
 the page. This keeps the docs canonical.
+
+## Media and asset policy
+
+The current visual system uses original SVG placeholders instead of
+downloaded internet images. This keeps the site lightweight, avoids
+copyright and endorsement risk, and gives each project card a consistent
+operator-console look until real media is captured.
+
+No stock-photo-first approach: owner-created photos and screenshots are
+preferred. If Unsplash or Pexels assets are ever used, they can be used
+for commercial projects under their licenses, but still avoid
+recognizable people, trademarks, logos, brand-heavy scenes, and implied
+endorsements unless permission is clear. Attribution is not required by
+those licenses but can be appreciated.
+
+Future real media should replace placeholders only after the privacy
+checklist in `docs/MEDIA_CAPTURE_PLAN.md` passes. Do not publish private
+customer data, internal restaurant data, secrets, passwords, API keys,
+financials, private addresses, camera footage, customer faces, or staff
+faces without permission.
 
 ---
 

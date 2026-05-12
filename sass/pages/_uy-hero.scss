@@ -1,5 +1,5 @@
 // =============================================================================
-// dev.uyammadu.com — home hero + code-card visual
+// dev.uyammadu.com — home hero + technical visual
 // =============================================================================
 
 body.uy-page {
@@ -79,7 +79,25 @@ body.uy-page {
 
     &__visual {
       position: relative;
-      @include respond(tab-port) { display: none; }
+      max-width: 56rem;
+      justify-self: end;
+
+      @include respond(tab-port) {
+        max-width: 62rem;
+        justify-self: start;
+      }
+    }
+
+    &__asset {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      border-radius: $uy-radius-xl;
+      border: 1px solid rgba($uy-primary, 0.18);
+      box-shadow: $uy-shadow-lg;
+      background: $uy-surface-deep;
     }
   }
 

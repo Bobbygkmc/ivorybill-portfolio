@@ -117,6 +117,8 @@ body.uy-page {
     border: 1px solid $uy-line;
     border-radius: $uy-radius-lg;
     padding: 2.8rem;
+    display: flex;
+    flex-direction: column;
     transition: transform 0.2s $uy-ease,
                 box-shadow 0.2s $uy-ease,
                 border-color 0.2s $uy-ease;
@@ -125,6 +127,17 @@ body.uy-page {
       transform: translateY(-2px);
       box-shadow: $uy-shadow-md;
       border-color: $uy-line-2;
+    }
+
+    &__thumb {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      border-radius: $uy-radius-md;
+      border: 1px solid rgba($uy-primary, 0.14);
+      background: $uy-surface-deep;
+      margin-bottom: 2rem;
     }
 
     &__head {

@@ -31,6 +31,16 @@ body.uy-page {
       transform: translateY(-2px);
     }
 
+    &__visual {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: $uy-radius-sm;
+      border: 1px solid rgba($uy-primary, 0.12);
+      background: $uy-surface-deep;
+    }
+
     &__header {
       display: flex;
       justify-content: space-between;

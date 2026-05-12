@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Uyammadu Dev Services social preview</title>
+  <desc id="desc">Social preview card for Uyammadu Dev Services with an abstract systems console.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061426"/>
+      <stop offset=".58" stop-color="#0a1f3d"/>
+      <stop offset="1" stop-color="#020817"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0v44" fill="none" stroke="#174164" opacity=".38"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="1000" cy="84" r="190" fill="#00b4d8" opacity=".13"/>
+  <circle cx="100" cy="610" r="260" fill="#0062b9" opacity=".18"/>
+  <rect x="72" y="70" width="1056" height="490" rx="36" fill="#07182c" stroke="#2b638e" stroke-width="3"/>
+  <text x="124" y="164" fill="#00b4d8" font-family="JetBrains Mono, monospace" font-size="26" font-weight="600">UYAMMADU DEV SERVICES</text>
+  <text x="124" y="254" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">Systems, AI, and local</text>
+  <text x="124" y="326" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">business technology</text>
+  <text x="124" y="392" fill="#c7e4ff" font-family="Inter, Arial, sans-serif" font-size="30">Veteran-owned technical operator for practical builds, handoff, and proof.</text>
+  <g transform="translate(124 448)">
+    <rect width="250" height="48" rx="24" fill="#00b4d8"/>
+    <text x="28" y="31" fill="#04101f" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">dev.uyammadu.com</text>
+    <rect x="282" width="206" height="48" rx="24" fill="#102d52" stroke="#2b638e"/>
+    <text x="310" y="31" fill="#c7e4ff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Bucks County + remote</text>
+  </g>
+</svg>

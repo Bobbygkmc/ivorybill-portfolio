@@ -1,0 +1,7 @@
+{
+  "status": ["draft", "review", "approved", "archived"],
+  "platform": ["web", "social"],
+  "contentType": ["hero", "project-thumbnail", "social-preview", "documentation"],
+  "source": ["original-svg", "owner-photo", "owner-screenshot"],
+  "privacy": ["public-safe", "synthetic-only", "needs-redaction-review"]
+}

@@ -1,0 +1,87 @@
+{
+  "version": "1.0.0",
+  "generatedFor": "dev.uyammadu.com",
+  "notes": "Lightweight registry for original site SVGs. Filenames intentionally use stable project slugs because HTML references them directly and the media plan documents replacement paths.",
+  "assets": [
+    {
+      "id": "placeholder-project-operator-console",
+      "name": "Operator Console Placeholder",
+      "type": "placeholder",
+      "path": "assets/images/placeholders/project-operator-console.svg",
+      "dimensions": { "width": 1200, "height": 800 },
+      "tags": ["web", "hero", "project-thumbnail", "original-svg"],
+      "status": "approved",
+      "privacy": "no real data, no people, no logos"
+    },
+    {
+      "id": "project-ai-dashboard",
+      "name": "AI Dashboard Project Thumbnail",
+      "type": "project-thumbnail",
+      "path": "assets/images/projects/project-ai-dashboard.svg",
+      "dimensions": { "width": 900, "height": 600 },
+      "tags": ["web", "project-thumbnail", "ai", "original-svg"],
+      "status": "approved",
+      "privacy": "synthetic visual only"
+    },
+    {
+      "id": "project-camera-nvr",
+      "name": "Camera NVR Project Thumbnail",
+      "type": "project-thumbnail",
+      "path": "assets/images/projects/project-camera-nvr.svg",
+      "dimensions": { "width": 900, "height": 600 },
+      "tags": ["web", "project-thumbnail", "cameras", "original-svg"],
+      "status": "approved",
+      "privacy": "no footage, no addresses, no license plates"
+    },
+    {
+      "id": "project-raspberry-pi-lab",
+      "name": "Raspberry Pi Server Lab Project Thumbnail",
+      "type": "project-thumbnail",
+      "path": "assets/images/projects/project-raspberry-pi-lab.svg",
+      "dimensions": { "width": 900, "height": 600 },
+      "tags": ["web", "project-thumbnail", "homelab", "original-svg"],
+      "status": "approved",
+      "privacy": "abstract hardware visual only"
+    },
+    {
+      "id": "project-restaurant-tech",
+      "name": "Restaurant Technology Project Thumbnail",
+      "type": "project-thumbnail",
+      "path": "assets/images/projects/project-restaurant-tech.svg",
+      "dimensions": { "width": 900, "height": 600 },
+      "tags": ["web", "project-thumbnail", "restaurant-tech", "original-svg"],
+      "status": "approved",
+      "privacy": "no internal restaurant data"
+    },
+    {
+      "id": "project-cloudflare-pipeline",
+      "name": "Cloud Pipeline Project Thumbnail",
+      "type": "project-thumbnail",
+      "path": "assets/images/projects/project-cloudflare-pipeline.svg",
+      "dimensions": { "width": 900, "height": 600 },
+      "tags": ["web", "project-thumbnail", "deployment", "original-svg"],
+      "status": "approved",
+      "privacy": "no secrets or account identifiers"
+    },
+    {
+      "id": "project-community-platform",
+      "name": "Community Platform Project Thumbnail",
+      "type": "project-thumbnail",
+      "path": "assets/images/projects/project-community-platform.svg",
+      "dimensions": { "width": 900, "height": 600 },
+      "tags": ["web", "project-thumbnail", "community", "original-svg"],
+      "status": "approved",
+      "privacy": "no member data"
+    },
+    {
+      "id": "social-og-default",
+      "name": "Default Open Graph Preview",
+      "type": "social-preview",
+      "path": "assets/images/social/og-default.svg",
+      "dimensions": { "width": 1200, "height": 630 },
+      "tags": ["web", "social", "open-graph", "original-svg"],
+      "status": "approved",
+      "privacy": "no private data, no third-party marks"
+    }
+  ]
+}
