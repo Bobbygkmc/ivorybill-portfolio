@@ -1,0 +1,133 @@
+// =============================================================================
+// dev.uyammadu.com — Projects page specific layout
+// =============================================================================
+
+body.uy-page {
+
+  .uy-proof-wall {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .uy-proof-card {
+    background: $uy-surface;
+    border: 1px solid $uy-line;
+    border-radius: $uy-radius-md;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all 0.2s $uy-ease;
+
+    &:hover {
+      border-color: $uy-line-2;
+      box-shadow: $uy-shadow-sm;
+      transform: translateY(-2px);
+    }
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    &__title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: $uy-deep;
+      margin: 0;
+    }
+
+    &__category {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $uy-primary;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    &__desc {
+      font-size: 1.4rem;
+      color: $uy-muted;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    &__status {
+      margin-top: auto;
+      padding-top: 1rem;
+    }
+  }
+
+  .uy-service-mapping {
+    margin-top: 6rem;
+    
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(34rem, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+
+      @include respond(phone) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__item {
+      padding: 2.4rem;
+      background: $uy-surface-2;
+      border-radius: $uy-radius-lg;
+      border: 1px solid $uy-line;
+
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $uy-deep;
+        margin-bottom: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &::before {
+          content: '';
+          width: 4px;
+          height: 1.8rem;
+          background: $uy-primary;
+          border-radius: 2px;
+        }
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: $uy-muted;
+        margin-bottom: 1.6rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+
+        li {
+          font-size: 1.3rem;
+          font-weight: 500;
+          color: $uy-ink-2;
+          background: $uy-surface;
+          padding: 0.4rem 1rem;
+          border: 1px solid $uy-line;
+          border-radius: $uy-radius-sm;
+        }
+      }
+    }
+  }
+}
