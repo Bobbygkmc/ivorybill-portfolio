@@ -1,15 +1,18 @@
 # Media Capture Plan
 
-This site uses original SVG placeholders first, then replaces them with
-owner-created photos and screenshots when safe. Visuals should reinforce
-the operator proof-wall: real systems, clean handoff, local business
-technology, and practical technical work.
+This site keeps original SVG placeholders in the asset library, but live
+project and proof-wall cards intentionally use minimal CSS-built
+placeholder accents until owner-created photos and screenshots are ready.
+Future visuals should reinforce the operator proof-wall: real systems,
+clean handoff, local business technology, and practical technical work.
 
 The current placeholder filenames use stable project slugs such as
-`project-ai-dashboard.svg` and `og-default.svg` because they are directly
-referenced by static HTML. Campaign-style timestamped filenames are useful
-for larger marketing asset libraries, but this site keeps public web
-assets stable and tracks review state in `.assets/manifest.json`.
+`project-ai-dashboard.svg` and `og-default.svg`. Some are kept for social
+previews, reference, or future experiments, but the main project cards
+should not force abstract SVGs into the live layout while real media is
+pending. Campaign-style timestamped filenames are useful for larger
+marketing asset libraries, but this site keeps public web assets stable
+and tracks review state in `.assets/manifest.json`.
 
 ## Asset Locations
 
@@ -91,8 +94,12 @@ For replacement images, prefer descriptive names over generic names like
 ## Recommended Sizes
 
 - Homepage hero visual: 1200 x 800 or SVG with a 3:2 viewBox.
-- Project thumbnails: 900 x 600 or 1200 x 800, displayed at 16:10.
-- Proof-wall thumbnails: 900 x 506 or 1200 x 675, displayed at 16:9.
+- Project thumbnails: 900 x 600 or 1200 x 800 when real media is added;
+  current card placeholders are compact rectangles, roughly 140-210 px
+  tall depending on viewport.
+- Proof-wall thumbnails: 900 x 506 or 1200 x 675 when real media is
+  added; current proof-wall accents are compact, roughly 72-100 px tall
+  depending on viewport.
 - Case-study screenshots: 1600 px wide minimum.
 - Headshots: 1200 x 1200 square crop plus original source outside repo.
 - Open Graph image: 1200 x 630.

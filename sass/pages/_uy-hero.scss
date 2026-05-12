@@ -88,6 +88,30 @@ body.uy-page {
       }
     }
 
+    &__console {
+      width: min(100%, 54rem);
+
+      .uy-codecard__body {
+        display: grid;
+        gap: 0.8rem;
+        white-space: normal;
+      }
+
+      .uy-codecard__line {
+        display: block;
+        min-width: max-content;
+      }
+
+      @include respond(phone) {
+        width: 100%;
+
+        .uy-codecard__body {
+          padding: 1.6rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
     &__asset {
       display: block;
       width: 100%;
