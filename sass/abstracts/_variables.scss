@@ -7,54 +7,55 @@ $commonBorderRadius: 5px;
 // All new partials and pages should use the `$uy-*` tokens below.
 // ---------------------------------------------------------------------------
 
-// Brand
-$uy-deep:    #0a1f3d;   // Deep navy — headlines, dark sections
-$uy-primary: #0062b9;   // Workhorse blue — links, primary surfaces
-$uy-accent:  #00b4d8;   // Bright cyan — highlights, hovers
-$uy-warm:    #f59e0b;   // Warm accent — used sparingly for status
+// Brand — Field Operator direction
+$uy-deep:    #0f1a14;   // Deep field green — hero, footer, dark panels
+$uy-primary: #2d6a4f;   // Forest green — links, primary surfaces
+$uy-accent:  #b68a3e;   // Brass — CTAs, highlights, operator marks
+$uy-warm:    #8e6a2a;   // Aged brass — secondary warm accent
 
 // Ink and neutrals
-$uy-ink:        #0f172a;
-$uy-ink-2:      #1e293b;
-$uy-muted:      #475569;
-$uy-muted-2:    #94a3b8;
-$uy-line:       #e2e8f0;
-$uy-line-2:     #cbd5e1;
+$uy-ink:        #14181c;
+$uy-ink-2:      #2c3531;
+$uy-muted:      #5f6b65;
+$uy-muted-2:    #8a938c;
+$uy-line:       #d6cfc0;
+$uy-line-2:     #b8ae99;
 $uy-surface:    #ffffff;
-$uy-surface-2:  #f8fafc;
-$uy-surface-3:  #f1f5f9;
-$uy-surface-deep: #0a1628;
+$uy-surface-2:  #f8f4eb;
+$uy-surface-3:  #eae3d5;
+$uy-surface-deep: #0f1a14;
+$uy-surface-page: #f2ede3;
 
 // Status colors (for project status pills)
-$uy-status-live:    #10b981;
-$uy-status-proto:   #6366f1;
-$uy-status-dev:     #f59e0b;
-$uy-status-private: #64748b;
-$uy-status-research: #8b5cf6;
+$uy-status-live:    #2d6a4f;
+$uy-status-proto:   #8e6a2a;
+$uy-status-dev:     #b68a3e;
+$uy-status-private: #6b7570;
+$uy-status-research: #5a4a2a;
 
 // Radius
-$uy-radius-sm: 6px;
-$uy-radius-md: 10px;
-$uy-radius-lg: 16px;
-$uy-radius-xl: 24px;
+$uy-radius-sm: 4px;
+$uy-radius-md: 6px;
+$uy-radius-lg: 12px;
+$uy-radius-xl: 16px;
 $uy-radius-pill: 999px;
 
 // Shadows
-$uy-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05),
-               0 1px 2px rgba(15, 23, 42, 0.04);
-$uy-shadow-md: 0 4px 16px rgba(15, 23, 42, 0.06),
-               0 2px 6px rgba(15, 23, 42, 0.04);
-$uy-shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.10),
-               0 4px 12px rgba(15, 23, 42, 0.06);
-$uy-shadow-glow: 0 0 0 1px rgba(0, 98, 185, 0.12),
-                 0 12px 40px rgba(0, 98, 185, 0.18);
+$uy-shadow-sm: 0 1px 0 rgba(20, 24, 28, 0.04),
+               0 1px 3px rgba(20, 24, 28, 0.04);
+$uy-shadow-md: 0 1px 0 rgba(20, 24, 28, 0.04),
+               0 8px 22px rgba(20, 24, 28, 0.07);
+$uy-shadow-lg: 0 2px 0 rgba(20, 24, 28, 0.05),
+               0 18px 48px rgba(20, 24, 28, 0.12);
+$uy-shadow-glow: 0 0 0 1px rgba(45, 106, 79, 0.16),
+                 0 16px 42px rgba(45, 106, 79, 0.22);
 
 // Motion
 $uy-ease: cubic-bezier(0.4, 0, 0.2, 1);
 $uy-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
 // Type
-$uy-font-sans: 'Inter', 'Source Sans Pro', system-ui, -apple-system,
+$uy-font-sans: 'Geist', 'Inter', 'Source Sans Pro', system-ui, -apple-system,
                'Segoe UI', Roboto, sans-serif;
 $uy-font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular',
                Menlo, monospace;

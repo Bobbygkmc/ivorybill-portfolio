@@ -18,9 +18,12 @@ body.uy-page {
   }
   .uy-step {
     counter-increment: uy-step;
-    border-top: 2px solid $uy-line;
-    padding-top: 2rem;
+    border: 1px solid $uy-line;
+    border-radius: $uy-radius-lg;
+    background: $uy-surface;
+    padding: 2rem;
     position: relative;
+    box-shadow: $uy-shadow-sm;
 
     &::before {
       content: counter(uy-step, decimal-leading-zero);
@@ -31,7 +34,7 @@ body.uy-page {
       letter-spacing: 1px;
     }
 
-    h4 { margin: 0.6rem 0 0.6rem; }
+    h4 { margin: 0.6rem 0 0.6rem; color: $uy-ink; }
     p  { font-size: 1.4rem; color: $uy-muted; line-height: 1.55; margin: 0; }
   }
 
@@ -42,7 +45,7 @@ body.uy-page {
     padding: 6rem 0;
     background:
       radial-gradient(40rem 30rem at 80% 0%, rgba($uy-accent, 0.18), transparent 60%),
-      linear-gradient(135deg, $uy-deep, color.adjust($uy-deep, $lightness: 6%));
+      linear-gradient(135deg, $uy-deep, color.adjust($uy-deep, $lightness: 5%));
     color: #fff;
 
     &__inner {
@@ -52,7 +55,7 @@ body.uy-page {
       gap: 3rem;
       flex-wrap: wrap;
     }
-    h3 { color: #fff; margin: 0; font-size: 2.6rem; font-weight: 700; letter-spacing: -0.01em; }
+    h3 { color: #fff; margin: 0; font-size: 2.6rem; font-weight: 700; letter-spacing: 0; }
     p  { color: rgba(#fff, 0.7); margin: 0.4rem 0 0; font-size: 1.55rem; }
   }
 }

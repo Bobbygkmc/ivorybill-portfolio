@@ -8,7 +8,7 @@
       name="description"
       content="Personal portfolio for Chuk Uyammadu: Information Systems Management background, IT support and data analysis experience, Python/backend/AI systems, Linux homelab work, and small-business technology."
     />
-    <meta name="theme-color" content="#0a1f3d" />
+    <meta name="theme-color" content="#0f1a14" />
     <meta property="og:title" content="Chuk Uyammadu — AI, Backend, Data & Business Technology Systems" />
     <meta property="og:description" content="Personal portfolio for a systems-minded builder with Information Systems Management, IT support, data analysis, Python/backend/AI, Linux homelab, and small-business technology experience." />
     <meta property="og:type" content="website" />
@@ -22,12 +22,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body class="uy-page">
+    <canvas id="uy-network-bg" class="uy-network-bg" aria-hidden="true"></canvas>
     <a href="#uy-main" class="uy-btn uy-btn--quiet" style="position:absolute;left:-9999px;top:0;">Skip to content</a>
 
     <!-- Top navigation -->
@@ -83,77 +84,93 @@
               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>
               </svg>
-              Chuk Uyammadu — systems, data, AI, and operations
+              Veteran-owned · Bucks County, PA + remote · operator systems
             </span>
             <h1 class="uy-h1">
-              AI, backend, data, and business technology systems built for real-world operators.
+              Practical technology for businesses that need it to just work.
             </h1>
             <p class="uy-lede">
-              I build practical systems across Python backends, AI workflows, reporting,
-              Linux/Raspberry Pi infrastructure, websites, cameras, and small-business
-              operations. Information Systems Management background, hands-on IT support
-              instincts, and no buzzword theater.
+              Uyammadu Dev Services is Chuk Uyammadu's hands-on technology practice for
+              websites, automation, camera/NVR systems, networking fixes, and small-business
+              workflows. The work is scoped clearly, built on owner-controlled systems, and
+              documented so the next person can understand it.
             </p>
             <div class="uy-hero__cta-row">
-              <a class="uy-btn uy-btn--primary uy-btn--lg" href="/about">
-                About Chuk
+              <a class="uy-btn uy-btn--primary uy-btn--lg" href="/contact">
+                Request a Local Tech Assessment
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M5 12h14M13 5l7 7-7 7"/>
                 </svg>
               </a>
               <a class="uy-btn uy-btn--ghost uy-btn--lg" href="/services">
-                View services
+                View Services
               </a>
-              <a class="uy-btn uy-btn--ghost uy-btn--lg" href="/projects">View projects</a>
+              <a class="uy-btn uy-btn--ghost uy-btn--lg" href="/projects">View Projects</a>
             </div>
             <div class="uy-hero__meta">
               <div class="uy-hero__meta-item">
-                <span class="uy-hero__meta-item-num">ISM</span>
-                <span class="uy-hero__meta-item-label">Information systems background</span>
+                <span class="uy-hero__meta-item-num">Web + ops</span>
+                <span class="uy-hero__meta-item-label">Sites, forms, domains, and handoff</span>
               </div>
               <div class="uy-hero__meta-item">
-                <span class="uy-hero__meta-item-num">Python + AI</span>
-                <span class="uy-hero__meta-item-label">Backend systems builder</span>
+                <span class="uy-hero__meta-item-num">Automation</span>
+                <span class="uy-hero__meta-item-label">Reporting and workflow prototypes</span>
               </div>
               <div class="uy-hero__meta-item">
-                <span class="uy-hero__meta-item-num">Linux + Pi</span>
-                <span class="uy-hero__meta-item-label">Homelab and local infrastructure</span>
+                <span class="uy-hero__meta-item-num">Local systems</span>
+                <span class="uy-hero__meta-item-label">Cameras, NVR, networking, Raspberry Pi</span>
               </div>
             </div>
           </div>
 
           <div class="uy-hero__visual">
-            <div class="uy-hero__console uy-codecard" aria-hidden="true">
-              <div class="uy-codecard__head">
-                <span class="uy-codecard__head-dot uy-codecard__head-dot--r"></span>
-                <span class="uy-codecard__head-dot uy-codecard__head-dot--y"></span>
-                <span class="uy-codecard__head-dot uy-codecard__head-dot--g"></span>
-                <span class="uy-codecard__head-title">operator-checklist</span>
+            <aside class="uy-operator-card" aria-label="Current operator status">
+              <div class="uy-operator-card__head">
+                <span>Field log</span>
+                <strong>Online</strong>
               </div>
-              <div class="uy-codecard__body">
-                <span class="uy-codecard__line"><span class="uy-codecard__k">systems</span>.intake(<span class="uy-codecard__s">"business need"</span>)</span>
-                <span class="uy-codecard__line"><span class="uy-codecard__k">audit</span>.run(<span class="uy-codecard__s">"backend + data + ops"</span>)</span>
-                <span class="uy-codecard__line"><span class="uy-codecard__k">handoff</span>.ship(<span class="uy-codecard__s">"clean, documented, owner-ready"</span>)</span>
-              </div>
-            </div>
+              <dl class="uy-operator-card__list">
+                <div>
+                  <dt>Live site</dt>
+                  <dd>dev.uyammadu.com</dd>
+                </div>
+                <div>
+                  <dt>Contact form</dt>
+                  <dd>Operational</dd>
+                </div>
+                <div>
+                  <dt>Focus</dt>
+                  <dd>Websites, automation, camera/NVR, small-business systems</dd>
+                </div>
+                <div>
+                  <dt>Service area</dt>
+                  <dd>Bucks County, PA + remote</dd>
+                </div>
+                <div>
+                  <dt>Stack</dt>
+                  <dd>Cloudflare Pages, HTML/SASS, vanilla JS, Pages Functions</dd>
+                </div>
+              </dl>
+            </aside>
           </div>
         </div>
       </section>
 
-      <!-- Recruiter profile -->
+      <!-- Operator profile -->
       <section class="uy-section uy-section--alt">
         <div class="uy-container">
           <div class="uy-profile-strip">
             <div>
-              <span class="uy-eyebrow">Recruiter snapshot</span>
-              <h2 class="uy-h2">A practical builder with business systems context</h2>
+              <span class="uy-eyebrow">Operator snapshot</span>
+              <h2 class="uy-h2">One accountable builder for messy, practical technology work</h2>
               <p class="uy-lede">
-                Chukwuemelie "Chuk" Uyammadu brings together Information Systems
-                Management, IT support, data analysis, backend development, AI prototypes,
-                Linux homelab work, and small-business operator experience.
+                Chukwuemelie "Chuk" Uyammadu brings Information Systems Management,
+                IT support, data analysis, backend development, AI prototypes, Linux
+                homelab work, and small-business operator experience into one practical
+                service model.
               </p>
               <div class="uy-case-actions">
-                <a class="uy-btn uy-btn--ghost" href="/about">Read the formal profile</a>
+                <a class="uy-btn uy-btn--ghost" href="/about">Read the profile</a>
                 <a class="uy-btn uy-btn--quiet" href="/orion">Review Orion →</a>
               </div>
             </div>
@@ -368,9 +385,9 @@
       <section class="uy-section uy-section--dark">
         <div class="uy-container">
           <div class="uy-section-head">
-            <span class="uy-eyebrow" style="background:rgba(0,180,216,0.14);color:#00b4d8;">The umbrella</span>
-            <h2 class="uy-h2" style="color:#fff;">uyammadu.com is a small ecosystem, not a single page</h2>
-            <p class="uy-lede" style="color:rgba(255,255,255,0.75);">
+            <span class="uy-eyebrow">The umbrella</span>
+            <h2 class="uy-h2">uyammadu.com is a small ecosystem, not a single page</h2>
+            <p class="uy-lede">
               dev.uyammadu.com is the dependable, business-facing surface. Other sibling
               subdomains carry the more experimental work. Everything stays under one roof,
               with one operator behind it.

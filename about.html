@@ -8,7 +8,7 @@
       name="description"
       content="Formal profile for Chukwuemelie 'Chuk' Uyammadu: Information Systems Management background, IT support and data analyst experience, Python/backend/AI systems builder, Raspberry Pi/Linux homelab builder, and small business operator."
     />
-    <meta name="theme-color" content="#0a1f3d" />
+    <meta name="theme-color" content="#0f1a14" />
     <meta property="og:title" content="About Chuk Uyammadu" />
     <meta property="og:description" content="Information Systems Management background, IT support and data analyst experience, Python/backend/AI systems, Linux homelab work, and operator-first business technology." />
     <meta property="og:type" content="profile" />
@@ -22,12 +22,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body class="uy-page">
+    <canvas id="uy-network-bg" class="uy-network-bg" aria-hidden="true"></canvas>
     <a href="#uy-main" class="uy-btn uy-btn--quiet" style="position:absolute;left:-9999px;top:0;">Skip to content</a>
 
     <header class="uy-nav" role="banner">
@@ -72,20 +73,39 @@
       <section class="uy-pagehead">
         <div class="uy-container">
           <div class="uy-pagehead__crumb"><a href="/">Home</a><span>/</span>About</div>
-          <span class="uy-eyebrow">Formal profile</span>
+          <span class="uy-eyebrow">Founder profile</span>
           <h1 class="uy-h1">Chuk Uyammadu</h1>
           <p class="uy-lede">Chukwuemelie "Chuk" Uyammadu — Information Systems Management background, IT support and data analysis experience, backend and AI systems builder, Linux homelab operator, and small-business technology practitioner.</p>
           <div class="uy-case-actions">
-            <a class="uy-btn uy-btn--primary uy-btn--lg" href="/projects">View portfolio</a>
-            <a class="uy-btn uy-btn--ghost uy-btn--lg" href="/contact">Contact Chuk</a>
+            <a class="uy-btn uy-btn--primary uy-btn--lg" href="/contact">Request a Local Tech Assessment</a>
+            <a class="uy-btn uy-btn--ghost uy-btn--lg" href="/projects">View Projects</a>
           </div>
         </div>
       </section>
 
       <section class="uy-section">
         <div class="uy-container">
-          <div class="uy-profile-strip">
-            <div>
+          <div class="uy-about-profile">
+            <figure class="uy-profile-media">
+              <picture class="uy-profile-media__picture">
+                <source srcset="./assets/images/headshots/chuk-uyammadu-headshot.webp" type="image/webp" />
+                <img
+                  data-uy-headshot
+                  src="./assets/images/headshots/chuk-uyammadu-headshot.jpg"
+                  width="960"
+                  height="960"
+                  alt="Chuk Uyammadu, founder of Uyammadu Dev Services"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+              <div class="uy-profile-media__placeholder" aria-hidden="true">
+                <span>CU</span>
+                <small>Profile photo coming soon</small>
+              </div>
+              <figcaption>Founder / operator / systems builder</figcaption>
+            </figure>
+            <div class="uy-about-profile__copy">
               <span class="uy-eyebrow">Positioning</span>
               <h2 class="uy-h2">Systems-minded builder for operational work</h2>
               <p class="uy-body">
@@ -96,27 +116,27 @@
                 needs enough structure that another technical reviewer can trust it.
               </p>
             </div>
-            <div class="uy-signal-grid">
-              <div class="uy-signal">
-                <span>Education signal</span>
-                <strong>Information Systems Management</strong>
-                <p>Business systems, process thinking, data workflows, and technology management.</p>
-              </div>
-              <div class="uy-signal">
-                <span>Experience signal</span>
-                <strong>IT support + data analysis</strong>
-                <p>Troubleshooting, reporting, operational visibility, and owner-friendly handoff.</p>
-              </div>
-              <div class="uy-signal">
-                <span>Build signal</span>
-                <strong>Python, backend, AI systems</strong>
-                <p>FastAPI-style services, structured data contracts, agent prototypes, and eval checks.</p>
-              </div>
-              <div class="uy-signal">
-                <span>Operator signal</span>
-                <strong>Linux homelab + small business</strong>
-                <p>Raspberry Pi systems, local infrastructure, restaurants, cameras, networks, and daily operations.</p>
-              </div>
+          </div>
+          <div class="uy-signal-grid uy-signal-grid--profile">
+            <div class="uy-signal">
+              <span>Education signal</span>
+              <strong>Information Systems Management</strong>
+              <p>Business systems, process thinking, data workflows, and technology management.</p>
+            </div>
+            <div class="uy-signal">
+              <span>Experience signal</span>
+              <strong>IT support + data analysis</strong>
+              <p>Troubleshooting, reporting, operational visibility, and owner-friendly handoff.</p>
+            </div>
+            <div class="uy-signal">
+              <span>Build signal</span>
+              <strong>Python, backend, AI systems</strong>
+              <p>FastAPI-style services, structured data contracts, agent prototypes, and eval checks.</p>
+            </div>
+            <div class="uy-signal">
+              <span>Operator signal</span>
+              <strong>Linux homelab + small business</strong>
+              <p>Raspberry Pi systems, local infrastructure, restaurants, cameras, networks, and daily operations.</p>
             </div>
           </div>
         </div>
@@ -125,7 +145,7 @@
       <section class="uy-section uy-section--alt">
         <div class="uy-container">
           <div class="uy-section-head">
-            <span class="uy-eyebrow">Recruiter scan</span>
+              <span class="uy-eyebrow">Capability scan</span>
             <h2 class="uy-h2">Where the work clusters</h2>
             <p class="uy-lede">
               The portfolio is intentionally practical: systems that read local data,
@@ -159,9 +179,9 @@
             <div class="uy-case-panel">
               <h3>Representative projects</h3>
               <ul class="uy-case-list">
-                <li><a href="/orion" style="color:#0062b9;">Orion</a>: secure agentic BI prototype with fictional local data and explicit guardrails.</li>
-                <li><a href="/projects" style="color:#0062b9;">Raspberry Pi infrastructure pattern</a>: small-business local services and owner-controlled systems.</li>
-                <li><a href="/cameras" style="color:#0062b9;">Camera systems practice</a>: privacy-first camera/NVR planning, remote access, and handoff documentation.</li>
+                <li><a href="/orion">Orion</a>: secure agentic BI prototype with fictional local data and explicit guardrails.</li>
+                <li><a href="/projects">Raspberry Pi infrastructure pattern</a>: small-business local services and owner-controlled systems.</li>
+                <li><a href="/cameras">Camera systems practice</a>: privacy-first camera/NVR planning, remote access, and handoff documentation.</li>
               </ul>
             </div>
             <div class="uy-case-panel">
@@ -183,7 +203,7 @@
             <h3>Review the work, then start with the case studies.</h3>
             <p>Orion is the clearest backend/AI example; the camera and infrastructure work shows the operator side.</p>
           </div>
-          <a class="uy-btn uy-btn--accent uy-btn--lg" href="/projects">View projects</a>
+          <a class="uy-btn uy-btn--accent uy-btn--lg" href="/projects">View Projects</a>
         </div>
       </section>
     </main>

@@ -8,7 +8,7 @@
       name="description"
       content="A proof-wall of live deployments, prototypes, and technical research concepts across AI, networking, and restaurant technology."
     />
-    <meta name="theme-color" content="#0a1f3d" />
+    <meta name="theme-color" content="#0f1a14" />
     <meta property="og:title" content="Projects & Proof — Uyammadu Dev Services" />
     <meta property="og:description" content="A proof-wall of live deployments, prototypes, and technical research concepts across AI, networking, and restaurant technology." />
     <meta property="og:type" content="website" />
@@ -19,11 +19,12 @@
     <link rel="icon" type="image/svg+xml" href="./assets/svg/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body class="uy-page">
+    <canvas id="uy-network-bg" class="uy-network-bg" aria-hidden="true"></canvas>
     <header class="uy-nav" role="banner">
       <div class="uy-container uy-nav__inner">
         <a class="uy-nav__brand" href="/" aria-label="Uyammadu home">
@@ -66,7 +67,8 @@
       <section class="uy-pagehead">
         <div class="uy-container">
           <div class="uy-pagehead__crumb"><a href="/">Home</a><span>/</span>Projects</div>
-          <h1 class="uy-h1">Projects & Proof</h1>
+          <span class="uy-eyebrow">Proof wall</span>
+          <h1 class="uy-h1">Real builds, clearly labeled.</h1>
           <p class="uy-lede">
             A working portfolio of live deployments, prototypes, and technical research concepts. Statuses
             are honest. <code>Live</code> means it's running for a user.
@@ -74,8 +76,53 @@
             <code>Private deployment</code> means it's running for an operator and details are kept off public pages.
           </p>
           <div class="uy-case-actions">
-            <a class="uy-btn uy-btn--primary uy-btn--lg" href="/contact">Request Assessment</a>
+            <a class="uy-btn uy-btn--primary uy-btn--lg" href="/contact">Request a Local Tech Assessment</a>
             <a class="uy-btn uy-btn--ghost uy-btn--lg" href="/pricing">View Pricing</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="uy-section uy-section--tight">
+        <div class="uy-container">
+          <div class="uy-status-legend">
+            <div class="uy-status-legend__intro">
+              <span class="uy-eyebrow">Status legend</span>
+              <h2 class="uy-h2">Honest labels for what is live, private, experimental, or still being built.</h2>
+              <p class="uy-body">
+                The proof wall mixes public deployments, internal tools, lab systems, and research notes.
+                These labels prevent prototypes from pretending to be client case studies.
+              </p>
+            </div>
+            <div class="uy-status-legend__grid" aria-label="Project status definitions">
+              <div class="uy-status-legend__item">
+                <span class="uy-pill uy-pill--live">Live</span>
+                <p>Running on a real domain or active system.</p>
+              </div>
+              <div class="uy-status-legend__item">
+                <span class="uy-pill uy-pill--private">Private deployment</span>
+                <p>Running for an operator, with details kept off public pages.</p>
+              </div>
+              <div class="uy-status-legend__item">
+                <span class="uy-pill uy-pill--proto">Prototype</span>
+                <p>Working on synthetic, fictional, or limited data.</p>
+              </div>
+              <div class="uy-status-legend__item">
+                <span class="uy-pill uy-pill--lab">Lab build</span>
+                <p>Built and tested locally, usually on owner-controlled hardware patterns.</p>
+              </div>
+              <div class="uy-status-legend__item">
+                <span class="uy-pill uy-pill--internal">Internal tool</span>
+                <p>Used to support Chuk's own workflow, not sold as a product.</p>
+              </div>
+              <div class="uy-status-legend__item">
+                <span class="uy-pill uy-pill--dev">In development</span>
+                <p>Active build work; public status may change as it matures.</p>
+              </div>
+              <div class="uy-status-legend__item">
+                <span class="uy-pill uy-pill--research">Research concept</span>
+                <p>Exploration or blueprint. It may never ship.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -84,9 +131,9 @@
       <section class="uy-section">
         <div class="uy-container">
           <div class="uy-section-head">
-            <span class="uy-eyebrow">Featured Work</span>
-            <h2 class="uy-h2">High-impact service deployments</h2>
-            <p class="uy-lede">Selected projects demonstrating deep technical execution and operator-first systems design.</p>
+            <span class="uy-eyebrow">Featured work</span>
+            <h2 class="uy-h2">Public proof, private deployments, and working prototypes</h2>
+            <p class="uy-lede">Selected builds that show the service surface without pretending every item is a polished client case study.</p>
           </div>
 
           <div class="uy-projects">
@@ -157,7 +204,7 @@
               </div>
               <div class="uy-project__head">
                 <h3 class="uy-project__title">Camera/NVR Systems Lab</h3>
-                <span class="uy-pill uy-pill--research">Lab build</span>
+                <span class="uy-pill uy-pill--lab">Lab build</span>
               </div>
               <span class="uy-project__subtitle">Camera/NVR & Footage Systems</span>
               <p class="uy-project__desc">
@@ -178,7 +225,7 @@
               </div>
               <div class="uy-project__head">
                 <h3 class="uy-project__title">Crenshaw Agent Workflow</h3>
-                <span class="uy-pill uy-pill--dev">Internal tool</span>
+                <span class="uy-pill uy-pill--internal">Internal tool</span>
               </div>
               <span class="uy-project__subtitle">AI Agents / Operations</span>
               <p class="uy-project__desc">
@@ -282,7 +329,7 @@
               </div>
               <div class="uy-proof-card__header">
                 <span class="uy-proof-card__category">Data</span>
-                <span class="uy-pill uy-pill--research">Research</span>
+                <span class="uy-pill uy-pill--research">Research concept</span>
               </div>
               <h4 class="uy-proof-card__title">Local Event Radar</h4>
               <p class="uy-proof-card__desc">Manual-first radar concept for tracking local business opportunities in Bucks County.</p>
@@ -295,7 +342,7 @@
               </div>
               <div class="uy-proof-card__header">
                 <span class="uy-proof-card__category">AI</span>
-                <span class="uy-pill uy-pill--research">Research</span>
+                <span class="uy-pill uy-pill--research">Research concept</span>
               </div>
               <h4 class="uy-proof-card__title">AI Scanning & Quiz Gen</h4>
               <p class="uy-proof-card__desc">Researching OCR and LLM pathways for turning physical docs into structured quizzes.</p>
@@ -308,7 +355,7 @@
               </div>
               <div class="uy-proof-card__header">
                 <span class="uy-proof-card__category">Data</span>
-                <span class="uy-pill uy-pill--research">Research</span>
+                <span class="uy-pill uy-pill--research">Research concept</span>
               </div>
               <h4 class="uy-proof-card__title">Stray Animal Tracking</h4>
               <p class="uy-proof-card__desc">Exploring data models and community reporting tools for local animal welfare.</p>
@@ -321,7 +368,7 @@
               </div>
               <div class="uy-proof-card__header">
                 <span class="uy-proof-card__category">Hardware</span>
-                <span class="uy-pill uy-pill--research">Lab build</span>
+                <span class="uy-pill uy-pill--lab">Lab build</span>
               </div>
               <h4 class="uy-proof-card__title">Piano LED Learning</h4>
               <p class="uy-proof-card__desc">ESP32-based hardware lab for MIDI-triggered visual learning systems.</p>
@@ -347,7 +394,7 @@
               </div>
               <div class="uy-proof-card__header">
                 <span class="uy-proof-card__category">Security</span>
-                <span class="uy-pill uy-pill--research">Lab build</span>
+                <span class="uy-pill uy-pill--lab">Lab build</span>
               </div>
               <h4 class="uy-proof-card__title">Cyber Intelligence Lab</h4>
               <p class="uy-proof-card__desc">Environment for testing OSINT tools and local network security auditing patterns.</p>
@@ -467,8 +514,8 @@
             <p>From simple websites to complex AI workflows, let's build something practical.</p>
           </div>
           <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-            <a class="uy-btn uy-btn--accent uy-btn--lg" href="/contact">Start a Project</a>
-            <a class="uy-btn uy-btn--ghost uy-btn--lg" href="/pricing">View Service Rates</a>
+            <a class="uy-btn uy-btn--accent uy-btn--lg" href="/contact">Request a Local Tech Assessment</a>
+            <a class="uy-btn uy-btn--ghost uy-btn--lg" href="/pricing">See Pricing</a>
           </div>
         </div>
       </section>

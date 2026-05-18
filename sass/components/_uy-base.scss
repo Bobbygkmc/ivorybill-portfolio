@@ -6,11 +6,17 @@
 body.uy-page {
   font-family: $uy-font-sans;
   color: $uy-ink;
-  background: $uy-surface;
+  background: $uy-surface-page;
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  a {
+    color: $uy-primary;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
 
   // ---- Layout primitives -----------------------------------------------------
 
@@ -25,14 +31,21 @@ body.uy-page {
   }
 
   .uy-section {
-    padding: 10rem 0;
+    padding: 9.6rem 0;
     @include respond(tab-port) { padding: 7rem 0; }
-    @include respond(phone)    { padding: 5.5rem 0; }
+    @include respond(phone)    { padding: 5.6rem 0; }
   }
   .uy-section--tight { padding: 6rem 0; }
   .uy-section--dark {
     background: $uy-surface-deep;
     color: rgba(#fff, 0.92);
+
+    .uy-eyebrow { color: $uy-accent; }
+    .uy-h2,
+    .uy-h3,
+    .uy-h4 { color: #efe8d6; }
+    .uy-lede,
+    .uy-body { color: rgba(#efe8d6, 0.76); }
   }
   .uy-section--alt { background: $uy-surface-2; }
 
@@ -43,60 +56,68 @@ body.uy-page {
     align-items: center;
     gap: 0.8rem;
     font-size: 1.3rem;
-    font-weight: 600;
-    letter-spacing: 1.2px;
+    font-weight: 700;
+    letter-spacing: 0;
     text-transform: uppercase;
     color: $uy-primary;
-    padding: 0.6rem 1.2rem;
-    border-radius: $uy-radius-pill;
-    background: rgba($uy-primary, 0.08);
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
     max-width: 100%;
     flex-wrap: wrap;
+
+    &::before {
+      content: '';
+      width: 1.8rem;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.46;
+    }
   }
 
   .uy-h1 {
-    font-size: clamp(3.6rem, 5vw + 1rem, 6.4rem);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    font-weight: 700;
-    color: $uy-deep;
-    margin: 0 0 2rem;
+    font-size: clamp(4rem, 7vw + 1rem, 8.6rem);
+    line-height: 1.02;
+    letter-spacing: 0;
+    font-weight: 650;
+    color: $uy-ink;
+    margin: 1.8rem 0 2.4rem;
     max-width: 100%;
   }
   .uy-h2 {
-    font-size: clamp(2.8rem, 3vw + 1rem, 4.2rem);
-    line-height: 1.15;
-    letter-spacing: -0.015em;
-    font-weight: 700;
-    color: $uy-deep;
-    margin: 0 0 1.6rem;
+    font-size: clamp(3rem, 3.8vw + 1rem, 5rem);
+    line-height: 1.06;
+    letter-spacing: 0;
+    font-weight: 650;
+    color: $uy-ink;
+    margin: 1rem 0 1.8rem;
     max-width: 100%;
   }
   .uy-h3 {
     font-size: clamp(2rem, 1.2vw + 1.4rem, 2.6rem);
     line-height: 1.25;
     font-weight: 700;
-    color: $uy-deep;
+    color: $uy-ink;
     margin: 0 0 1.2rem;
   }
   .uy-h4 {
     font-size: 1.8rem;
     font-weight: 600;
-    color: $uy-deep;
+    color: $uy-ink;
     margin: 0 0 0.8rem;
-    letter-spacing: -0.005em;
+    letter-spacing: 0;
   }
 
   .uy-lede {
     font-size: clamp(1.7rem, 0.6vw + 1.4rem, 2.1rem);
-    color: $uy-muted;
+    color: $uy-ink-2;
     line-height: 1.6;
     max-width: 70rem;
   }
 
   .uy-body {
     font-size: 1.7rem;
-    color: $uy-muted;
+    color: $uy-ink-2;
     line-height: 1.7;
     max-width: 78rem;
   }
@@ -105,14 +126,24 @@ body.uy-page {
     font-family: $uy-font-mono;
     font-size: 1.4rem;
     color: $uy-muted;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
   }
 
   .uy-section-head {
-    text-align: center;
-    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+    gap: 6rem;
+    align-items: end;
+    text-align: left;
+    margin-bottom: 4.8rem;
 
     .uy-eyebrow { margin-bottom: 1.6rem; }
-    .uy-lede { margin: 0 auto; }
+    .uy-lede { margin: 0; }
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+      margin-bottom: 3.6rem;
+    }
   }
 }

@@ -9,6 +9,10 @@ and vanilla JavaScript with a SASS build step. The contact form uses a
 Cloudflare Pages Function at `/api/contact`; there is no database and no
 tracking scripts.
 
+The site background uses a small vanilla JavaScript canvas network effect
+behind the content. It does not use third-party animation libraries,
+WebGL, or external animation dependencies.
+
 ---
 
 ## What this site is

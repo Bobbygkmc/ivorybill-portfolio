@@ -26,7 +26,8 @@ body.uy-page {
     background: $uy-surface;
     border: 1px solid $uy-line;
     border-radius: $uy-radius-lg;
-    padding: 2.8rem;
+    padding: 2.4rem;
+    position: relative;
     transition: transform 0.2s $uy-ease,
                 box-shadow 0.2s $uy-ease,
                 border-color 0.2s $uy-ease;
@@ -35,25 +36,51 @@ body.uy-page {
     gap: 1.2rem;
 
     &:hover {
-      transform: translateY(-2px);
+      transform: translateY(-1px);
       box-shadow: $uy-shadow-md;
       border-color: $uy-line-2;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1.2rem;
+      height: 1.2rem;
+      border-color: $uy-line-2;
+      border-style: solid;
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    &::before {
+      top: -1px;
+      left: -1px;
+      border-width: 1px 0 0 1px;
+      border-radius: $uy-radius-lg 0 0 0;
+    }
+
+    &::after {
+      right: -1px;
+      bottom: -1px;
+      border-width: 0 1px 1px 0;
+      border-radius: 0 0 $uy-radius-lg 0;
     }
 
     &__icon {
       width: 4.4rem;
       height: 4.4rem;
-      border-radius: $uy-radius-md;
+      border-radius: $uy-radius-sm;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba($uy-primary, 0.08);
+      background: rgba($uy-primary, 0.12);
       color: $uy-primary;
       margin-bottom: 0.4rem;
 
       svg { width: 2.4rem; height: 2.4rem; }
     }
-    &__title { font-size: 1.9rem; font-weight: 700; color: $uy-deep; margin: 0; }
+    &__title { font-size: 1.9rem; font-weight: 700; color: $uy-ink; margin: 0; }
     &__desc { font-size: 1.5rem; color: $uy-muted; line-height: 1.6; margin: 0; }
     &__list {
       list-style: none; padding: 0; margin: 0.6rem 0 0;
@@ -116,7 +143,8 @@ body.uy-page {
     background: $uy-surface;
     border: 1px solid $uy-line;
     border-radius: $uy-radius-lg;
-    padding: 2.8rem;
+    padding: 0;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     transition: transform 0.2s $uy-ease,
@@ -124,7 +152,7 @@ body.uy-page {
                 border-color 0.2s $uy-ease;
 
     &:hover {
-      transform: translateY(-2px);
+      transform: translateY(-1px);
       box-shadow: $uy-shadow-md;
       border-color: $uy-line-2;
     }
@@ -134,18 +162,22 @@ body.uy-page {
       display: flex;
       align-items: flex-end;
       width: 100%;
-      height: clamp(9rem, 14vw, 13rem);
+      height: clamp(12rem, 18vw, 18rem);
       overflow: hidden;
-      border-radius: $uy-radius-md;
-      border: 1px solid rgba($uy-primary, 0.14);
+      border-radius: 0;
+      border: 0;
+      border-bottom: 1px solid $uy-line;
       background:
-        linear-gradient(135deg, rgba($uy-primary, 0.08), rgba($uy-accent, 0.06)),
-        linear-gradient(180deg, $uy-surface, $uy-surface-2);
-      margin-bottom: 2rem;
+        linear-gradient(to right, rgba($uy-line, 0.72) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba($uy-line, 0.72) 1px, transparent 1px),
+        linear-gradient(135deg, rgba($uy-primary, 0.09), rgba($uy-accent, 0.10)),
+        $uy-surface-2;
+      background-size: 2.4rem 2.4rem, 2.4rem 2.4rem, auto, auto;
+      margin-bottom: 0;
       padding: 1.6rem;
 
       @include respond(phone) {
-        height: 10rem;
+        height: 11rem;
         margin-bottom: 1.6rem;
       }
 
@@ -153,7 +185,7 @@ body.uy-page {
         content: '';
         position: absolute;
         inset: 1.2rem;
-        border: 1px solid rgba($uy-primary, 0.08);
+        border: 1px solid rgba($uy-primary, 0.12);
         border-radius: calc(#{$uy-radius-md} - 2px);
       }
     }
@@ -165,7 +197,7 @@ body.uy-page {
       max-width: 100%;
       padding: 0.6rem 1rem;
       border-radius: $uy-radius-pill;
-      background: rgba($uy-surface, 0.86);
+      background: rgba($uy-surface, 0.92);
       border: 1px solid rgba($uy-line-2, 0.85);
       color: $uy-ink-2;
       font-family: $uy-font-mono;
@@ -181,14 +213,14 @@ body.uy-page {
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      margin-bottom: 1.2rem;
+      margin: 2.4rem 2.4rem 1.2rem;
 
       @include respond(phone) {
         align-items: flex-start;
         flex-direction: column;
       }
     }
-    &__title { font-size: 2rem; font-weight: 700; color: $uy-deep; margin: 0; }
+    &__title { font-size: 2rem; font-weight: 700; color: $uy-ink; margin: 0; }
     &__subtitle {
       display: block;
       margin-top: 0.3rem;
@@ -196,19 +228,20 @@ body.uy-page {
       font-weight: 600;
       color: $uy-muted;
     }
-    &__desc  { font-size: 1.5rem; color: $uy-muted; line-height: 1.65; margin: 0 0 1.6rem; }
+    &__desc  { font-size: 1.5rem; color: $uy-muted; line-height: 1.65; margin: 0 2.4rem 1.6rem; }
 
     &__tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.6rem;
-      margin-top: 1.6rem;
+      margin: 1.6rem 2.4rem 0;
 
       span {
         font-size: 1.2rem;
         font-family: $uy-font-mono;
         color: $uy-muted;
-        background: $uy-surface-3;
+        background: $uy-surface-2;
+        border: 1px solid $uy-line;
         padding: 0.3rem 0.9rem;
         border-radius: $uy-radius-sm;
       }
@@ -220,6 +253,7 @@ body.uy-page {
       flex-wrap: wrap;
       gap: 1rem;
       margin-top: 2rem;
+      padding: 0 2.4rem 2.4rem;
 
       @include respond(phone) {
         align-items: stretch;

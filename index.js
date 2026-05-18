@@ -1,7 +1,8 @@
 // dev.uyammadu.com — minimal client-side behavior.
 // 1. Mobile nav toggle on the new design (.uy-nav)
 // 2. Year stamp in the footer (.uy-year)
-// 3. Legacy hamburger toggle (kept guarded for any archived pages)
+// 3. Lightweight canvas network background
+// 4. Legacy hamburger toggle (kept guarded for any archived pages)
 
 (function () {
   // ---- New nav --------------------------------------------------------------
@@ -26,6 +27,203 @@
   document.querySelectorAll('.uy-year').forEach(function (el) {
     el.textContent = String(new Date().getFullYear());
   });
+
+  // ---- Optional About page headshot -----------------------------------------
+  document.querySelectorAll('[data-uy-headshot]').forEach(function (img) {
+    function markMissing() {
+      var media = img.closest('.uy-profile-media');
+      if (media) {
+        media.classList.add('uy-profile-media--missing');
+      }
+      img.hidden = true;
+    }
+
+    function markLoaded() {
+      var media = img.closest('.uy-profile-media');
+      if (media) {
+        media.classList.remove('uy-profile-media--missing');
+      }
+      img.hidden = false;
+    }
+
+    img.addEventListener('error', markMissing);
+    img.addEventListener('load', markLoaded);
+
+    if (img.complete && img.naturalWidth === 0) {
+      markMissing();
+    }
+  });
+
+  // ---- Technical network background ----------------------------------------
+  var networkCanvas = document.getElementById('uy-network-bg');
+  if (networkCanvas && networkCanvas.getContext) {
+    var ctx = networkCanvas.getContext('2d');
+    var reduceMotionQuery = window.matchMedia
+      ? window.matchMedia('(prefers-reduced-motion: reduce)')
+      : null;
+    var points = [];
+    var animationFrame = null;
+    var width = 0;
+    var height = 0;
+    var dpr = 1;
+
+    function getNetworkConfig() {
+      var mobile = window.innerWidth < 680;
+
+      return {
+        count: mobile ? 20 : 44,
+        maxDistance: mobile ? 112 : 164,
+        speed: mobile ? 0.045 : 0.07,
+        dotRadius: mobile ? 1.25 : 1.45,
+        dotAlpha: mobile ? 0.32 : 0.42,
+        lineAlpha: mobile ? 0.08 : 0.12,
+      };
+    }
+
+    function makePoint(config) {
+      var angle = Math.random() * Math.PI * 2;
+      var speed = config.speed * (0.45 + Math.random() * 0.8);
+
+      return {
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        pulse: Math.random() * Math.PI * 2,
+      };
+    }
+
+    function resizeNetwork() {
+      var nextWidth = window.innerWidth;
+      var nextHeight = window.innerHeight;
+
+      if (nextWidth === width && nextHeight === height) {
+        return;
+      }
+
+      width = nextWidth;
+      height = nextHeight;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      networkCanvas.width = Math.max(1, Math.floor(width * dpr));
+      networkCanvas.height = Math.max(1, Math.floor(height * dpr));
+      networkCanvas.style.width = width + 'px';
+      networkCanvas.style.height = height + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      var config = getNetworkConfig();
+      points = Array.from({ length: config.count }, function () {
+        return makePoint(config);
+      });
+    }
+
+    function drawNetwork(config) {
+      ctx.clearRect(0, 0, width, height);
+
+      for (var i = 0; i < points.length; i += 1) {
+        var point = points[i];
+
+        for (var j = i + 1; j < points.length; j += 1) {
+          var other = points[j];
+          var dx = point.x - other.x;
+          var dy = point.y - other.y;
+          var distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < config.maxDistance) {
+            var alpha = (1 - distance / config.maxDistance) * config.lineAlpha;
+            ctx.beginPath();
+            ctx.moveTo(point.x, point.y);
+            ctx.lineTo(other.x, other.y);
+            ctx.strokeStyle = 'rgba(0, 180, 216, ' + alpha.toFixed(3) + ')';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      }
+
+      for (var k = 0; k < points.length; k += 1) {
+        var dot = points[k];
+        var pulse = 0.55 + Math.sin(dot.pulse) * 0.2;
+
+        ctx.beginPath();
+        ctx.arc(dot.x, dot.y, config.dotRadius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(118, 220, 255, ' + (config.dotAlpha * pulse).toFixed(3) + ')';
+        ctx.fill();
+      }
+    }
+
+    function moveNetwork() {
+      for (var i = 0; i < points.length; i += 1) {
+        var point = points[i];
+        point.x += point.vx;
+        point.y += point.vy;
+        point.pulse += 0.012;
+
+        if (point.x < -20) point.x = width + 20;
+        if (point.x > width + 20) point.x = -20;
+        if (point.y < -20) point.y = height + 20;
+        if (point.y > height + 20) point.y = -20;
+      }
+    }
+
+    function renderNetwork() {
+      var config = getNetworkConfig();
+      resizeNetwork();
+      drawNetwork(config);
+
+      if (reduceMotionQuery && reduceMotionQuery.matches) {
+        animationFrame = null;
+        return;
+      }
+
+      moveNetwork();
+      animationFrame = window.requestAnimationFrame(renderNetwork);
+    }
+
+    function startNetwork() {
+      if (!animationFrame && !document.hidden) {
+        renderNetwork();
+      }
+    }
+
+    function stopNetwork() {
+      if (animationFrame) {
+        window.cancelAnimationFrame(animationFrame);
+        animationFrame = null;
+      }
+    }
+
+    window.addEventListener('resize', function () {
+      width = 0;
+      resizeNetwork();
+      drawNetwork(getNetworkConfig());
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        stopNetwork();
+      } else {
+        startNetwork();
+      }
+    });
+
+    if (reduceMotionQuery) {
+      var handleMotionChange = function () {
+        stopNetwork();
+        startNetwork();
+      };
+
+      if (reduceMotionQuery.addEventListener) {
+        reduceMotionQuery.addEventListener('change', handleMotionChange);
+      } else if (reduceMotionQuery.addListener) {
+        reduceMotionQuery.addListener(handleMotionChange);
+      }
+    }
+
+    resizeNetwork();
+    drawNetwork(getNetworkConfig());
+    startNetwork();
+  }
 
   // ---- Service-request form -------------------------------------------------
   var form = document.querySelector('[data-uy-form]');

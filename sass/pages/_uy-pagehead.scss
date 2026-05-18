@@ -6,20 +6,36 @@ body.uy-page {
 
   .uy-pagehead {
     padding: 8rem 0 5rem;
+    position: relative;
+    overflow: hidden;
     background:
-      radial-gradient(40rem 30rem at 5% -10%, rgba($uy-primary, 0.16), transparent 60%),
-      $uy-surface;
-    border-bottom: 1px solid $uy-line;
+      radial-gradient(46rem 30rem at 10% -20%, rgba($uy-primary, 0.22), transparent 62%),
+      $uy-deep;
+    border-bottom: 1px solid rgba(#fff, 0.08);
+
+    .uy-eyebrow {
+      color: rgba(#fff, 0.62);
+    }
+
+    .uy-h1,
+    .uy-h2,
+    .uy-body {
+      color: #efe8d6;
+    }
+
+    .uy-lede {
+      color: rgba(#efe8d6, 0.76);
+    }
 
     @include respond(phone) { padding: 5rem 0 3rem; }
 
     &__crumb {
       font-family: $uy-font-mono;
       font-size: 1.3rem;
-      color: $uy-muted-2;
-      letter-spacing: 0.4px;
+      color: rgba(#efe8d6, 0.5);
+      letter-spacing: 0.08em;
       margin-bottom: 1.6rem;
-      a { color: $uy-muted; text-decoration: none; &:hover { color: $uy-primary; } }
+      a { color: rgba(#efe8d6, 0.7); text-decoration: none; &:hover { color: #efe8d6; } }
       span { margin: 0 0.6rem; }
     }
   }

@@ -13,9 +13,10 @@ body.uy-page {
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
-    padding: 1.4rem 2.4rem;
+    min-height: 4.4rem;
+    padding: 1.2rem 2rem;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 650;
     border-radius: $uy-radius-md;
     text-decoration: none;
     border: 1px solid transparent;
@@ -36,11 +37,11 @@ body.uy-page {
     svg { width: 1.6rem; height: 1.6rem; }
 
     &--primary {
-      background: $uy-deep;
+      background: $uy-primary;
       color: #fff;
       box-shadow: $uy-shadow-md;
       &:hover {
-        background: $uy-primary;
+        background: color.adjust($uy-primary, $lightness: -8%);
         box-shadow: $uy-shadow-glow;
       }
     }
@@ -48,24 +49,24 @@ body.uy-page {
       background: $uy-accent;
       color: $uy-deep;
       box-shadow: $uy-shadow-md;
-      &:hover { background: color.adjust($uy-accent, $lightness: 4%); }
+      &:hover { background: color.adjust($uy-accent, $lightness: -6%); }
     }
     &--ghost {
       background: transparent;
-      color: $uy-deep;
+      color: $uy-ink;
       border-color: $uy-line-2;
       &:hover {
-        border-color: $uy-deep;
-        background: rgba($uy-deep, 0.03);
+        border-color: $uy-ink;
+        background: rgba($uy-surface, 0.5);
       }
     }
     &--quiet {
       background: transparent;
-      color: $uy-deep;
+      color: $uy-ink;
       padding: 1.2rem 1.4rem;
       &:hover { color: $uy-primary; }
     }
-    &--lg { padding: 1.7rem 3.2rem; font-size: 1.6rem; }
+    &--lg { min-height: 5.2rem; padding: 1.4rem 2.4rem; font-size: 1.6rem; }
     &--block { width: 100%; }
 
     @include respond(phone) {
@@ -93,9 +94,9 @@ body.uy-page {
     align-items: center;
     gap: 0.6rem;
     padding: 0.5rem 1.1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    letter-spacing: 0.4px;
+    letter-spacing: 0;
     text-transform: uppercase;
     border-radius: $uy-radius-pill;
     background: $uy-surface-3;
@@ -110,10 +111,16 @@ body.uy-page {
       opacity: 0.9;
     }
 
-    &--live     { background: rgba($uy-status-live, 0.12);    color: color.adjust($uy-status-live, $lightness: -12%); }
-    &--proto    { background: rgba($uy-status-proto, 0.12);   color: $uy-status-proto; }
-    &--dev      { background: rgba($uy-status-dev, 0.14);     color: color.adjust($uy-status-dev, $lightness: -8%); }
-    &--private  { background: rgba($uy-status-private, 0.14); color: $uy-status-private; }
-    &--research { background: rgba($uy-status-research, 0.12); color: $uy-status-research; }
+    &--live     { background: $uy-status-live; color: #fff; }
+    &--proto    { background: transparent; color: $uy-status-proto; border: 1px solid rgba($uy-status-proto, 0.55); }
+    &--dev      { background: transparent; color: $uy-status-dev; border: 1px solid currentColor; }
+    &--lab      { background: transparent; color: $uy-primary; border: 1px solid rgba($uy-primary, 0.55); }
+    &--internal { background: transparent; color: $uy-ink-2; border: 1px solid $uy-line-2; }
+    &--private  {
+      background: $uy-surface-3;
+      color: $uy-status-private;
+      background-image: repeating-linear-gradient(45deg, transparent 0 5px, rgba(#000, 0.035) 5px 6px);
+    }
+    &--research { background: transparent; color: $uy-status-research; border: 1px dashed rgba($uy-status-research, 0.65); }
   }
 }

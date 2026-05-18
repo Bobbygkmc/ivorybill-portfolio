@@ -8,19 +8,20 @@
       name="description"
       content="Request a local technology assessment or project estimate from Chuk Uyammadu. Email, call, or use the intake form."
     />
-    <meta name="theme-color" content="#0a1f3d" />
+    <meta name="theme-color" content="#0f1a14" />
 
     <link rel="icon" type="image/svg+xml" href="./assets/svg/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body class="uy-page">
+    <canvas id="uy-network-bg" class="uy-network-bg" aria-hidden="true"></canvas>
     <header class="uy-nav" role="banner">
       <div class="uy-container uy-nav__inner">
         <a class="uy-nav__brand" href="/" aria-label="Uyammadu home">
@@ -37,7 +38,7 @@
           <a class="uy-nav__link uy-nav__link--active" href="/contact">Contact</a>
           <a class="uy-nav__link" href="https://blog.uyammadu.com">Blog</a>
         </nav>
-        <a class="uy-btn uy-btn--primary uy-nav__cta" href="mailto:chuk.uyammadu@gmail.com">Email Chuk</a>
+        <a class="uy-btn uy-btn--primary uy-nav__cta" href="#contact-form">Request a Local Tech Assessment</a>
         <button class="uy-nav__toggle" aria-label="Open menu" aria-controls="uy-mobile-menu" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
         </button>
@@ -54,7 +55,7 @@
             <li><a href="/contact">Contact</a></li>
             <li><a href="https://blog.uyammadu.com">Blog</a></li>
           </ul>
-          <a class="uy-btn uy-btn--primary uy-btn--block" href="mailto:chuk.uyammadu@gmail.com">Email Chuk</a>
+          <a class="uy-btn uy-btn--primary uy-btn--block" href="#contact-form">Request a Local Tech Assessment</a>
         </div>
       </div>
     </header>
@@ -76,12 +77,12 @@
         <div class="uy-container">
           <div class="uy-split uy-split--narrow">
             <div>
-              <form class="uy-form" data-uy-form action="/api/contact" method="post" novalidate>
+              <form id="contact-form" class="uy-form" data-uy-form action="/api/contact" method="post" novalidate>
                 <p class="uy-status-banner" data-uy-form-status>
                   <strong>Request form:</strong> submissions are sent to Chuk through the
                   site backend. For urgent needs, email
-                  <a href="mailto:chuk.uyammadu@gmail.com" style="color:#0062b9;">chuk.uyammadu@gmail.com</a>
-                  or call/text <a href="tel:+12542587270" style="color:#0062b9;">254-258-7270</a>.
+                  <a href="mailto:chuk.uyammadu@gmail.com">chuk.uyammadu@gmail.com</a>
+                  or call/text <a href="tel:+12542587270">254-258-7270</a>.
                 </p>
 
                 <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
@@ -171,9 +172,9 @@
                 <h3 class="uy-card__title">Direct contact</h3>
                 <p class="uy-card__desc">Email Chuk directly to request service. Call or text for urgent local business technology issues.</p>
                 <ul class="uy-card__list" style="margin-top:1rem;">
-                  <li><strong>Email:</strong> <a href="mailto:chuk.uyammadu@gmail.com" style="color:#0062b9;">chuk.uyammadu@gmail.com</a></li>
-                  <li><strong>Call / text:</strong> <a href="tel:+12542587270" style="color:#0062b9;">254-258-7270</a></li>
-                  <li><strong>GitHub:</strong> <a href="https://github.com/Bobbygkmc" target="_blank" rel="noopener" style="color:#0062b9;">Bobbygkmc</a></li>
+                  <li><strong>Email:</strong> <a href="mailto:chuk.uyammadu@gmail.com">chuk.uyammadu@gmail.com</a></li>
+                  <li><strong>Call / text:</strong> <a href="tel:+12542587270">254-258-7270</a></li>
+                  <li><strong>GitHub:</strong> <a href="https://github.com/Bobbygkmc" target="_blank" rel="noopener">Bobbygkmc</a></li>
                 </ul>
               </div>
               <div class="uy-card">

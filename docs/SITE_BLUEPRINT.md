@@ -279,8 +279,8 @@ site follows this philosophy.
 
 ### 6.1 Home (`index.html`)
 
-1. **Hero** — one-line value prop + sub-prop + primary CTA (`Start a
-   project`) + secondary ghost CTA (`See pricing`). Code-card visual
+1. **Hero** — one-line value prop + sub-prop + primary CTA (`Request a
+   Local Tech Assessment`) + secondary ghost CTA (`See pricing`). Status-card visual
    reinforces "operator" identity.
 2. **Service preview** — 6 service cards. Each card is a self-contained
    answer to "what do you do for businesses like mine?".
@@ -314,7 +314,7 @@ site follows this philosophy.
 
 1. Page hero
 2. Projects grid with status pills. Sort: Live → In Development →
-   Prototype → Private → Research.
+   Private → Prototype → Lab Build → Internal Tool → Research Concept.
 3. CTA strip → contact
 
 ### 6.5 Cameras (`cameras.html`)
@@ -339,16 +339,17 @@ but tighter:
 
 ## 7. CTA hierarchy
 
-The site has one canonical CTA: **start a project**. Every page funnels
-toward `contact.html` or its inline form.
+The site has one canonical primary CTA: **Request a Local Tech
+Assessment**. Every page funnels toward `contact.html` or its inline
+form.
 
 | Surface       | Primary CTA            | Secondary CTA           |
 | ------------- | ---------------------- | ----------------------- |
-| Hero          | Start a project        | See pricing / services  |
+| Hero          | Request a Local Tech Assessment | See pricing / services  |
 | Service card  | (none — card itself links to services anchor) | — |
 | Project card  | (none — card links to case study)             | — |
-| Pricing tier  | Start a project        | —                       |
-| CTA strip     | Start a project        | Email link              |
+| Pricing tier  | Request a Local Tech Assessment | —              |
+| CTA strip     | Request a Local Tech Assessment | Email link     |
 | Footer        | Email + call/text      | —                       |
 
 **Sticky behavior**: the navigation `Contact` link is the persistent
@@ -366,8 +367,9 @@ must not be fabricated. These trust signals are honest and sufficient:
 - **Veteran-owned** — stated plainly in hero/footer, not flag-emoji'd.
 - **Service area** — Bucks County, PA + remote. Specific beats vague.
 - **Project transparency** — every project on `projects.html` carries
-  a status pill (Live, Prototype, In Dev, Private, Research). Honest
-  status is more credible than a "completed" filter that hides reality.
+  a status pill (Live, Private Deployment, Prototype, Lab Build,
+  Internal Tool, In Development, Research Concept). Honest status is
+  more credible than a "completed" filter that hides reality.
 - **Process clarity** — 4-step process on home + per-service "what's
   included" lists. Removes the freelancer mystery box.
 - **Pricing transparency** — explicit ranges and timeframes on
@@ -429,8 +431,8 @@ The following are **explicitly forbidden** on this site:
 - "10x", "growth hacker", "AI-powered" buzzword positioning
 
 Project statuses on `projects.html` are restricted to:
-`Live`, `Prototype`, `In Development`, `Private Deployment`,
-`Research Concept`.
+`Live`, `Private Deployment`, `Prototype`, `Lab Build`, `Internal Tool`,
+`In Development`, `Research Concept`.
 
 ---
 

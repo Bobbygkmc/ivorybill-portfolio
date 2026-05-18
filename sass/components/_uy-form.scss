@@ -13,7 +13,7 @@ body.uy-page {
     padding: 3.2rem;
     border-radius: $uy-radius-lg;
     border: 1px solid $uy-line;
-    box-shadow: $uy-shadow-sm;
+    box-shadow: $uy-shadow-md;
 
     @include respond(phone) { padding: 2.4rem; }
 
@@ -25,8 +25,10 @@ body.uy-page {
     &__label {
       font-size: 1.3rem;
       font-weight: 600;
-      color: $uy-ink-2;
-      letter-spacing: 0.2px;
+      color: $uy-muted;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: $uy-font-mono;
     }
 
     &__input,
@@ -38,7 +40,7 @@ body.uy-page {
       padding: 1.3rem 1.4rem;
       border: 1px solid $uy-line-2;
       border-radius: $uy-radius-md;
-      background: $uy-surface;
+      background: $uy-surface-2;
       transition: border-color 0.15s $uy-ease, box-shadow 0.15s $uy-ease;
 
       &::placeholder { color: $uy-muted-2; }
@@ -47,7 +49,7 @@ body.uy-page {
       &:focus {
         outline: none;
         border-color: $uy-primary;
-        box-shadow: 0 0 0 4px rgba($uy-primary, 0.12);
+        box-shadow: 0 0 0 4px rgba($uy-primary, 0.14);
       }
     }
     &__textarea { min-height: 14rem; resize: vertical; }
@@ -66,9 +68,9 @@ body.uy-page {
     margin-bottom: 2.4rem;
     padding: 1.4rem 1.8rem;
     border-radius: $uy-radius-md;
-    background: rgba($uy-accent, 0.08);
-    border: 1px solid rgba($uy-accent, 0.22);
-    color: color.adjust($uy-accent, $lightness: -24%);
+    background: rgba($uy-primary, 0.08);
+    border: 1px solid rgba($uy-primary, 0.22);
+    color: $uy-ink-2;
     font-size: 1.4rem;
     line-height: 1.55;
 

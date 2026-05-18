@@ -9,7 +9,7 @@ body.uy-page {
   .uy-pricing {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2.4rem;
   }
 
   .uy-pricing-group {
@@ -17,6 +17,7 @@ body.uy-page {
     border: 1px solid $uy-line;
     border-radius: $uy-radius-lg;
     overflow: hidden;
+    box-shadow: $uy-shadow-sm;
 
     &__head {
       padding: 2.4rem 2.8rem;
@@ -27,7 +28,7 @@ body.uy-page {
         margin: 0;
         font-size: 1.8rem;
         font-weight: 700;
-        color: $uy-deep;
+        color: $uy-ink;
       }
       p {
         margin: 0.6rem 0 0;
@@ -53,7 +54,7 @@ body.uy-page {
       padding: 1.6rem 2rem;
     }
 
-    &__name { font-size: 1.5rem; font-weight: 600; color: $uy-deep; }
+    &__name { font-size: 1.5rem; font-weight: 600; color: $uy-ink; }
     &__price {
       font-size: 1.5rem;
       font-weight: 700;
@@ -75,7 +76,7 @@ body.uy-page {
 
   .uy-callout {
     padding: 2.2rem 2.6rem;
-    border-radius: $uy-radius-md;
+    border-radius: $uy-radius-lg;
     background: rgba($uy-warm, 0.08);
     border: 1px solid rgba($uy-warm, 0.25);
 
@@ -86,8 +87,9 @@ body.uy-page {
   .uy-disclaimer {
     margin-top: 3rem;
     padding: 2rem 2.4rem;
+    border: 1px solid $uy-line;
     border-left: 3px solid $uy-line-2;
-    background: $uy-surface-2;
+    background: rgba($uy-surface, 0.72);
     color: $uy-muted;
     font-size: 1.4rem;
     line-height: 1.6;
