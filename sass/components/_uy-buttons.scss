@@ -1,6 +1,15 @@
 // =============================================================================
 // dev.uyammadu.com — buttons + pills
 // =============================================================================
+//
+// CONTRAST-SAFE BUTTON RULE
+// Every button variant must have readable text in normal, hover, focus, and
+// disabled states. When a button can sit on a dark background (hero, pagehead,
+// CTA strip, or any .uy-section--dark), add its container selector to the
+// dark-context override block below so ghost/quiet variants switch to light
+// text. Do not put light text on light backgrounds, dark text on dark
+// backgrounds, or hover styles that hide text behind a transparent fill.
+// =============================================================================
 
 @use 'sass:color';
 
@@ -58,6 +67,7 @@ body.uy-page {
       &:hover {
         border-color: $uy-ink;
         background: rgba($uy-surface, 0.5);
+        color: $uy-ink;
       }
     }
     &--quiet {
@@ -66,6 +76,19 @@ body.uy-page {
       padding: 1.2rem 1.4rem;
       &:hover { color: $uy-primary; }
     }
+
+    // Disabled / "looks like a button but isn't" badge. Intentionally muted so
+    // it reads as not clickable, while still passing contrast.
+    &--disabled,
+    &--disabled:hover {
+      color: $uy-ink-2;
+      background: $uy-surface-3;
+      border-color: $uy-line;
+      box-shadow: none;
+      cursor: default;
+      transform: none;
+    }
+
     &--lg { min-height: 5.2rem; padding: 1.4rem 2.4rem; font-size: 1.6rem; }
     &--block { width: 100%; }
 
@@ -75,15 +98,31 @@ body.uy-page {
     }
   }
 
-  // Dark-section button overrides
-  &.uy-section--dark, .uy-section--dark {
+  // Dark-context button overrides. Add new dark wrappers to this selector list
+  // so ghost/quiet/disabled variants stay readable on dark backgrounds.
+  &.uy-section--dark,
+  .uy-section--dark,
+  .uy-hero,
+  .uy-pagehead,
+  .uy-cta-strip {
     .uy-btn--ghost {
       color: #fff;
-      border-color: rgba(#fff, 0.25);
+      border-color: rgba(#fff, 0.35);
       &:hover {
         border-color: #fff;
-        background: rgba(#fff, 0.08);
+        background: rgba(#fff, 0.1);
+        color: #fff;
       }
+    }
+    .uy-btn--quiet {
+      color: rgba(#fff, 0.88);
+      &:hover { color: #fff; }
+    }
+    .uy-btn--disabled,
+    .uy-btn--disabled:hover {
+      color: rgba(#fff, 0.72);
+      background: rgba(#fff, 0.06);
+      border-color: rgba(#fff, 0.22);
     }
   }
 

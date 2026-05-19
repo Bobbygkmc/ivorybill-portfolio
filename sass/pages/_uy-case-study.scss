@@ -19,21 +19,9 @@ body.uy-page {
     }
   }
 
-  .uy-btn--disabled {
-    color: $uy-muted;
-    background: $uy-surface-3;
-    border-color: $uy-line;
-    box-shadow: none;
-    cursor: default;
-
-    &:hover {
-      color: $uy-muted;
-      background: $uy-surface-3;
-      border-color: $uy-line;
-      box-shadow: none;
-      transform: none;
-    }
-  }
+  // .uy-btn--disabled now lives in sass/components/_uy-buttons.scss so the
+  // disabled badge style is shared with non-case-study pages and stays in sync
+  // with the contrast-safe button rule.
 
   .uy-case-grid {
     display: grid;
