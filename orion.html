@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orion — Secure Agentic Business Intelligence Framework</title>
+    <title>Orion — Safe AI Business Intelligence Prototype</title>
     <meta
       name="description"
-      content="Orion is a read-first AI business intelligence prototype with FastAPI, LangGraph, Pydantic, fictional local CSV data, guardrails, PII scrubbing, evals, and reviewer-visible decision trails."
+      content="Orion is a Python/FastAPI portfolio prototype that explores AI-assisted business intelligence with fictional local data, read-only connectors, destructive-operation blocking, PII scrubbing, evaluation checks, and reviewer-visible decision trails."
     />
     <meta name="theme-color" content="#0f1a14" />
-    <meta property="og:title" content="Orion — Secure Agentic Business Intelligence Framework" />
-    <meta property="og:description" content="A portfolio case study for a read-first agentic BI prototype with typed plans, guardrails, fictional local data, and inspectable decision trails." />
+    <meta property="og:title" content="Orion — Safe AI Business Intelligence Prototype" />
+    <meta property="og:description" content="A reviewer-grade Python/FastAPI prototype showing how AI-assisted business intelligence can run on narrow permissions, fictional local data, and an auditable decision trail." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://dev.uyammadu.com/orion" />
     <meta property="og:image" content="https://dev.uyammadu.com/assets/images/social/og-default.svg" />
@@ -80,18 +80,24 @@
           <div class="uy-pagehead__crumb"><a href="/">Home</a><span>/</span><a href="/projects">Projects</a><span>/</span>Orion</div>
           <span class="uy-eyebrow">Portfolio case study</span>
           <h1 class="uy-h1">Orion</h1>
-          <p class="uy-lede">Secure Agentic Business Intelligence Framework</p>
+          <p class="uy-lede">Safe AI Business Intelligence Prototype</p>
           <p class="uy-body">
-            A read-first AI business intelligence prototype that turns natural-language
-            business questions into structured BI responses using FastAPI, LangGraph,
-            Pydantic, fictional local CSV data, destructive-operation blocking, PII
-            scrubbing, deterministic evals, and reviewer-visible decision trails.
+            Orion is a Python/FastAPI portfolio project that explores how an AI-assisted
+            analyst can answer business questions from structured data without being
+            given unrestricted permission to modify, delete, or expose records.
+          </p>
+          <p class="uy-body">
+            The current prototype uses fictional local CSV data, read-only connector
+            patterns, destructive-operation blocking, PII/secrets scrubbing, deterministic
+            evaluation checks, and reviewer-visible decision trails. It is designed to
+            demonstrate safe enterprise AI thinking: useful answers, narrow permissions,
+            auditable steps, and honest boundaries.
           </p>
           <div class="uy-case-actions" aria-label="Orion project actions">
-            <a class="uy-btn uy-btn--primary uy-btn--lg" href="/projects">Back to projects</a>
+            <a class="uy-btn uy-btn--primary uy-btn--lg" href="/contact">Request Orion reviewer access</a>
+            <a class="uy-btn uy-btn--ghost" href="/projects">Back to projects</a>
             <span class="uy-pill uy-pill--proto">Prototype</span>
             <span class="uy-btn uy-btn--ghost uy-btn--disabled" aria-disabled="true">Private repo / available on request</span>
-            <span class="uy-btn uy-btn--ghost uy-btn--disabled" aria-disabled="true">Live demo coming soon</span>
           </div>
         </div>
       </section>
@@ -104,33 +110,32 @@
                 <span class="uy-eyebrow">Problem</span>
                 <h2 class="uy-h2">Business answers without unrestricted data access</h2>
                 <p>
-                  Orion explores how AI-assisted business intelligence can answer
-                  operational questions without giving an LLM unrestricted database access.
-                  The prototype treats every user request as something that must be
-                  sanitized, planned, checked, executed read-only, and explained.
+                  Business intelligence is moving toward natural-language interfaces, but
+                  enterprise teams still need control. An AI system should not be able to
+                  freely write to databases, expose sensitive information, or run
+                  destructive actions just because a user asked in plain English.
                 </p>
               </article>
 
               <article>
                 <span class="uy-eyebrow">Approach</span>
-                <h2 class="uy-h2">Typed plans, guardrails, and inspectable trails</h2>
+                <h2 class="uy-h2">Sanitize, plan, guard, execute read-only, explain</h2>
                 <p>
-                  The system routes a request through sanitization, typed planning,
-                  guardrail checks, read-only connector execution, structured synthesis,
-                  and an inspectable decision trail. The emphasis is on narrow tool
-                  permissions, explicit intermediate state, and repeatable behavior that a
-                  reviewer can audit.
+                  Orion demonstrates a safer pattern: sanitize the request, create a typed
+                  plan, check the plan against guardrails, execute only read-only
+                  retrieval, and return both the answer and the trail of decisions that
+                  produced it.
                 </p>
               </article>
 
               <article>
                 <span class="uy-eyebrow">Build</span>
-                <h2 class="uy-h2">Portfolio-grade engineering demo</h2>
+                <h2 class="uy-h2">Reviewer-grade prototype, not a product</h2>
                 <p>
-                  It is built as a portfolio-grade engineering demo using fictional local
-                  data, deterministic fallback behavior, and repeatable build/eval checks.
-                  The public case study intentionally does not expose a running demo,
-                  customer data, live warehouse, ERP, CRM, or inventory connection.
+                  Orion is built as a portfolio-grade engineering demo: Python/FastAPI
+                  backend, fictional local CSV data, a browser reviewer demo, and CLI
+                  demo prompts. The intent is to make the safety model easy to inspect,
+                  not to ship a finished product.
                 </p>
               </article>
             </div>
@@ -149,7 +154,7 @@
                   </div>
                   <div class="uy-case-meta__row">
                     <span>Demo Access</span>
-                    <strong>Local reviewer demo only; public demo coming soon</strong>
+                    <strong>Reviewer walkthrough by request</strong>
                   </div>
                   <div class="uy-case-meta__row">
                     <span>Data</span>
@@ -161,7 +166,7 @@
               <div class="uy-case-panel">
                 <h3>Stack</h3>
                 <div class="uy-project__tags">
-                  <span>Python</span><span>FastAPI</span><span>LangGraph</span><span>Pydantic</span><span>AI Agents</span><span>Business Intelligence</span><span>Security Guardrails</span>
+                  <span>Python</span><span>FastAPI</span><span>Pydantic</span><span>AI Agents</span><span>Business Intelligence</span><span>Security Guardrails</span><span>Evaluation Harness</span>
                 </div>
               </div>
             </aside>
@@ -262,19 +267,24 @@
             <div class="uy-case-panel">
               <h3>What the case study demonstrates</h3>
               <ul class="uy-case-list">
-                <li>How to separate natural-language BI requests from unrestricted database access.</li>
-                <li>How typed plans and structured responses make agent behavior easier to review.</li>
-                <li>How guardrail checks can block destructive or out-of-scope operations before execution.</li>
-                <li>How deterministic evals and fallback behavior support repeatable review.</li>
+                <li>Python/FastAPI API design</li>
+                <li>Fictional structured business data</li>
+                <li>Read-only connector behavior</li>
+                <li>Destructive-operation blocking</li>
+                <li>PII/secrets scrubbing before model access</li>
+                <li>Decision trails and audit-minded outputs</li>
+                <li>Build Guard validation</li>
+                <li>Evaluation harness for safe and blocked prompts</li>
+                <li>Browser reviewer demo and CLI demo prompts</li>
               </ul>
             </div>
             <div class="uy-case-panel">
-              <h3>Public boundaries</h3>
+              <h3>Boundaries</h3>
               <ul class="uy-case-list">
-                <li>Prototype, not a production-ready product claim.</li>
-                <li>Uses fictional local CSV data, not real customer data.</li>
-                <li>No public live warehouse, ERP, CRM, or inventory-system integration is claimed.</li>
-                <li>The repository is private and the live demo is not exposed publicly yet.</li>
+                <li>Reviewer-grade prototype, not a production system.</li>
+                <li>Not connected to any live warehouse, ERP, CRM, customer, financial, or production system.</li>
+                <li>Uses fictional data so the safety model can be inspected without exposing private information.</li>
+                <li>Repository is private; reviewer access is available on request.</li>
               </ul>
             </div>
           </div>
@@ -284,10 +294,10 @@
       <section class="uy-cta-strip">
         <div class="uy-container uy-cta-strip__inner">
           <div>
-            <h3>Need a business system with clearer guardrails?</h3>
-            <p>Bring the workflow and the risk constraints. The implementation should respect both.</p>
+            <h3>Want to review Orion?</h3>
+            <p>A controlled reviewer demo is available by request. I can provide a walkthrough, project brief, sample outputs, and repository access for technical review.</p>
           </div>
-          <a class="uy-btn uy-btn--accent uy-btn--lg" href="/contact">Request a Local Tech Assessment</a>
+          <a class="uy-btn uy-btn--accent uy-btn--lg" href="/contact">Request Orion reviewer access</a>
         </div>
       </section>
     </main>
