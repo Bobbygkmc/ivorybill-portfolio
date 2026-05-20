@@ -145,3 +145,4 @@ dist/
 .cursor/
 __pycache__/
 *.pyc
+.bob/
