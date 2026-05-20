@@ -69,6 +69,7 @@ body.uy-page {
   }
 
   .uy-about-profile {
+    // Portrait moved to the hero — this block now carries the copy only.
     display: grid;
     grid-template-columns: 1fr;
     gap: 2.4rem;
@@ -76,8 +77,6 @@ body.uy-page {
     margin-bottom: 3rem;
 
     @media (min-width: 901px) {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 3in);
-      gap: 5rem;
       margin-bottom: 4rem;
     }
 

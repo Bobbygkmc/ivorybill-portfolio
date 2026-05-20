@@ -70,65 +70,67 @@
     </header>
 
     <main id="uy-main">
-      <section class="uy-pagehead">
-        <div class="uy-container">
-          <div class="uy-pagehead__crumb"><a href="/">Home</a><span>/</span>About</div>
-          <span class="uy-eyebrow">Founder profile</span>
-          <h1 class="uy-h1">Chuk Uyammadu</h1>
-          <p class="uy-lede">Chukwuemelie "Chuk" Uyammadu — Information Systems Management background, IT support and data analysis experience, backend and AI systems builder, Linux homelab operator, and small-business technology practitioner.</p>
-          <div class="uy-case-actions">
-            <a class="uy-btn uy-btn--primary uy-btn--lg" href="/contact">Request a Local Tech Assessment</a>
-            <a class="uy-btn uy-btn--ghost uy-btn--lg" href="/projects">View Projects</a>
+      <section class="uy-pagehead uy-pagehead--portrait">
+        <div class="uy-container uy-pagehead__inner">
+          <div class="uy-pagehead__text">
+            <div class="uy-pagehead__crumb"><a href="/">Home</a><span>/</span>About</div>
+            <span class="uy-eyebrow">Founder profile</span>
+            <h1 class="uy-h1">Chuk Uyammadu</h1>
+            <p class="uy-lede">Chukwuemelie "Chuk" Uyammadu — Information Systems Management background, IT support and data analysis experience, backend and AI systems builder, Linux homelab operator, and small-business technology practitioner.</p>
+            <div class="uy-case-actions">
+              <a class="uy-btn uy-btn--primary uy-btn--lg" href="/contact">Request a Local Tech Assessment</a>
+              <a class="uy-btn uy-btn--ghost uy-btn--lg" href="/projects">View Projects</a>
+            </div>
           </div>
+          <figure class="uy-profile-media uy-profile-media--hero">
+            <button
+              class="uy-profile-media__button"
+              type="button"
+              data-uy-headshot-open
+              aria-haspopup="dialog"
+              aria-controls="uy-headshot-dialog"
+              aria-label="Open expanded profile photo of Chuk Uyammadu"
+            >
+              <picture class="uy-profile-media__picture">
+                <source srcset="./assets/images/headshots/chuk-uyammadu-headshot.webp" type="image/webp" />
+                <img
+                  data-uy-headshot
+                  src="./assets/images/headshots/chuk-uyammadu-headshot.jpg"
+                  width="960"
+                  height="960"
+                  alt="Chuk Uyammadu, founder of Uyammadu Dev Services"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </button>
+            <div class="uy-profile-media__placeholder" aria-hidden="true">
+              <span>CU</span>
+              <small>Profile photo coming soon</small>
+            </div>
+            <figcaption>Founder / operator / systems builder</figcaption>
+          </figure>
+          <dialog class="uy-headshot-dialog" id="uy-headshot-dialog" aria-label="Expanded profile photo of Chuk Uyammadu">
+            <form class="uy-headshot-dialog__frame" method="dialog">
+              <button class="uy-headshot-dialog__close" type="submit" aria-label="Close expanded profile photo">Close</button>
+              <picture>
+                <source srcset="./assets/images/headshots/chuk-uyammadu-headshot-square.webp" type="image/webp" />
+                <img
+                  src="./assets/images/headshots/chuk-uyammadu-headshot-square.jpg"
+                  width="960"
+                  height="960"
+                  alt="Chuk Uyammadu, founder of Uyammadu Dev Services"
+                  decoding="async"
+                />
+              </picture>
+            </form>
+          </dialog>
         </div>
       </section>
 
       <section class="uy-section" aria-labelledby="profile-heading">
         <div class="uy-container">
           <div class="uy-about-profile">
-            <figure class="uy-profile-media">
-              <button
-                class="uy-profile-media__button"
-                type="button"
-                data-uy-headshot-open
-                aria-haspopup="dialog"
-                aria-controls="uy-headshot-dialog"
-                aria-label="Open expanded profile photo of Chuk Uyammadu"
-              >
-                <picture class="uy-profile-media__picture">
-                  <source srcset="./assets/images/headshots/chuk-uyammadu-headshot.webp" type="image/webp" />
-                  <img
-                    data-uy-headshot
-                    src="./assets/images/headshots/chuk-uyammadu-headshot.jpg"
-                    width="960"
-                    height="960"
-                    alt="Chuk Uyammadu, founder of Uyammadu Dev Services"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-              </button>
-              <div class="uy-profile-media__placeholder" aria-hidden="true">
-                <span>CU</span>
-                <small>Profile photo coming soon</small>
-              </div>
-              <figcaption>Founder / operator / systems builder</figcaption>
-            </figure>
-            <dialog class="uy-headshot-dialog" id="uy-headshot-dialog" aria-label="Expanded profile photo of Chuk Uyammadu">
-              <form class="uy-headshot-dialog__frame" method="dialog">
-                <button class="uy-headshot-dialog__close" type="submit" aria-label="Close expanded profile photo">Close</button>
-                <picture>
-                  <source srcset="./assets/images/headshots/chuk-uyammadu-headshot-square.webp" type="image/webp" />
-                  <img
-                    src="./assets/images/headshots/chuk-uyammadu-headshot-square.jpg"
-                    width="960"
-                    height="960"
-                    alt="Chuk Uyammadu, founder of Uyammadu Dev Services"
-                    decoding="async"
-                  />
-                </picture>
-              </form>
-            </dialog>
             <div class="uy-about-profile__copy">
               <span class="uy-eyebrow">Engineering identity</span>
               <h2 class="uy-h2" id="profile-heading">Building practical technology systems for real-world operations</h2>

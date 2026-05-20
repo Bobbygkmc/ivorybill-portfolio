@@ -38,5 +38,33 @@ body.uy-page {
       a { color: rgba(#efe8d6, 0.7); text-decoration: none; &:hover { color: #efe8d6; } }
       span { margin: 0 0.6rem; }
     }
+
+    // Hero variant: founder portrait sits top-right of the green hero,
+    // resting directly on the green background (no separate panel).
+    &__inner {
+      display: grid;
+      gap: 3rem;
+      align-items: start;
+
+      @media (min-width: 901px) {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 5rem;
+      }
+    }
+
+    &__text {
+      min-width: 0;
+    }
+
+    .uy-profile-media {
+      figcaption {
+        color: rgba(#efe8d6, 0.62);
+      }
+
+      // Stacked and centered on phones / small tablets.
+      @media (max-width: 900px) {
+        justify-self: center;
+      }
+    }
   }
 }
