@@ -72,11 +72,11 @@ body.uy-page {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2.4rem;
-    align-items: center;
+    align-items: start;
     margin-bottom: 3rem;
 
     @media (min-width: 901px) {
-      grid-template-columns: minmax(22rem, 0.42fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 3in);
       gap: 5rem;
       margin-bottom: 4rem;
     }
@@ -92,19 +92,45 @@ body.uy-page {
 
   .uy-profile-media {
     position: relative;
-    width: min(100%, 34rem);
+    width: min(3in, 82vw);
     aspect-ratio: 1 / 1;
     margin: 0;
-    overflow: hidden;
-    border: 1px solid rgba($uy-primary, 0.16);
-    border-radius: $uy-radius-xl;
-    background:
-      linear-gradient(135deg, rgba($uy-primary, 0.12), rgba($uy-warm, 0.10)),
-      $uy-surface-2;
-    box-shadow: $uy-shadow-md;
+    justify-self: start;
 
-    @include respond(phone) {
-      width: min(100%, 28rem);
+    @media (min-width: 901px) {
+      grid-column: 2;
+      justify-self: end;
+    }
+
+    &__button {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid rgba($uy-primary, 0.2);
+      border-radius: 50%;
+      background:
+        linear-gradient(135deg, rgba($uy-primary, 0.12), rgba($uy-warm, 0.10)),
+        $uy-surface-2;
+      box-shadow: $uy-shadow-md;
+      cursor: pointer;
+      transition: transform 0.18s $uy-ease,
+                  box-shadow 0.18s $uy-ease,
+                  border-color 0.18s $uy-ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: rgba($uy-primary, 0.42);
+        box-shadow: $uy-shadow-lg;
+      }
+
+      &:focus-visible {
+        outline: 3px solid $uy-accent;
+        outline-offset: 4px;
+      }
     }
 
     &__picture {
@@ -159,26 +185,70 @@ body.uy-page {
     }
 
     figcaption {
-      position: absolute;
-      left: 1.4rem;
-      right: 1.4rem;
-      bottom: 1.4rem;
-      z-index: 2;
-      padding: 0.8rem 1rem;
-      border: 1px solid rgba($uy-line-2, 0.8);
-      border-radius: $uy-radius-md;
-      background: rgba($uy-surface, 0.88);
-      color: $uy-ink-2;
+      margin-top: 1rem;
+      color: $uy-muted;
       font-size: 1.25rem;
       font-weight: 700;
       text-align: center;
-      backdrop-filter: blur(6px);
     }
 
     &--missing {
       .uy-profile-media__picture {
         display: none;
       }
+    }
+  }
+
+  .uy-headshot-dialog {
+    width: min(92vw, 68rem);
+    max-width: 68rem;
+    padding: 0;
+    border: 0;
+    border-radius: $uy-radius-lg;
+    background: transparent;
+
+    &::backdrop {
+      background: rgba($uy-deep, 0.78);
+      backdrop-filter: blur(4px);
+    }
+
+    &__frame {
+      position: relative;
+      margin: 0;
+      padding: 1.6rem;
+      border: 1px solid rgba($uy-line-2, 0.7);
+      border-radius: $uy-radius-lg;
+      background: $uy-surface;
+      box-shadow: $uy-shadow-lg;
+    }
+
+    &__close {
+      position: absolute;
+      top: 2.4rem;
+      right: 2.4rem;
+      z-index: 2;
+      min-height: 4rem;
+      padding: 0.8rem 1.2rem;
+      border: 1px solid rgba($uy-line-2, 0.85);
+      border-radius: $uy-radius-md;
+      background: rgba($uy-surface, 0.92);
+      color: $uy-ink;
+      font: inherit;
+      font-size: 1.3rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: $uy-shadow-sm;
+    }
+
+    picture,
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    img {
+      height: auto;
+      border-radius: $uy-radius-md;
     }
   }
 

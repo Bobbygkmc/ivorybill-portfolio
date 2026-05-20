@@ -54,6 +54,20 @@
     }
   });
 
+  // ---- About page expanded headshot ----------------------------------------
+  var headshotTrigger = document.querySelector('[data-uy-headshot-open]');
+  var headshotDialog = document.getElementById('uy-headshot-dialog');
+
+  if (headshotTrigger && headshotDialog) {
+    headshotTrigger.addEventListener('click', function () {
+      if (typeof headshotDialog.showModal === 'function') {
+        headshotDialog.showModal();
+      } else {
+        headshotDialog.setAttribute('open', '');
+      }
+    });
+  }
+
   // ---- Technical network background ----------------------------------------
   var networkCanvas = document.getElementById('uy-network-bg');
   if (networkCanvas && networkCanvas.getContext) {
