@@ -146,3 +146,4 @@ dist/
 __pycache__/
 *.pyc
 .bob/
+design-source/
