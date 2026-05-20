@@ -28,5 +28,7 @@
 
 @import 'components/header';
 @import 'components/footer';
+// Legacy components — used only by archive/ pages, but must keep compiling
+// into style.css so archived pages stay styled (CLAUDE.md: preserve archive/).
 @import 'components/skills';
 @import 'components/mouse-scroll';

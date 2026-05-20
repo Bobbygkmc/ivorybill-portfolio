@@ -6,11 +6,11 @@
     <title>Orion — Safe AI Business Intelligence Prototype</title>
     <meta
       name="description"
-      content="Orion is a Python/FastAPI portfolio prototype that explores AI-assisted business intelligence with fictional local data, read-only connectors, destructive-operation blocking, PII scrubbing, evaluation checks, and reviewer-visible decision trails."
+      content="Orion is a Python/FastAPI portfolio prototype that explores AI-assisted business intelligence with fictionalized local data, read-only connectors, destructive-operation blocking, PII scrubbing, evaluation checks, and reviewer-visible decision trails."
     />
     <meta name="theme-color" content="#0f1a14" />
     <meta property="og:title" content="Orion — Safe AI Business Intelligence Prototype" />
-    <meta property="og:description" content="A reviewer-grade Python/FastAPI prototype showing how AI-assisted business intelligence can run on narrow permissions, fictional local data, and an auditable decision trail." />
+    <meta property="og:description" content="A reviewer-grade Python/FastAPI prototype showing how AI-assisted business intelligence can run on narrow permissions, fictionalized local data, and an auditable decision trail." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://dev.uyammadu.com/orion" />
     <meta property="og:image" content="https://dev.uyammadu.com/assets/images/social/og-default.svg" />
@@ -87,11 +87,17 @@
             given unrestricted permission to modify, delete, or expose records.
           </p>
           <p class="uy-body">
-            The current prototype uses fictional local CSV data, read-only connector
+            The current prototype uses fictionalized local CSV data, read-only connector
             patterns, destructive-operation blocking, PII/secrets scrubbing, deterministic
             evaluation checks, and reviewer-visible decision trails. It is designed to
             demonstrate safe enterprise AI thinking: useful answers, narrow permissions,
             auditable steps, and honest boundaries.
+          </p>
+          <p class="uy-body">
+            The demo runs entirely on fictionalized local CSV data. It is not real
+            company, customer, financial, or production data — the synthetic dataset
+            exists only so the safety model can be inspected without exposing any
+            private information.
           </p>
           <div class="uy-case-actions" aria-label="Orion project actions">
             <a class="uy-btn uy-btn--primary uy-btn--lg" href="/contact">Request Orion reviewer access</a>
@@ -133,7 +139,7 @@
                 <h2 class="uy-h2">Reviewer-grade prototype, not a product</h2>
                 <p>
                   Orion is built as a portfolio-grade engineering demo: Python/FastAPI
-                  backend, fictional local CSV data, a browser reviewer demo, and CLI
+                  backend, fictionalized local CSV data, a browser reviewer demo, and CLI
                   demo prompts. The intent is to make the safety model easy to inspect,
                   not to ship a finished product.
                 </p>
@@ -158,7 +164,7 @@
                   </div>
                   <div class="uy-case-meta__row">
                     <span>Data</span>
-                    <strong>Fictional local CSV data</strong>
+                    <strong>Fictionalized local CSV data</strong>
                   </div>
                 </div>
               </div>
@@ -200,7 +206,7 @@
             </div>
             <div class="uy-case-pipeline__step">
               <span class="uy-case-pipeline__num">04</span>
-              <span class="uy-case-pipeline__text"><strong>Execute read-only</strong><span>Run against fictional local CSV data through constrained connector logic.</span></span>
+              <span class="uy-case-pipeline__text"><strong>Execute read-only</strong><span>Run against fictionalized local CSV data through constrained connector logic.</span></span>
             </div>
             <div class="uy-case-pipeline__step">
               <span class="uy-case-pipeline__num">05</span>
@@ -245,7 +251,7 @@
             <div class="uy-arch__node">
               <span>Execute</span>
               <strong>Local CSV connector</strong>
-              <p>Fictional local demo data only; no live warehouse connection.</p>
+              <p>Fictionalized local demo data only; no live warehouse connection.</p>
             </div>
             <div class="uy-arch__node">
               <span>Synthesize</span>
@@ -268,7 +274,7 @@
               <h3>What the case study demonstrates</h3>
               <ul class="uy-case-list">
                 <li>Python/FastAPI API design</li>
-                <li>Fictional structured business data</li>
+                <li>Fictionalized structured business data</li>
                 <li>Read-only connector behavior</li>
                 <li>Destructive-operation blocking</li>
                 <li>PII/secrets scrubbing before model access</li>
@@ -283,7 +289,7 @@
               <ul class="uy-case-list">
                 <li>Reviewer-grade prototype, not a production system.</li>
                 <li>Not connected to any live warehouse, ERP, CRM, customer, financial, or production system.</li>
-                <li>Uses fictional data so the safety model can be inspected without exposing private information.</li>
+                <li>Uses fictionalized data so the safety model can be inspected without exposing private information.</li>
                 <li>Repository is private; reviewer access is available on request.</li>
               </ul>
             </div>

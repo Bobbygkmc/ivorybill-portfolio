@@ -73,11 +73,12 @@
         </div>
       </section>
 
-      <section class="uy-section">
+      <section class="uy-section" aria-labelledby="contact-form-heading">
         <div class="uy-container">
           <div class="uy-split uy-split--narrow">
             <div>
-              <form id="contact-form" class="uy-form" data-uy-form action="/api/contact" method="post" novalidate>
+              <h2 class="uy-h2" id="contact-form-heading">Send a project request</h2>
+              <form id="contact-form" class="uy-form" data-uy-form action="/api/contact" method="post" novalidate aria-labelledby="contact-form-heading">
                 <p class="uy-status-banner" data-uy-form-status>
                   <strong>Request form:</strong> submissions are sent to Chuk through the
                   site backend. For urgent needs, email
@@ -93,22 +94,22 @@
                 <div class="uy-form__row">
                   <div class="uy-form__field">
                     <label class="uy-form__label" for="name">Your name</label>
-                    <input class="uy-form__input" id="name" name="name" type="text" placeholder="Jane Operator" required />
+                    <input class="uy-form__input" id="name" name="name" type="text" placeholder="Jane Operator" autocomplete="name" required />
                   </div>
                   <div class="uy-form__field">
                     <label class="uy-form__label" for="business">Business name</label>
-                    <input class="uy-form__input" id="business" name="business" type="text" placeholder="Optional" />
+                    <input class="uy-form__input" id="business" name="business" type="text" placeholder="Optional" autocomplete="organization" />
                   </div>
                 </div>
 
                 <div class="uy-form__row">
                   <div class="uy-form__field">
                     <label class="uy-form__label" for="email">Email</label>
-                    <input class="uy-form__input" id="email" name="email" type="email" placeholder="you@example.com" required />
+                    <input class="uy-form__input" id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
                   </div>
                   <div class="uy-form__field">
                     <label class="uy-form__label" for="phone">Phone (optional)</label>
-                    <input class="uy-form__input" id="phone" name="phone" type="tel" placeholder="(215) 555-0123" />
+                    <input class="uy-form__input" id="phone" name="phone" type="tel" placeholder="(215) 555-0123" autocomplete="tel" />
                   </div>
                 </div>
 
@@ -154,9 +155,9 @@
 
                 <div class="uy-form__field">
                   <label class="uy-form__label" for="message">Short project description</label>
-                  <textarea class="uy-form__textarea" id="message" name="message"
+                  <textarea class="uy-form__textarea" id="message" name="message" aria-describedby="message-hint"
                             placeholder="A few sentences about what's going on. Don't worry about getting the technical details right." required></textarea>
-                  <span class="uy-form__hint">When reaching out, include your business name, location, issue, urgency, and preferred contact method.</span>
+                  <span class="uy-form__hint" id="message-hint">When reaching out, include your business name, location, issue, urgency, and preferred contact method.</span>
                 </div>
 
                 <div class="uy-form__actions">

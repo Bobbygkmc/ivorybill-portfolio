@@ -18,6 +18,20 @@ body.uy-page {
     text-underline-offset: 0.18em;
   }
 
+  // Keyboard focus ring. The legacy base partial resets `outline: none` on all
+  // focusable elements, leaving keyboard users with no visible focus on links
+  // and similar controls. Restore a clear ring for :focus-visible only, so
+  // mouse clicks stay clean. Buttons and form inputs keep their own
+  // component-level focus styles (see _uy-buttons.scss / _uy-form.scss).
+  a:focus-visible,
+  button:focus-visible,
+  summary:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid $uy-accent;
+    outline-offset: 2px;
+    border-radius: $uy-radius-sm;
+  }
+
   // ---- Layout primitives -----------------------------------------------------
 
   .uy-container {

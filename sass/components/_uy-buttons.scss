@@ -100,24 +100,34 @@ body.uy-page {
 
   // Dark-context button overrides. Add new dark wrappers to this selector list
   // so ghost/quiet/disabled variants stay readable on dark backgrounds.
+  //
+  // Resting state must be readable on its own — do not rely on :hover or
+  // :focus-visible to reveal the text. Resting gets a faint white fill and a
+  // visible light border so the button reads as a button before any
+  // interaction. :hover and :focus-visible share the same elevated state so
+  // keyboard users get the same affordance as mouse users.
   &.uy-section--dark,
   .uy-section--dark,
   .uy-hero,
   .uy-pagehead,
   .uy-cta-strip {
-    .uy-btn--ghost {
-      color: #fff;
-      border-color: rgba(#fff, 0.35);
-      &:hover {
-        border-color: #fff;
-        background: rgba(#fff, 0.1);
-        color: #fff;
-      }
-    }
+    .uy-btn--ghost,
     .uy-btn--quiet {
-      color: rgba(#fff, 0.88);
-      &:hover { color: #fff; }
+      color: #fff;
+      border-color: rgba(#fff, 0.65);
+      background: rgba(#fff, 0.10);
     }
+    .uy-btn--ghost:hover,
+    .uy-btn--ghost:focus-visible,
+    .uy-btn--quiet:hover,
+    .uy-btn--quiet:focus-visible {
+      color: #fff;
+      border-color: rgba(#fff, 0.9);
+      background: rgba(#fff, 0.16);
+    }
+
+    // Disabled badges stay distinct from clickable ghost buttons: dimmer text
+    // and border so they don't look interactive.
     .uy-btn--disabled,
     .uy-btn--disabled:hover {
       color: rgba(#fff, 0.72);
