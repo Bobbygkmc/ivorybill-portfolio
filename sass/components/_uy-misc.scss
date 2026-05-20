@@ -306,4 +306,51 @@ body.uy-page {
   .uy-mb-0 { margin-bottom: 0; }
   .uy-mb-2 { margin-bottom: 2rem; }
   .uy-mb-4 { margin-bottom: 4rem; }
+
+  // Horizontal row of call-to-action buttons; wraps on narrow widths.
+  .uy-btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+
+  // Skip-to-content link: parked off-screen, slides into view on focus so
+  // keyboard users can jump past the nav.
+  .uy-skip-link {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    z-index: 200;
+    background: $uy-surface;
+    border: 1px solid $uy-line-2;
+    box-shadow: $uy-shadow-md;
+    transform: translateY(-150%);
+    transition: transform 0.16s $uy-ease;
+
+    &:focus,
+    &:focus-visible {
+      transform: translateY(0);
+    }
+  }
+
+  // Visually hidden but kept in the accessibility tree / DOM (form honeypot).
+  .uy-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  // Contact page: stacked side cards with consistent spacing.
+  .uy-contact-aside {
+    display: grid;
+    gap: 2rem;
+    align-content: start;
+  }
 }

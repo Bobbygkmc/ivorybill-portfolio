@@ -10,17 +10,48 @@
   var mobile = document.querySelector('.uy-nav__mobile');
 
   if (toggle && mobile) {
-    toggle.addEventListener('click', function () {
-      var open = mobile.classList.toggle('uy-nav__mobile--open');
+    // Single source of truth: keep the panel class and aria-expanded in sync.
+    function setMenu(open) {
+      mobile.classList.toggle('uy-nav__mobile--open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    function isMenuOpen() {
+      return mobile.classList.contains('uy-nav__mobile--open');
+    }
+
+    toggle.addEventListener('click', function () {
+      setMenu(!isMenuOpen());
     });
+
     // Close on link click (small screens)
     mobile.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
-        mobile.classList.remove('uy-nav__mobile--open');
-        toggle.setAttribute('aria-expanded', 'false');
+        setMenu(false);
       });
     });
+
+    // Escape closes the menu and returns focus to the toggle button.
+    document.addEventListener('keydown', function (evt) {
+      if (evt.key === 'Escape' && isMenuOpen()) {
+        setMenu(false);
+        toggle.focus();
+      }
+    });
+
+    // If the viewport widens to where the desktop nav is shown, drop the open
+    // state so the menu can't stay "open" while its toggle is hidden.
+    var desktopNav = window.matchMedia('(min-width: 56.3125em)');
+    function syncNavToViewport(mq) {
+      if (mq.matches) {
+        setMenu(false);
+      }
+    }
+    if (desktopNav.addEventListener) {
+      desktopNav.addEventListener('change', syncNavToViewport);
+    } else if (desktopNav.addListener) {
+      desktopNav.addListener(syncNavToViewport);
+    }
   }
 
   // ---- Year stamp -----------------------------------------------------------

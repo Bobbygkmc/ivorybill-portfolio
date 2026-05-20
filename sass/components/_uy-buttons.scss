@@ -18,13 +18,15 @@ body.uy-page {
   // ---- Buttons ---------------------------------------------------------------
 
   .uy-btn {
+    // Compact professional default — close to a social-app action button.
+    // Prominent page CTAs opt into the larger size via .uy-btn--lg.
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
-    min-height: 4.4rem;
-    padding: 1.2rem 2rem;
-    font-size: 1.5rem;
+    gap: 0.7rem;
+    min-height: 4rem;
+    padding: 1rem 1.8rem;
+    font-size: 1.4rem;
     font-weight: 650;
     border-radius: $uy-radius-md;
     text-decoration: none;
@@ -43,7 +45,7 @@ body.uy-page {
       outline-offset: 2px;
     }
 
-    svg { width: 1.6rem; height: 1.6rem; }
+    svg { width: 1.5rem; height: 1.5rem; }
 
     &--primary {
       background: $uy-primary;
@@ -73,7 +75,7 @@ body.uy-page {
     &--quiet {
       background: transparent;
       color: $uy-ink;
-      padding: 1.2rem 1.4rem;
+      padding: 1rem 1.2rem;
       &:hover { color: $uy-primary; }
     }
 
@@ -89,7 +91,8 @@ body.uy-page {
       transform: none;
     }
 
-    &--lg { min-height: 5.2rem; padding: 1.4rem 2.4rem; font-size: 1.6rem; }
+    // Larger size reserved for hero / pagehead / CTA-strip primary actions.
+    &--lg { min-height: 4.8rem; padding: 1.3rem 2.4rem; font-size: 1.55rem; }
     &--block { width: 100%; }
 
     @include respond(phone) {
