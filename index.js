@@ -255,7 +255,10 @@
     if (reduceMotionQuery) {
       var handleMotionChange = function () {
         stopNetwork();
-        startNetwork();
+        networkCanvas.hidden = reduceMotionQuery.matches;
+        if (!reduceMotionQuery.matches) {
+          startNetwork();
+        }
       };
 
       if (reduceMotionQuery.addEventListener) {
@@ -265,9 +268,13 @@
       }
     }
 
-    resizeNetwork();
-    drawNetwork(getNetworkConfig());
-    startNetwork();
+    if (reduceMotionQuery && reduceMotionQuery.matches) {
+      networkCanvas.hidden = true;
+    } else {
+      resizeNetwork();
+      drawNetwork(getNetworkConfig());
+      startNetwork();
+    }
   }
 
   // ---- Service-request form -------------------------------------------------

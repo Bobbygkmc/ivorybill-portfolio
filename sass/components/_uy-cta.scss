@@ -34,7 +34,8 @@ body.uy-page {
       letter-spacing: 1px;
     }
 
-    h4 { margin: 0.6rem 0 0.6rem; color: $uy-ink; }
+    h3,
+    h4 { margin: 0.6rem 0 0.6rem; color: $uy-ink; font-size: 1.8rem; }
     p  { font-size: 1.4rem; color: $uy-muted; line-height: 1.55; margin: 0; }
   }
 

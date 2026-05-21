@@ -25,6 +25,9 @@ body.uy-page {
   // component-level focus styles (see _uy-buttons.scss / _uy-form.scss).
   a:focus-visible,
   button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
   summary:focus-visible,
   [tabindex]:focus-visible {
     outline: 2px solid $uy-accent;

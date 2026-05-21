@@ -153,6 +153,8 @@ body.uy-page {
     border-radius: $uy-radius-pill;
     background: $uy-surface-3;
     color: $uy-muted;
+    cursor: default;
+    user-select: none;
 
     &::before {
       content: '';

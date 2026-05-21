@@ -27,6 +27,12 @@ html {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   box-sizing: border-box;
   position: relative;
