@@ -292,7 +292,13 @@ site follows this philosophy.
    Differentiator + trust signal #3.
 6. **Final CTA strip** — single primary CTA, dark background.
 
-### 6.2 Services (`services.html`)
+### 6.2 About (`about.html`)
+
+1. Founder/operator profile with practical engineering identity.
+2. Compact operator stack, limited to real tools/workflows already associated with Chuk: Raspberry Pi, Linux, Docker, Cloudflare Tunnel, Tailscale, systemd, Python, Rust, FastAPI, Axum, Supabase, SQLite/Postgres, AI-assisted tooling, Codex, Hermes, Claude, IBM Bob.
+3. Capability scan and representative project links stay concise; do not turn the page into a resume dump.
+
+### 6.3 Services (`services.html`)
 
 1. Page hero (compact: title + lede)
 2. Full service catalog grouped by domain (web, network, AI, cameras,
@@ -300,7 +306,7 @@ site follows this philosophy.
    included" list.
 3. CTA strip → contact
 
-### 6.3 Pricing (`pricing.html`)
+### 6.4 Pricing (`pricing.html`)
 
 1. Page hero
 2. Pricing tiers (3) — middle tier carries `--popular` highlight (deep
@@ -310,14 +316,16 @@ site follows this philosophy.
    timing, included revisions)
 5. CTA strip → contact
 
-### 6.4 Projects (`projects.html`)
+### 6.5 Projects (`projects.html`)
 
 1. Page hero
 2. Projects grid with status pills. Sort: Live → In Development →
    Private → Prototype → Lab Build → Internal Tool → Research Concept.
-3. CTA strip → contact
+3. Private/internal project cards may omit public CTAs, but must include a short note explaining why details or demos are intentionally withheld.
+4. Static tags and status pills are non-interactive badges; do not style them like clickable buttons.
+5. CTA strip → contact
 
-### 6.5 Cameras (`cameras.html`)
+### 6.6 Cameras (`cameras.html`)
 
 Vertical landing page for camera/security systems. Same flow as Home
 but tighter:
@@ -328,7 +336,7 @@ but tighter:
 4. Process (compact, 3 steps)
 5. CTA → contact (camera-specific intake)
 
-### 6.6 Contact (`contact.html`)
+### 6.7 Contact (`contact.html`)
 
 1. Page hero
 2. Two-column: form (left, primary action) + contact methods (right)
