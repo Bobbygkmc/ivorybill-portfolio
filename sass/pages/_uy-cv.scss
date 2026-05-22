@@ -1,0 +1,412 @@
+// =============================================================================
+// dev.uyammadu.com — CV / résumé page
+//
+// Compact one-page CV reachable from the footer "CV" link. Designed to read
+// well on screen and to print cleanly to a single Letter/A4 page.
+//
+// Screen layout: two-column document feel (sidebar + main). Print layout:
+// hides chrome, tightens spacing, drops the canvas + nav + footer + CTA.
+// =============================================================================
+
+body.uy-page {
+
+  // ---- On-screen container -------------------------------------------------
+
+  .uy-cv-wrap {
+    padding: 4.8rem 0 8rem;
+
+    @include respond(phone) { padding: 3.2rem 0 5.6rem; }
+  }
+
+  // Toolbar above the CV — "Print / Save as PDF", "Back to About".
+  // Hidden in print so it never leaks into the printed PDF.
+  .uy-cv-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    margin-bottom: 2.4rem;
+
+    &__hint {
+      font-family: $uy-font-mono;
+      font-size: 1.2rem;
+      color: $uy-muted;
+      letter-spacing: 0.04em;
+    }
+
+    &__actions {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+  }
+
+  // ---- The CV "paper" -------------------------------------------------------
+  //
+  // Sized to feel like an 8.5×11 sheet on screen. The visual frame is dropped
+  // in print so the browser's page margins are the only frame.
+  .uy-cv-paper {
+    background: $uy-surface;
+    color: $uy-ink;
+    border: 1px solid $uy-line;
+    border-radius: $uy-radius-lg;
+    box-shadow: $uy-shadow-md;
+    max-width: 88rem;
+    margin: 0 auto;
+    padding: 4.4rem 4.4rem 4rem;
+
+    @include respond(tab-port) { padding: 3.2rem; }
+    @include respond(phone)    { padding: 2.4rem 2rem; border-radius: $uy-radius-md; }
+
+    a { color: $uy-primary; text-decoration: underline; text-underline-offset: 0.16em; }
+    a:hover { color: $uy-deep; }
+  }
+
+  // ---- Header band ---------------------------------------------------------
+
+  .uy-cv-head {
+    display: grid;
+    gap: 1rem;
+    padding-bottom: 1.6rem;
+    margin-bottom: 2.4rem;
+    border-bottom: 2px solid $uy-deep;
+
+    @media (min-width: 600px) {
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      align-items: end;
+      gap: 2.4rem;
+    }
+
+    &__id { min-width: 0; }
+
+    &__eyebrow {
+      font-family: $uy-font-mono;
+      font-size: 1.2rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: $uy-accent;
+    }
+
+    &__name {
+      font-size: 3.2rem;
+      line-height: 1.05;
+      letter-spacing: -0.005em;
+      font-weight: 700;
+      margin: 0.4rem 0 0.4rem;
+      color: $uy-ink;
+
+      @include respond(phone) { font-size: 2.6rem; }
+    }
+
+    &__role {
+      font-size: 1.5rem;
+      color: $uy-ink-2;
+      margin: 0;
+    }
+
+    &__meta {
+      font-family: $uy-font-mono;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: $uy-muted;
+      display: grid;
+      gap: 0.2rem;
+
+      @media (min-width: 600px) {
+        justify-items: end;
+        text-align: right;
+      }
+
+      a { color: inherit; text-decoration: none; }
+      a:hover { color: $uy-primary; text-decoration: underline; }
+    }
+  }
+
+  // ---- Two-column body -----------------------------------------------------
+
+  .uy-cv-body {
+    display: grid;
+    gap: 2.4rem;
+    align-items: start;
+
+    @media (min-width: 760px) {
+      grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
+      gap: 3.6rem;
+    }
+  }
+
+  .uy-cv-section {
+    margin-bottom: 1.8rem;
+
+    &:last-child { margin-bottom: 0; }
+
+    h2 {
+      font-family: $uy-font-mono;
+      font-size: 1.15rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: $uy-primary;
+      margin: 0 0 0.8rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid $uy-line;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.55;
+      color: $uy-ink-2;
+    }
+
+    > p { margin: 0 0 0.8rem; }
+    > p:last-child { margin-bottom: 0; }
+  }
+
+  // ---- Skills / capability blocks -------------------------------------------
+
+  .uy-cv-skills {
+    display: grid;
+    gap: 1.2rem;
+
+    > div { min-width: 0; }
+
+    strong {
+      display: block;
+      font-size: 1.25rem;
+      color: $uy-ink;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: $uy-ink-2;
+      margin: 0;
+    }
+  }
+
+  // ---- Project / experience entries ----------------------------------------
+
+  .uy-cv-entry {
+    display: grid;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+
+    &:last-child { margin-bottom: 0; }
+
+    &__head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.6rem;
+    }
+
+    &__title {
+      font-size: 1.4rem;
+      font-weight: 650;
+      color: $uy-ink;
+      margin: 0;
+    }
+
+    &__meta {
+      font-family: $uy-font-mono;
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+      color: $uy-muted;
+    }
+
+    &__desc {
+      font-size: 1.3rem;
+      line-height: 1.55;
+      color: $uy-ink-2;
+      margin: 0;
+    }
+  }
+
+  // ---- Inline tag list ------------------------------------------------------
+
+  .uy-cv-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.4rem 0 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      font-family: $uy-font-mono;
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+      color: $uy-ink-2;
+      background: $uy-surface-2;
+      border: 1px solid $uy-line;
+      padding: 0.2rem 0.6rem;
+      border-radius: $uy-radius-sm;
+    }
+  }
+
+  // ---- Compact bullet list --------------------------------------------------
+
+  .uy-cv-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative;
+      padding-left: 1.2rem;
+      margin-bottom: 0.35rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.7rem;
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: 50%;
+        background: $uy-accent;
+      }
+    }
+  }
+
+  // ---- Languages mini-block -------------------------------------------------
+
+  .uy-cv-langs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.3rem;
+
+    li {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 0.8rem;
+      font-size: 1.2rem;
+      color: $uy-ink-2;
+    }
+
+    span:last-child {
+      font-family: $uy-font-mono;
+      font-size: 1.1rem;
+      color: $uy-muted;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  // ---- Footnote -------------------------------------------------------------
+
+  .uy-cv-footnote {
+    margin-top: 2.4rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid $uy-line;
+    font-family: $uy-font-mono;
+    font-size: 1.1rem;
+    color: $uy-muted;
+    letter-spacing: 0.04em;
+
+    a { color: inherit; }
+  }
+}
+
+// =============================================================================
+// Print styles
+//
+// Goal: a single, clean Letter/A4 page. Strip background chrome (canvas, nav,
+// site footer, CTA, toolbar), tighten typography, and remove the page-level
+// border so the browser's page margins handle the frame.
+// =============================================================================
+
+@media print {
+  // Conservative page margins; works for both Letter and A4 in practice.
+  @page { size: auto; margin: 0.5in; }
+
+  html, body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  // Hide site chrome and decorative pieces.
+  .uy-nav,
+  .uy-nav__mobile,
+  .uy-footer,
+  .uy-cta-strip,
+  .uy-skip-link,
+  .uy-network-bg,
+  .uy-cv-toolbar {
+    display: none !important;
+  }
+
+  body.uy-page {
+    background: #fff !important;
+  }
+
+  body.uy-page .uy-cv-wrap {
+    padding: 0 !important;
+  }
+
+  body.uy-page .uy-cv-paper {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    background: #fff;
+    color: #111;
+    border-radius: 0;
+  }
+
+  // Tighten the document scale for print. Browsers print 1in = 96px ≈ 9.6rem
+  // at the 10px root we use; this is already compact. Trim section gaps and
+  // remove tag chips' backgrounds so ink usage stays low.
+  body.uy-page .uy-cv-head {
+    margin-bottom: 1.4rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1.5px solid #111;
+  }
+  body.uy-page .uy-cv-head__name { font-size: 2.4rem; }
+  body.uy-page .uy-cv-head__role,
+  body.uy-page .uy-cv-head__meta { color: #333; }
+
+  body.uy-page .uy-cv-body { gap: 2rem; }
+
+  body.uy-page .uy-cv-section { margin-bottom: 1rem; }
+  body.uy-page .uy-cv-section h2 {
+    color: #111;
+    border-bottom-color: #999;
+    margin-bottom: 0.45rem;
+  }
+
+  body.uy-page .uy-cv-section p,
+  body.uy-page .uy-cv-section li,
+  body.uy-page .uy-cv-entry__desc { color: #222; }
+
+  body.uy-page .uy-cv-tags li {
+    background: transparent;
+    border: 1px solid #aaa;
+    color: #333;
+    padding: 0.1rem 0.45rem;
+  }
+
+  body.uy-page .uy-cv-footnote {
+    color: #555;
+    border-top-color: #aaa;
+    margin-top: 1.4rem;
+    padding-top: 0.6rem;
+  }
+
+  // Avoid awkward breaks inside small blocks.
+  body.uy-page .uy-cv-section,
+  body.uy-page .uy-cv-entry {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  // Make links readable in print without URL-after-link clutter.
+  body.uy-page .uy-cv-paper a {
+    color: #111;
+    text-decoration: none;
+  }
+}
