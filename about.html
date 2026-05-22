@@ -257,14 +257,60 @@
       </section>
 
       <aside class="uy-container uy-language-box" aria-labelledby="languages-heading">
-        <h2 id="languages-heading">Languages</h2>
-        <ul class="uy-language-list" aria-label="Languages">
-          <li><span>English</span></li>
-          <li><span>Igbo</span></li>
-          <li><span>Hausa</span></li>
-          <li><span>Yoruba</span></li>
-          <li><span>Spanish</span><small>learning</small></li>
-        </ul>
+        <div class="uy-language-box__head">
+          <p>Capability matrix</p>
+          <h2 id="languages-heading">Languages</h2>
+        </div>
+        <div class="uy-language-matrix" aria-label="Language capabilities by spoken, written, and comprehension proficiency">
+          <div class="uy-language-matrix__header" aria-hidden="true">
+            <span>Language</span>
+            <span>Spoken</span>
+            <span>Written</span>
+            <span>Comprehension</span>
+          </div>
+          <ul class="uy-language-list" aria-label="Languages">
+            <li class="uy-language-row">
+              <div class="uy-language-row__name"><span>English</span></div>
+              <div class="uy-language-row__rails">
+                <span class="uy-language-rail" style="--rail: 1" data-axis="Spoken" aria-label="English spoken proficiency"><span></span></span>
+                <span class="uy-language-rail" style="--rail: 0.96" data-axis="Written" aria-label="English written proficiency"><span></span></span>
+                <span class="uy-language-rail" style="--rail: 1" data-axis="Comprehension" aria-label="English comprehension proficiency"><span></span></span>
+              </div>
+            </li>
+            <li class="uy-language-row">
+              <div class="uy-language-row__name"><span>Igbo</span></div>
+              <div class="uy-language-row__rails">
+                <span class="uy-language-rail" style="--rail: 0.74" data-axis="Spoken" aria-label="Igbo spoken proficiency"><span></span></span>
+                <span class="uy-language-rail" style="--rail: 0.56" data-axis="Written" aria-label="Igbo written proficiency"><span></span></span>
+                <span class="uy-language-rail" style="--rail: 0.78" data-axis="Comprehension" aria-label="Igbo comprehension proficiency"><span></span></span>
+              </div>
+            </li>
+            <li class="uy-language-row">
+              <div class="uy-language-row__name"><span>Hausa</span></div>
+              <div class="uy-language-row__rails">
+                <span class="uy-language-rail" style="--rail: 0.58" data-axis="Spoken" aria-label="Hausa spoken proficiency"><span></span></span>
+                <span class="uy-language-rail" style="--rail: 0.42" data-axis="Written" aria-label="Hausa written proficiency"><span></span></span>
+                <span class="uy-language-rail" style="--rail: 0.62" data-axis="Comprehension" aria-label="Hausa comprehension proficiency"><span></span></span>
+              </div>
+            </li>
+            <li class="uy-language-row">
+              <div class="uy-language-row__name"><span>Yoruba</span></div>
+              <div class="uy-language-row__rails">
+                <span class="uy-language-rail" style="--rail: 0.54" data-axis="Spoken" aria-label="Yoruba spoken proficiency"><span></span></span>
+                <span class="uy-language-rail" style="--rail: 0.38" data-axis="Written" aria-label="Yoruba written proficiency"><span></span></span>
+                <span class="uy-language-rail" style="--rail: 0.58" data-axis="Comprehension" aria-label="Yoruba comprehension proficiency"><span></span></span>
+              </div>
+            </li>
+            <li class="uy-language-row uy-language-row--learning">
+              <div class="uy-language-row__name"><span>Spanish</span><small>currently learning</small></div>
+              <div class="uy-language-row__rails">
+                <span class="uy-language-rail" style="--rail: 0.3" data-axis="Spoken" aria-label="Spanish spoken proficiency, currently learning"><span></span></span>
+                <span class="uy-language-rail" style="--rail: 0.26" data-axis="Written" aria-label="Spanish written proficiency, currently learning"><span></span></span>
+                <span class="uy-language-rail" style="--rail: 0.36" data-axis="Comprehension" aria-label="Spanish comprehension proficiency, currently learning"><span></span></span>
+              </div>
+            </li>
+          </ul>
+        </div>
       </aside>
     </main>
 
