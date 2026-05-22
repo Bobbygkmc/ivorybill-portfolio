@@ -370,6 +370,33 @@ body.uy-page {
     }
   }
 
+  .uy-language-box {
+    width: min(100% - 4rem, 72rem);
+    margin-top: 2.4rem;
+    margin-bottom: 3.2rem;
+    padding: 1.4rem 1.6rem;
+    border: 1px solid rgba($uy-primary, 0.18);
+    border-radius: $uy-radius-md;
+    background:
+      linear-gradient(135deg, rgba($uy-primary, 0.08), rgba($uy-accent, 0.08)),
+      rgba($uy-surface, 0.92);
+    box-shadow: $uy-shadow-sm;
+
+    h2 {
+      margin: 0 0 0.5rem;
+      color: $uy-deep;
+      font-size: 1.45rem;
+      line-height: 1.25;
+    }
+
+    p {
+      margin: 0;
+      color: $uy-muted;
+      font-size: 1.35rem;
+      line-height: 1.55;
+    }
+  }
+
   // Utility helpers
   .uy-text-center { text-align: center; }
   .uy-mt-0 { margin-top: 0; }
