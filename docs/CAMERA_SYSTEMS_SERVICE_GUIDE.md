@@ -114,6 +114,10 @@ owner's comfort level.
 - The owner is the sole privileged account holder after handoff.
 - Default vendor passwords are rotated before handoff.
 - Installer accounts are removed.
+- Public proof materials may show hardware, topology diagrams, and
+  sanitized handoff examples, but never private footage.
+- Faces, addresses, license plates, credentials, account screens, and
+  live or exported footage stay private.
 - Footage is deleted on the owner's instruction at any time, no
   questions asked.
 - The owner receives written documentation that includes how to wipe

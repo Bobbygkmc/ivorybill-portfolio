@@ -156,16 +156,20 @@
                     <strong>In development; public pilot polish in progress</strong>
                   </div>
                   <div class="uy-case-meta__row">
-                    <span>Repository</span>
-                    <strong>Private; available on request</strong>
+                    <span>Backend</span>
+                    <strong>Rust + Axum HTTP service</strong>
                   </div>
                   <div class="uy-case-meta__row">
-                    <span>Public demo</span>
-                    <strong>Not exposed publicly yet</strong>
+                    <span>Store</span>
+                    <strong>SQLite; operator-controlled</strong>
                   </div>
                   <div class="uy-case-meta__row">
-                    <span>Deployment target</span>
-                    <strong>Raspberry Pi (operator-controlled)</strong>
+                    <span>Access boundary</span>
+                    <strong>Public-safe pages; gated admin and operator tooling</strong>
+                  </div>
+                  <div class="uy-case-meta__row">
+                    <span>Evidence available</span>
+                    <strong>Boundary diagram, pilot check summary, private repo by request</strong>
                   </div>
                 </div>
               </div>
@@ -182,6 +186,38 @@
       </section>
 
       <section class="uy-section uy-section--alt">
+        <div class="uy-container">
+          <div class="uy-section-head">
+            <span class="uy-eyebrow">Boundary proof</span>
+            <h2 class="uy-h2">Public-safe surface separated from operator-only work</h2>
+            <p class="uy-lede">
+              The proof is the boundary: prototype/public-safe data can be shown on public
+              pages, while admin routes, member details, raw exports, Slack details, and
+              operator tools stay gated or private.
+            </p>
+          </div>
+
+          <div class="uy-grid">
+            <article class="uy-case-panel">
+              <span class="uy-eyebrow">Public-safe</span>
+              <h3>Member-facing surface</h3>
+              <p>Homepage, project board, published recaps, public events, sponsor/join pages, and Tech Help intake acknowledgement.</p>
+            </article>
+            <article class="uy-case-panel">
+              <span class="uy-eyebrow">Gated</span>
+              <h3>Admin / operator surface</h3>
+              <p>Admin routes, raw exports, unpublished recaps, member email fields, SQLite contents, <code>ft</code> CLI workflows, and Scout details stay private.</p>
+            </article>
+            <article class="uy-case-panel">
+              <span class="uy-eyebrow">Data boundary</span>
+              <h3>Prototype data only</h3>
+              <p>Public examples use prototype or public-safe records only. No route secrets, admin keys, Slack tokens, member emails, or private community data are exposed.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="uy-section">
         <div class="uy-container">
           <div class="uy-section-head">
             <span class="uy-eyebrow">Public launch polish</span>
@@ -225,7 +261,7 @@
             <span class="uy-eyebrow">Sanitized architecture</span>
             <h2 class="uy-h2">Public pages on one side, operator surface on the other</h2>
             <p class="uy-lede">
-              This placeholder shows the public architecture pattern without
+              This public-safe architecture view shows the public pattern without
               exposing private repository links, local demo URLs, admin keys,
               Slack tokens, member emails, or non-public implementation
               details.
@@ -336,7 +372,7 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.38 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.55V9h3.57v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/></svg>
                 <span class="uy-visually-hidden">LinkedIn</span>
               </a>
-              <a class="uy-footer__social-link" href="#" aria-label="CV link placeholder; CV file is not yet available" title="CV file not yet available">CV</a>
+              <a class="uy-footer__social-link" href="#" aria-label="CV file not yet available" title="CV file not yet available">CV</a>
             </li>
           </ul></div>
         </div>

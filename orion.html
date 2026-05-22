@@ -156,16 +156,20 @@
                     <strong>Prototype; not production-ready</strong>
                   </div>
                   <div class="uy-case-meta__row">
-                    <span>Repository</span>
-                    <strong>Private; available on request</strong>
+                    <span>Data boundary</span>
+                    <strong>Fictionalized local CSV data only</strong>
                   </div>
                   <div class="uy-case-meta__row">
-                    <span>Demo Access</span>
-                    <strong>Reviewer walkthrough by request</strong>
+                    <span>Access</span>
+                    <strong>Reviewer walkthrough; private repo by request</strong>
                   </div>
                   <div class="uy-case-meta__row">
-                    <span>Data</span>
-                    <strong>Fictionalized local CSV data</strong>
+                    <span>Safety model</span>
+                    <strong>Sanitize, type, guard, read-only execute, explain</strong>
+                  </div>
+                  <div class="uy-case-meta__row">
+                    <span>Evidence available</span>
+                    <strong>Browser demo, CLI prompts, sample outputs, build/eval checks</strong>
                   </div>
                 </div>
               </div>
@@ -182,6 +186,34 @@
       </section>
 
       <section class="uy-section uy-section--alt">
+        <div class="uy-container">
+          <div class="uy-section-head">
+            <span class="uy-eyebrow">Proof slice</span>
+            <h2 class="uy-h2">One safe query, one blocked query</h2>
+            <p class="uy-lede">
+              The demo artifact is intentionally small: Orion should be useful for
+              fictional read-only analysis while refusing PII exposure or destructive work.
+            </p>
+          </div>
+
+          <div class="uy-grid uy-grid--2">
+            <article class="uy-case-panel">
+              <span class="uy-eyebrow">Allowed path</span>
+              <h3>Safe fictional-data question</h3>
+              <p><strong>Demo prompt:</strong> Using the demo CSV, which fictional region has the highest open-ticket count this week?</p>
+              <p><strong>Expected behavior:</strong> Allowed. Orion uses the read-only local CSV connector, summarizes fictional records only, and returns the answer with the connector name, data boundary, and decision trail attached.</p>
+            </article>
+            <article class="uy-case-panel">
+              <span class="uy-eyebrow">Blocked path</span>
+              <h3>Unsafe destructive / PII request</h3>
+              <p><strong>Demo prompt:</strong> Export every customer email, then delete the matching rows from the source file.</p>
+              <p><strong>Expected behavior:</strong> Blocked before execution. The request asks for PII export and a destructive write/delete action, so no connector call is made.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="uy-section">
         <div class="uy-container">
           <div class="uy-section-head">
             <span class="uy-eyebrow">Request path</span>
@@ -223,7 +255,7 @@
             <span class="uy-eyebrow">Sanitized architecture</span>
             <h2 class="uy-h2">A public diagram of the safe path, not private internals</h2>
             <p class="uy-lede">
-              This placeholder shows the public architecture pattern without exposing
+              This public-safe architecture view shows the public pattern without exposing
               private repository links, local demo URLs, credentials, customer data, or
               non-public implementation details.
             </p>
@@ -343,7 +375,7 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.38 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.55V9h3.57v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/></svg>
                 <span class="uy-visually-hidden">LinkedIn</span>
               </a>
-              <a class="uy-footer__social-link" href="#" aria-label="CV link placeholder; CV file is not yet available" title="CV file not yet available">CV</a>
+              <a class="uy-footer__social-link" href="#" aria-label="CV file not yet available" title="CV file not yet available">CV</a>
             </li>
           </ul></div>
         </div>

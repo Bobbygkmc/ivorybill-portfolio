@@ -84,7 +84,7 @@ preview is safe before anyone outside the table sees it.
    verifies that admin data is not exposed and that admin routes
    reject invalid keys before any preview goes out.
 
-## Public architecture placeholder
+## Public-safe architecture view
 
 Use a sanitized flow diagram only:
 
@@ -100,6 +100,33 @@ Do not include:
 - Slack bot tokens or workspace data
 - member emails or raw exports
 - specific unpublished events or sponsor names
+
+## Compact proof metadata
+
+- **Status:** In development; public pilot polish in progress.
+- **Backend:** Rust + Axum HTTP service.
+- **Store:** SQLite, operator-controlled; prototype/public-safe data only
+  for public examples.
+- **Access boundary:** Public pages and safe public API responses stay on
+  one side; admin routes, raw data, member emails, Slack details, and
+  operator tooling stay gated/private.
+- **Evidence available:** Public/private boundary diagram, public pilot
+  confidence-check summary, prototype page walkthrough, and private repo
+  review by request.
+
+## Public/private boundary proof block
+
+Show the boundary as a compact text or card layout. Do not publish route
+secrets, admin keys, Slack tokens, private data, member emails, raw
+exports, or unpublished recaps.
+
+- **Public-safe surface:** Homepage, project board, published recaps,
+  public events, sponsor/join pages, and Tech Help intake acknowledgement.
+- **Gated/operator-only surface:** Admin routes, SQLite contents, member
+  email fields, raw exports, unpublished recaps, `ft` CLI workflows, and
+  Slack Scout details.
+- **Data boundary:** Public examples use prototype/public-safe data only;
+  no real member records or private community operations are shown.
 
 ## What the case study demonstrates
 

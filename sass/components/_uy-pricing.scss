@@ -85,6 +85,18 @@ body.uy-page {
     p  { margin: 0; font-size: 1.4rem; color: $uy-ink-2; line-height: 1.6; }
   }
 
+  .uy-pagehead,
+  .uy-section--dark {
+    .uy-callout {
+      background: rgba(#fff, 0.06);
+      border-color: rgba($uy-accent, 0.42);
+
+      h2,
+      h4 { color: color.adjust($uy-accent, $lightness: 18%); }
+      p  { color: rgba(#fff, 0.84); }
+    }
+  }
+
   .uy-disclaimer {
     margin-top: 3rem;
     padding: 2rem 2.4rem;
