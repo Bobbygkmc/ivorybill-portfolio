@@ -39,6 +39,24 @@ body.uy-page {
       span { margin: 0 0.6rem; }
     }
 
+    &--portrait {
+      padding: 6.6rem 0 4.2rem;
+
+      @include respond(phone) { padding: 4.4rem 0 2.8rem; }
+
+      .uy-pagehead__inner {
+        gap: 2.4rem;
+
+        @media (min-width: 901px) {
+          gap: 4rem;
+        }
+      }
+
+      .uy-profile-media--hero {
+        width: min(2.72in, 78vw);
+      }
+    }
+
     // Hero variant: founder portrait sits top-right of the green hero,
     // resting directly on the green background (no separate panel).
     &__inner {
