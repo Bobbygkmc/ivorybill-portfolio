@@ -1,0 +1,28 @@
+# Cloudflare Pages _headers — security hardening for dev.uyammadu.com
+# Place this file at the project root so `npm run build` copies it into dist/.
+# Cloudflare Pages reads _headers from the build output root.
+#
+# Fixes audit findings F-1 (CSP), F-2 (clickjacking), F-3 (HSTS), F-4 (MIME sniffing).
+#
+# NOTE on CSP: the portfolio uses some inline styles ('unsafe-inline' in style-src)
+# and Google Fonts (fonts.googleapis.com stylesheet + fonts.gstatic.com font files),
+# which are explicitly allowed below. There is NO inline script relaxation —
+# index.js is the only script and is loaded same-origin ('self').
+# ROLLOUT STATE: the CSP below is currently in REPORT-ONLY mode — it logs violations
+# to the browser console but does NOT block anything, so it cannot break the live site.
+# After confirming no legitimate resource is reported as blocked, rename the header from
+# `Content-Security-Policy-Report-Only` to `Content-Security-Policy` to enforce it.
+# All other headers below are enforcing immediately.
+
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
+
+# Tighten caching/headers for the API route specifically (no caching of dynamic responses)
+/api/*
+  Cache-Control: no-store
+  X-Content-Type-Options: nosniff

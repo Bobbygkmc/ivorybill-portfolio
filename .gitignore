@@ -1,4 +1,8 @@
 
+# Local security assessment artifacts — keep OUT of the public repo.
+# Contains a full vulnerability report (attacker-useful detail); store locally only.
+security-audit/
+
 # Created by https://www.toptal.com/developers/gitignore/api/node
 # Edit at https://www.toptal.com/developers/gitignore?templates=node
 

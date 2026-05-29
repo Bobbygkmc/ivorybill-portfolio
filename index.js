@@ -337,6 +337,15 @@
     });
   }
 
+  // ---- Print buttons (CV) ---------------------------------------------------
+  // Replaces an inline onclick="window.print()" so a strict CSP (script-src
+  // 'self', no 'unsafe-inline') does not block it.
+  document.querySelectorAll('[data-uy-print]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      window.print();
+    });
+  });
+
   // ---- Legacy guard ---------------------------------------------------------
   var legacyToggle = document.querySelector('.header__main-ham-menu-cont');
   var legacyMenu   = document.querySelector('.header__sm-menu');
