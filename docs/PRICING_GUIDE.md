@@ -5,6 +5,13 @@ urgency, hardware and software costs, site conditions, and project
 complexity. This document is the source of truth for the website's
 `pricing.html` page — update here first, then mirror to the page.
 
+> **Status (2026-05-28): `pricing.html` is hidden.** The page is kept
+> in the repo but removed from the nav, mobile menu, footer, and all
+> CTAs; dropped from `sitemap.xml`; marked `noindex, nofollow`; and the
+> `/pricing` URL 301-redirects to `/` via `_redirects`. The ranges
+> below remain the source of truth for quoting — re-link the page to
+> restore it.
+
 > **Disclaimer**: Prices below are estimates only. They are not a
 > binding quote. Hardware and software (licenses, subscriptions,
 > cameras, switches, cabling, hosting, domains) are billed separately
