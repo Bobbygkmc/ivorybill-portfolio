@@ -29,11 +29,7 @@ body.uy-page {
     &__inner {
       position: relative;
       display: grid;
-      grid-template-columns: minmax(0, 1.38fr) minmax(31rem, 0.9fr);
-      gap: 8rem;
-      align-items: end;
-
-      @include respond(tab-port) { grid-template-columns: 1fr; gap: 4.5rem; }
+      grid-template-columns: 1fr;
     }
 
     &__copy {
@@ -88,17 +84,6 @@ body.uy-page {
       }
     }
 
-    &__visual {
-      position: relative;
-      max-width: 54rem;
-      justify-self: end;
-
-      @include respond(tab-port) {
-        max-width: 62rem;
-        justify-self: start;
-      }
-    }
-
     &__console {
       width: min(100%, 54rem);
 
@@ -133,101 +118,6 @@ body.uy-page {
       border: 1px solid rgba($uy-primary, 0.18);
       box-shadow: $uy-shadow-lg;
       background: $uy-surface-deep;
-    }
-  }
-
-  .uy-operator-card {
-    width: min(100%, 54rem);
-    padding: 2.2rem;
-    color: rgba(#fff, 0.9);
-    background:
-      linear-gradient(180deg, rgba(#fff, 0.06), rgba(#fff, 0.025)),
-      rgba(#fff, 0.02);
-    border: 1px solid rgba(#fff, 0.11);
-    border-radius: $uy-radius-lg;
-    box-shadow: $uy-shadow-lg;
-    backdrop-filter: blur(8px);
-
-    @include respond(phone) {
-      width: 100%;
-      padding: 1.8rem;
-    }
-
-    &__head {
-      display: flex;
-      justify-content: space-between;
-      gap: 1.6rem;
-      align-items: center;
-      padding-bottom: 1.6rem;
-      border-bottom: 1px solid rgba(#fff, 0.10);
-
-      span {
-        font-family: $uy-font-mono;
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: rgba(#fff, 0.58);
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      strong {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.7rem;
-        color: #6fab87;
-        font-family: $uy-font-mono;
-        font-size: 1.2rem;
-        font-weight: 600;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-
-        &::before {
-          content: '';
-          width: 0.8rem;
-          height: 0.8rem;
-          border-radius: 50%;
-          background: currentColor;
-          box-shadow: 0 0 0 0.4rem rgba(#6fab87, 0.12);
-        }
-      }
-    }
-
-    &__list {
-      margin: 0;
-      display: grid;
-
-      div {
-        display: grid;
-        grid-template-columns: minmax(10rem, 0.44fr) 1fr;
-        gap: 1.6rem;
-        padding: 1.4rem 0;
-        border-bottom: 1px solid rgba(#fff, 0.08);
-
-        &:last-child {
-          border-bottom: 0;
-          padding-bottom: 0;
-        }
-
-        @include respond(phone) {
-          grid-template-columns: 1fr;
-          gap: 0.4rem;
-        }
-      }
-
-      dt {
-        color: rgba(#fff, 0.56);
-        font-size: 1.25rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-      }
-
-      dd {
-        margin: 0;
-        color: rgba(#fff, 0.9);
-        font-size: 1.42rem;
-        line-height: 1.55;
-      }
     }
   }
 
