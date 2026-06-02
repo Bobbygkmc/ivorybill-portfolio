@@ -1,0 +1,197 @@
+// ForgeTable / ForgeWorks scoped brand overlay.
+// Keep this local to `.ft-brand`; the global `$uy-*` palette stays unchanged.
+
+body.uy-page {
+  .ft-brand {
+    $ft-ember: #FF6A3D;
+    $ft-ember-dark: #F0501C;
+    $ft-iron: #131010;
+    $ft-surface: #211C18;
+    $ft-text: #D8CEC4;
+    $ft-border: #3A312A;
+
+    color: $ft-text;
+
+    &.uy-pagehead {
+      background:
+        radial-gradient(46rem 30rem at 10% -20%, rgba($ft-ember, 0.28), transparent 62%),
+        linear-gradient(135deg, $ft-iron, $ft-surface);
+      border-bottom-color: $ft-border;
+
+      .uy-eyebrow,
+      .uy-pagehead__crumb,
+      .uy-pagehead__crumb a {
+        color: rgba($ft-text, 0.72);
+      }
+
+      .uy-pagehead__crumb a:hover {
+        color: $ft-ember;
+      }
+
+      .uy-h1,
+      .uy-h2,
+      .uy-body {
+        color: $ft-text;
+      }
+
+      .uy-lede {
+        color: rgba($ft-text, 0.82);
+      }
+    }
+
+    &.uy-project {
+      background: $ft-surface;
+      border-color: $ft-border;
+      color: $ft-text;
+
+      &:hover {
+        border-color: rgba($ft-ember, 0.72);
+        box-shadow:
+          0 1px 0 rgba(255, 106, 61, 0.14),
+          0 16px 38px rgba(19, 16, 16, 0.22);
+      }
+
+      .uy-project__media {
+        border-bottom-color: $ft-border;
+        background:
+          linear-gradient(to right, rgba($ft-border, 0.72) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba($ft-border, 0.72) 1px, transparent 1px),
+          linear-gradient(135deg, rgba($ft-ember, 0.18), rgba($ft-iron, 0.86)),
+          $ft-surface;
+
+        &::before {
+          border-color: rgba($ft-ember, 0.24);
+        }
+      }
+
+      .uy-project__media-label {
+        background: rgba($ft-iron, 0.84);
+        border-color: rgba($ft-ember, 0.32);
+        color: $ft-text;
+      }
+
+      .uy-project__title {
+        color: $ft-text;
+      }
+
+      .uy-project__subtitle,
+      .uy-project__desc {
+        color: rgba($ft-text, 0.78);
+      }
+
+      .uy-project__tags span {
+        background: rgba($ft-iron, 0.58);
+        border-color: $ft-border;
+        color: rgba($ft-text, 0.8);
+      }
+    }
+
+    .uy-section:not(.uy-section--alt):not(.uy-section--dark),
+    .uy-section--alt {
+      background-color: rgba($ft-iron, 0.95);
+    }
+
+    .uy-section-head .uy-eyebrow,
+    .uy-case-prose .uy-eyebrow,
+    .uy-case-panel .uy-eyebrow,
+    .uy-arch__node span,
+    a {
+      color: $ft-ember;
+    }
+
+    .uy-section-head .uy-h2,
+    .uy-case-prose .uy-h2,
+    .uy-case-panel h3,
+    .uy-case-pipeline__text strong,
+    .uy-case-meta__row strong,
+    .uy-arch__node strong {
+      color: $ft-text;
+    }
+
+    .uy-section-head .uy-lede,
+    .uy-case-prose p,
+    .uy-case-panel p,
+    .uy-case-list li,
+    .uy-case-pipeline__text span,
+    .uy-arch__node p {
+      color: rgba($ft-text, 0.78);
+    }
+
+    .uy-case-panel,
+    .uy-case-pipeline__step,
+    .uy-arch__node {
+      background: $ft-surface;
+      border-color: $ft-border;
+      box-shadow:
+        0 1px 0 rgba(255, 106, 61, 0.08),
+        0 10px 28px rgba(19, 16, 16, 0.16);
+    }
+
+    .uy-case-list li::before,
+    .uy-case-pipeline__num {
+      background: $ft-ember;
+    }
+
+    .uy-case-pipeline__num {
+      color: $ft-iron;
+    }
+
+    .uy-case-meta__row {
+      border-bottom-color: $ft-border;
+
+      span {
+        color: rgba($ft-text, 0.62);
+      }
+    }
+
+    .uy-arch__node::after {
+      background: $ft-border;
+    }
+
+    .uy-project__tags span {
+      background: rgba($ft-iron, 0.58);
+      border-color: $ft-border;
+      color: rgba($ft-text, 0.8);
+    }
+
+    .uy-btn--primary,
+    .uy-btn--accent {
+      background: $ft-ember;
+      color: $ft-iron;
+
+      &:hover,
+      &:focus-visible {
+        background: $ft-ember-dark;
+        color: $ft-iron;
+      }
+    }
+
+    .uy-btn--ghost,
+    .uy-btn--quiet {
+      color: $ft-text;
+      border-color: rgba($ft-text, 0.38);
+      background: rgba($ft-text, 0.07);
+
+      &:hover,
+      &:focus-visible {
+        color: $ft-text;
+        border-color: rgba($ft-ember, 0.72);
+        background: rgba($ft-ember, 0.14);
+      }
+    }
+
+    .uy-btn--disabled,
+    .uy-btn--disabled:hover {
+      color: rgba($ft-text, 0.62);
+      background: rgba($ft-text, 0.06);
+      border-color: rgba($ft-text, 0.18);
+    }
+
+    .uy-pill,
+    .uy-pill--dev {
+      background: rgba($ft-ember, 0.12);
+      color: $ft-ember;
+      border: 1px solid rgba($ft-ember, 0.68);
+    }
+  }
+}
