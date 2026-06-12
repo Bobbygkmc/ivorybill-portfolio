@@ -7,31 +7,31 @@ $commonBorderRadius: 5px;
 // All new partials and pages should use the `$uy-*` tokens below.
 // ---------------------------------------------------------------------------
 
-// Brand — Field Operator direction
-$uy-deep:    #0f1a14;   // Deep field green — hero, footer, dark panels
-$uy-primary: #2d6a4f;   // Forest green — links, primary surfaces
-$uy-accent:  #b68a3e;   // Brass — CTAs, highlights, operator marks
-$uy-warm:    #8e6a2a;   // Aged brass — secondary warm accent
+// Brand and color tokens map to runtime CSS custom properties.
+$uy-deep:    var(--color-deep);
+$uy-primary: var(--color-primary);
+$uy-accent:  var(--color-accent);
+$uy-warm:    var(--color-warm);
 
 // Ink and neutrals
-$uy-ink:        #14181c;
-$uy-ink-2:      #2c3531;
-$uy-muted:      #5f6b65;
-$uy-muted-2:    #8a938c;
-$uy-line:       #d6cfc0;
-$uy-line-2:     #b8ae99;
-$uy-surface:    #ffffff;
-$uy-surface-2:  #f8f4eb;
-$uy-surface-3:  #eae3d5;
-$uy-surface-deep: #0f1a14;
-$uy-surface-page: #f2ede3;
+$uy-ink:        var(--color-ink);
+$uy-ink-2:      var(--color-ink-2);
+$uy-muted:      var(--color-muted);
+$uy-muted-2:    var(--color-muted-2);
+$uy-line:       var(--color-line);
+$uy-line-2:     var(--color-line-2);
+$uy-surface:    var(--color-surface);
+$uy-surface-2:  var(--color-surface-2);
+$uy-surface-3:  var(--color-surface-3);
+$uy-surface-deep: var(--color-surface-deep);
+$uy-surface-page: var(--color-surface-page);
 
 // Status colors (for project status pills)
-$uy-status-live:    #2d6a4f;
-$uy-status-proto:   #8e6a2a;
-$uy-status-dev:     #b68a3e;
-$uy-status-private: #6b7570;
-$uy-status-research: #5a4a2a;
+$uy-status-live:    var(--color-status-live);
+$uy-status-proto:   var(--color-status-proto);
+$uy-status-dev:     var(--color-status-dev);
+$uy-status-private: var(--color-status-private);
+$uy-status-research: var(--color-status-research);
 
 // Radius
 $uy-radius-sm: 4px;
@@ -41,14 +41,10 @@ $uy-radius-xl: 16px;
 $uy-radius-pill: 999px;
 
 // Shadows
-$uy-shadow-sm: 0 1px 0 rgba(20, 24, 28, 0.04),
-               0 1px 3px rgba(20, 24, 28, 0.04);
-$uy-shadow-md: 0 1px 0 rgba(20, 24, 28, 0.04),
-               0 8px 22px rgba(20, 24, 28, 0.07);
-$uy-shadow-lg: 0 2px 0 rgba(20, 24, 28, 0.05),
-               0 18px 48px rgba(20, 24, 28, 0.12);
-$uy-shadow-glow: 0 0 0 1px rgba(45, 106, 79, 0.16),
-                 0 16px 42px rgba(45, 106, 79, 0.22);
+$uy-shadow-sm: var(--shadow-sm);
+$uy-shadow-md: var(--shadow-md);
+$uy-shadow-lg: var(--shadow-lg);
+$uy-shadow-glow: var(--shadow-glow);
 
 // Motion
 $uy-ease: cubic-bezier(0.4, 0, 0.2, 1);

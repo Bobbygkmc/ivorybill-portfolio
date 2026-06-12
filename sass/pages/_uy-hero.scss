@@ -115,7 +115,7 @@ body.uy-page {
       aspect-ratio: 3 / 2;
       object-fit: cover;
       border-radius: $uy-radius-xl;
-      border: 1px solid rgba($uy-primary, 0.18);
+      border: 1px solid rgb(var(--rgb-primary) / 0.18);
       box-shadow: $uy-shadow-lg;
       background: $uy-surface-deep;
     }

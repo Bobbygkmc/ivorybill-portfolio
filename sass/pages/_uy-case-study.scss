@@ -121,7 +121,7 @@ body.uy-page {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba($uy-primary, 0.1);
+    background: rgb(var(--rgb-primary) / 0.1);
     color: $uy-primary;
     font-family: $uy-font-mono;
     font-size: 1.2rem;

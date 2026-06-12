@@ -45,8 +45,8 @@ body.uy-page {
     margin: 0;
     padding: 6rem 0;
     background:
-      radial-gradient(40rem 30rem at 80% 0%, rgba($uy-accent, 0.18), transparent 60%),
-      linear-gradient(135deg, $uy-deep, color.adjust($uy-deep, $lightness: 5%));
+      radial-gradient(40rem 30rem at 80% 0%, rgb(var(--rgb-accent) / 0.18), transparent 60%),
+      linear-gradient(135deg, $uy-deep, color-mix(in srgb, $uy-deep 86%, white));
     color: #fff;
 
     &__inner {

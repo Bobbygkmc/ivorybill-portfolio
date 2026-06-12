@@ -52,7 +52,7 @@ body.uy-page {
       color: #fff;
       box-shadow: $uy-shadow-md;
       &:hover {
-        background: color.adjust($uy-primary, $lightness: -8%);
+        background: color-mix(in srgb, $uy-primary 86%, black);
         box-shadow: $uy-shadow-glow;
       }
     }
@@ -60,7 +60,7 @@ body.uy-page {
       background: $uy-accent;
       color: $uy-deep;
       box-shadow: $uy-shadow-md;
-      &:hover { background: color.adjust($uy-accent, $lightness: -6%); }
+      &:hover { background: color-mix(in srgb, $uy-accent 88%, black); }
     }
     &--ghost {
       background: transparent;
@@ -68,7 +68,7 @@ body.uy-page {
       border-color: $uy-line-2;
       &:hover {
         border-color: $uy-ink;
-        background: rgba($uy-surface, 0.5);
+        background: rgb(var(--rgb-surface) / 0.5);
         color: $uy-ink;
       }
     }
@@ -166,15 +166,15 @@ body.uy-page {
     }
 
     &--live     { background: $uy-status-live; color: #fff; }
-    &--proto    { background: transparent; color: $uy-status-proto; border: 1px solid rgba($uy-status-proto, 0.55); }
+    &--proto    { background: transparent; color: $uy-status-proto; border: 1px solid rgb(var(--rgb-status-proto) / 0.55); }
     &--dev      { background: transparent; color: $uy-status-dev; border: 1px solid currentColor; }
-    &--lab      { background: transparent; color: $uy-primary; border: 1px solid rgba($uy-primary, 0.55); }
+    &--lab      { background: transparent; color: $uy-primary; border: 1px solid rgb(var(--rgb-primary) / 0.55); }
     &--internal { background: transparent; color: $uy-ink-2; border: 1px solid $uy-line-2; }
     &--private  {
       background: $uy-surface-3;
       color: $uy-status-private;
       background-image: repeating-linear-gradient(45deg, transparent 0 5px, rgba(#000, 0.035) 5px 6px);
     }
-    &--research { background: transparent; color: $uy-status-research; border: 1px dashed rgba($uy-status-research, 0.65); }
+    &--research { background: transparent; color: $uy-status-research; border: 1px dashed rgb(var(--rgb-status-research) / 0.65); }
   }
 }

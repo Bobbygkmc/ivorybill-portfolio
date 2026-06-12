@@ -1,0 +1,99 @@
+:root {
+  color-scheme: light;
+  --color-deep: #1A1714;
+  --color-primary: #5B7568;
+  --color-accent: #5B7568;
+  --color-warm: #6F665C;
+  --color-ink: #1A1714;
+  --color-ink-2: #34302B;
+  --color-muted: #6F6962;
+  --color-muted-2: #9B938A;
+  --color-line: #DDD7D0;
+  --color-line-2: #C8BFB5;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #F1EEE9;
+  --color-surface-3: #E7E1DA;
+  --color-surface-deep: #1A1714;
+  --color-surface-page: #FAF8F5;
+  --color-status-live: #4F7667;
+  --color-status-proto: #7A6854;
+  --color-status-dev: #5B7568;
+  --color-status-private: #77716B;
+  --color-status-research: #6F6254;
+
+  --rgb-deep: 26 23 20;
+  --rgb-primary: 91 117 104;
+  --rgb-accent: 91 117 104;
+  --rgb-warm: 111 102 92;
+  --rgb-ink: 26 23 20;
+  --rgb-ink-2: 52 48 43;
+  --rgb-muted: 111 105 98;
+  --rgb-muted-2: 155 147 138;
+  --rgb-line: 221 215 208;
+  --rgb-line-2: 200 191 181;
+  --rgb-surface: 255 255 255;
+  --rgb-surface-2: 241 238 233;
+  --rgb-surface-3: 231 225 218;
+  --rgb-surface-deep: 26 23 20;
+  --rgb-surface-page: 250 248 245;
+  --rgb-status-live: 79 118 103;
+  --rgb-status-proto: 122 104 84;
+  --rgb-status-dev: 91 117 104;
+  --rgb-status-private: 119 113 107;
+  --rgb-status-research: 111 98 84;
+
+  --shadow-sm: 0 1px 0 rgb(26 23 20 / 0.04), 0 1px 3px rgb(26 23 20 / 0.04);
+  --shadow-md: 0 1px 0 rgb(26 23 20 / 0.04), 0 8px 22px rgb(26 23 20 / 0.07);
+  --shadow-lg: 0 2px 0 rgb(26 23 20 / 0.05), 0 18px 48px rgb(26 23 20 / 0.12);
+  --shadow-glow: 0 0 0 1px rgb(91 117 104 / 0.16), 0 16px 42px rgb(91 117 104 / 0.18);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-deep: #0C0A09;
+  --color-primary: #8FB3A2;
+  --color-accent: #8FB3A2;
+  --color-warm: #A79D92;
+  --color-ink: #F4EFE8;
+  --color-ink-2: #DED6CD;
+  --color-muted: #B8AEA4;
+  --color-muted-2: #8F867D;
+  --color-line: #3A342E;
+  --color-line-2: #51483F;
+  --color-surface: #1B1815;
+  --color-surface-2: #24201C;
+  --color-surface-3: #2E2924;
+  --color-surface-deep: #0C0A09;
+  --color-surface-page: #12100E;
+  --color-status-live: #8FB3A2;
+  --color-status-proto: #C4A678;
+  --color-status-dev: #8FB3A2;
+  --color-status-private: #9A928B;
+  --color-status-research: #BCA978;
+
+  --rgb-deep: 12 10 9;
+  --rgb-primary: 143 179 162;
+  --rgb-accent: 143 179 162;
+  --rgb-warm: 167 157 146;
+  --rgb-ink: 244 239 232;
+  --rgb-ink-2: 222 214 205;
+  --rgb-muted: 184 174 164;
+  --rgb-muted-2: 143 134 125;
+  --rgb-line: 58 52 46;
+  --rgb-line-2: 81 72 63;
+  --rgb-surface: 27 24 21;
+  --rgb-surface-2: 36 32 28;
+  --rgb-surface-3: 46 41 36;
+  --rgb-surface-deep: 12 10 9;
+  --rgb-surface-page: 18 16 14;
+  --rgb-status-live: 143 179 162;
+  --rgb-status-proto: 196 166 120;
+  --rgb-status-dev: 143 179 162;
+  --rgb-status-private: 154 146 139;
+  --rgb-status-research: 188 169 120;
+
+  --shadow-sm: 0 1px 0 rgb(0 0 0 / 0.24), 0 1px 3px rgb(0 0 0 / 0.22);
+  --shadow-md: 0 1px 0 rgb(0 0 0 / 0.24), 0 10px 28px rgb(0 0 0 / 0.30);
+  --shadow-lg: 0 2px 0 rgb(0 0 0 / 0.28), 0 22px 58px rgb(0 0 0 / 0.42);
+  --shadow-glow: 0 0 0 1px rgb(143 179 162 / 0.20), 0 18px 48px rgb(143 179 162 / 0.14);
+}

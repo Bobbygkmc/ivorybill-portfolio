@@ -49,7 +49,7 @@ body.uy-page {
       &:focus {
         outline: none;
         border-color: $uy-primary;
-        box-shadow: 0 0 0 4px rgba($uy-primary, 0.14);
+        box-shadow: 0 0 0 4px rgb(var(--rgb-primary) / 0.14);
       }
     }
     &__textarea { min-height: 14rem; resize: vertical; }
@@ -68,8 +68,8 @@ body.uy-page {
     margin-bottom: 2.4rem;
     padding: 1.4rem 1.8rem;
     border-radius: $uy-radius-md;
-    background: rgba($uy-primary, 0.08);
-    border: 1px solid rgba($uy-primary, 0.22);
+    background: rgb(var(--rgb-primary) / 0.08);
+    border: 1px solid rgb(var(--rgb-primary) / 0.22);
     color: $uy-ink-2;
     font-size: 1.4rem;
     line-height: 1.55;
