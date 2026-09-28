@@ -19,26 +19,10 @@
     <meta name="twitter:image" content="https://dev.uyammadu.com/assets/images/social/og-default.svg" />
 
     <link rel="icon" type="image/svg+xml" href="./assets/svg/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-    />
-    <script>
-      (function () {
-        try {
-          var t = localStorage.getItem('uy-theme');
-          if (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
-          if (t === 'dark') document.documentElement.dataset.theme = 'dark';
-        } catch (e) {}
-      })();
-    </script>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
-  <body class="uy-page">
-    <canvas id="uy-network-bg" class="uy-network-bg" aria-hidden="true"></canvas>
+  <body class="uy-page work-order-home">
     <a href="#uy-main" class="uy-btn uy-btn--quiet uy-skip-link">Skip to content</a>
 
     <!-- Top navigation -->
@@ -60,16 +44,6 @@
           <a class="uy-nav__link" href="/contact">Contact</a>
           <a class="uy-nav__link" href="https://blog.uyammadu.com">Blog</a>
         </nav>
-        <button
-          class="uy-theme-toggle"
-          type="button"
-          data-theme-toggle
-          aria-label="Switch to dark theme"
-          aria-pressed="false"
-        >
-          <span class="uy-theme-toggle__icon" aria-hidden="true"></span>
-          <span class="uy-visually-hidden" data-theme-toggle-label>Switch to dark theme</span>
-        </button>
         <a class="uy-btn uy-btn--primary uy-nav__cta" href="/contact">Let's talk</a>
         <button class="uy-nav__toggle" aria-label="Open menu" aria-controls="uy-mobile-menu" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -132,11 +106,46 @@
           <h2 class="uy-h2" id="services-heading">Services</h2>
           <p class="section-intro">Tell me what is getting in the way of the job. I’ll check the setup and write down what needs to change.</p>
           <div class="service-list">
-            <article class="service-entry"><h3>Security cameras</h3><p>Install PoE cameras. Set up recording and remote viewing on hardware you own.</p><a href="/cameras">Camera installation details</a></article>
-            <article class="service-entry"><h3>Networking &amp; Wi-Fi</h3><p>Find Wi-Fi dead spots and connection faults. Set up routers and switches for the space.</p><a href="/services#networking">Network support details</a></article>
-            <article class="service-entry"><h3>POS systems</h3><p>Get Toast terminals and receipt printers talking to each other. Troubleshoot the setup at the counter.</p><a href="/services#restaurant">POS support details</a></article>
-            <article class="service-entry"><h3>Websites</h3><p>Build a business website or fix the one you have. Make it easy to find your hours and contact you.</p><a href="/services#websites">Website service details</a></article>
-            <article class="service-entry"><h3>Restaurant systems</h3><p>Connect your menus to online ordering. Make sales reports easier to use at the end of a shift.</p><a href="/services#restaurant">Restaurant support details</a></article>
+            <article class="work-ticket">
+              <div class="work-ticket__heading"><h3>Security cameras</h3><a href="/cameras">Camera installation details</a></div>
+              <dl>
+                <div class="work-ticket__scope"><dt>Scope</dt><dd>Install PoE cameras. Set up recording and remote viewing on hardware you own.</dd></div>
+                <div class="work-ticket__timeline"><dt>Timeline</dt><dd>Install date agreed after a site check.</dd></div>
+                <div class="work-ticket__handoff"><dt>Handoff</dt><dd>Recording settings and owner access. A walkthrough of playback.</dd></div>
+              </dl>
+            </article>
+            <article class="work-ticket">
+              <div class="work-ticket__heading"><h3>Networking &amp; Wi-Fi</h3><a href="/services#networking">Network support details</a></div>
+              <dl>
+                <div class="work-ticket__scope"><dt>Scope</dt><dd>Find dead spots and connection faults. Set up routers and switches for the space.</dd></div>
+                <div class="work-ticket__timeline"><dt>Timeline</dt><dd>Visit booked after we discuss the fault.</dd></div>
+                <div class="work-ticket__handoff"><dt>Handoff</dt><dd>A network map and notes on the changes.</dd></div>
+              </dl>
+            </article>
+            <article class="work-ticket">
+              <div class="work-ticket__heading"><h3>POS systems</h3><a href="/services#restaurant">POS support details</a></div>
+              <dl>
+                <div class="work-ticket__scope"><dt>Scope</dt><dd>Get Toast terminals and receipt printers talking to each other. Troubleshoot the setup at the counter.</dd></div>
+                <div class="work-ticket__timeline"><dt>Timeline</dt><dd>Work scheduled around your service hours.</dd></div>
+                <div class="work-ticket__handoff"><dt>Handoff</dt><dd>Device settings and a staff walkthrough.</dd></div>
+              </dl>
+            </article>
+            <article class="work-ticket">
+              <div class="work-ticket__heading"><h3>Websites</h3><a href="/services#websites">Website service details</a></div>
+              <dl>
+                <div class="work-ticket__scope"><dt>Scope</dt><dd>Build a business website or fix the one you have. Make hours and contact details easy to find.</dd></div>
+                <div class="work-ticket__timeline"><dt>Timeline</dt><dd>Milestones agreed in the written scope.</dd></div>
+                <div class="work-ticket__handoff"><dt>Handoff</dt><dd>Account access and instructions for updates.</dd></div>
+              </dl>
+            </article>
+            <article class="work-ticket">
+              <div class="work-ticket__heading"><h3>Restaurant systems</h3><a href="/services#restaurant">Restaurant support details</a></div>
+              <dl>
+                <div class="work-ticket__scope"><dt>Scope</dt><dd>Connect menus to online ordering. Make sales reports easier to use after a shift.</dd></div>
+                <div class="work-ticket__timeline"><dt>Timeline</dt><dd>Changes planned around trading hours.</dd></div>
+                <div class="work-ticket__handoff"><dt>Handoff</dt><dd>Workflow notes and a walkthrough with your team.</dd></div>
+              </dl>
+            </article>
           </div>
           <p class="section-note">Hardware and labor are itemized in the estimate. <a href="/pricing">See starting prices</a>.</p>
         </div>
@@ -158,17 +167,17 @@
           <h2 class="uy-h2" id="work-heading">Selected work</h2>
           <div class="work-register">
             <article class="work-entry">
-              <div class="work-entry__title"><h3>Peppino’s restaurant systems</h3><span class="work-status">Supported</span></div>
+              <div class="work-entry__title"><h3>Peppino’s restaurant systems</h3><span class="status-badge" data-status="supported">SUPPORTED</span></div>
               <p>Helped with Toast POS and network troubleshooting for a Bucks County restaurant.</p>
               <div class="work-entry__detail"><span>Client work · Private deployment</span><a href="/projects">Project notes</a></div>
             </article>
             <article class="work-entry">
-              <div class="work-entry__title"><h3>This business website</h3><span class="work-status">Deployed</span></div>
+              <div class="work-entry__title"><h3>This business website</h3><span class="status-badge" data-status="deployed">DEPLOYED</span></div>
               <p>Put service information and a direct contact route online for local business owners.</p>
               <div class="work-entry__detail"><span>Static HTML · Cloudflare Pages</span><a href="/projects">Website project notes</a></div>
             </article>
             <article class="work-entry">
-              <div class="work-entry__title"><h3>Orion</h3><span class="work-status">In progress</span></div>
+              <div class="work-entry__title"><h3>Orion</h3><span class="status-badge" data-status="in-progress">IN PROGRESS</span></div>
               <p>Built a prototype to test AI-assisted business analysis using fictional demo data.</p>
               <div class="work-entry__detail"><span>Python / FastAPI · Prototype</span><a href="/orion">Read the Orion case study</a></div>
             </article>

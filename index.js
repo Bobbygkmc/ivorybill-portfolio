@@ -5,57 +5,6 @@
 // 4. Legacy hamburger toggle (kept guarded for any archived pages)
 
 (function () {
-  // ---- Theme toggle ---------------------------------------------------------
-  var themeStorageKey = 'uy-theme';
-  var root = document.documentElement;
-  var themeToggles = document.querySelectorAll('[data-theme-toggle]');
-  var prefersDark = window.matchMedia
-    ? window.matchMedia('(prefers-color-scheme: dark)')
-    : null;
-
-  function getStoredTheme() {
-    try {
-      return localStorage.getItem(themeStorageKey);
-    } catch (err) {
-      return null;
-    }
-  }
-
-  function setStoredTheme(theme) {
-    try {
-      localStorage.setItem(themeStorageKey, theme);
-    } catch (err) {}
-  }
-
-  function getInitialTheme() {
-    var stored = getStoredTheme();
-    if (stored === 'light' || stored === 'dark') return stored;
-    return prefersDark && prefersDark.matches ? 'dark' : 'light';
-  }
-
-  function applyTheme(theme) {
-    root.dataset.theme = theme;
-    themeToggles.forEach(function (button) {
-      var next = theme === 'dark' ? 'light' : 'dark';
-      var label = 'Switch to ' + next + ' theme';
-      button.setAttribute('aria-label', label);
-      button.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
-      var text = button.querySelector('[data-theme-toggle-label]');
-      if (text) text.textContent = label;
-    });
-  }
-
-  var currentTheme = getInitialTheme();
-  applyTheme(currentTheme);
-
-  themeToggles.forEach(function (button) {
-    button.addEventListener('click', function () {
-      currentTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-      applyTheme(currentTheme);
-      setStoredTheme(currentTheme);
-    });
-  });
-
   // ---- New nav --------------------------------------------------------------
   var toggle = document.querySelector('.uy-nav__toggle');
   var mobile = document.querySelector('.uy-nav__mobile');
@@ -65,6 +14,7 @@
     function setMenu(open) {
       mobile.classList.toggle('uy-nav__mobile--open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     }
 
     function isMenuOpen() {
@@ -92,7 +42,7 @@
 
     // If the viewport widens to where the desktop nav is shown, drop the open
     // state so the menu can't stay "open" while its toggle is hidden.
-    var desktopNav = window.matchMedia('(min-width: 56.3125em)');
+    var desktopNav = window.matchMedia('(min-width: 1101px)');
     function syncNavToViewport(mq) {
       if (mq.matches) {
         setMenu(false);
