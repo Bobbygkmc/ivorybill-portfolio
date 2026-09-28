@@ -90,6 +90,11 @@ body.uy-page {
     white-space: normal;
   }
   .uy-btn:hover { transform: none; box-shadow: none; }
+  .uy-skip-link {
+    transform: translateY(-150%);
+    &:hover { transform: translateY(-150%); }
+    &:focus, &:focus-visible { transform: translateY(0); }
+  }
   :is(.uy-btn--primary, .uy-btn--accent) { background: var(--color-accent); color: #fff; border: 1px solid var(--color-accent); }
   :is(.uy-btn--primary, .uy-btn--accent):hover { background: #244336; color: #fff; }
   :is(.uy-btn--ghost, .uy-btn--quiet) { color: var(--color-ink); }
