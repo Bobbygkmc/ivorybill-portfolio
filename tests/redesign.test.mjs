@@ -94,3 +94,21 @@ test('selected work uses each documented status badge variant', () => {
 test('public HTML routes do not contain broken local links or fragment targets', () => {
   assert.deepEqual(findBrokenLocalLinks(root), []);
 });
+
+test('the linked pricing page is not redirected away by Cloudflare', () => {
+  assert.ok(homepage.includes('href="/pricing"'));
+  const redirects = readFileSync(join(root, '_redirects'), 'utf8')
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => line && !line.startsWith('#'));
+  assert.ok(!redirects.some((line) => /^\/pricing(?:\s|\/|\*)/.test(line)),
+    'the homepage pricing link must reach the pricing page');
+});
+
+test('Cloudflare receives a real not-found page instead of the homepage fallback', () => {
+  const notFound = readFileSync(join(root, '404.html'), 'utf8');
+  assert.match(notFound, /<h1\b[^>]*>Page not found\.<\/h1>/);
+  assert.match(notFound, /name="robots" content="noindex"/);
+  assert.match(notFound, /href="\/css\/style\.css"/);
+  assert.match(notFound, /href="\/"/);
+});

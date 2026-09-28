@@ -1,2 +1,2 @@
-# Hidden pages — redirect retired/unlinked URLs to home (301)
-/pricing  /  301
+# Public pages use Cloudflare Pages clean URLs.
+# Keep /pricing reachable from the homepage pricing link.
